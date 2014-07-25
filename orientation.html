@@ -15,32 +15,13 @@
 			border: 0;
 		}
 	</style>
-
-	<script src="js/BoardRenderer.js"></script>
-	<script src="js/BoardModel.js"></script>
-	<script src="js/Game.js"></script>
-
 	<script>
-		var game;
-
+		var canvas;
+		var ctx;
 		function init() {
-			var canvas = initFullScreenCanvas("mainCanvas");
-			game = new Game(canvas);
-
-			if (isTouchDevice()) {
-				canvas.addEventListener("touchstart", function(e) {
-					var touch = event.targetTouches[0];
-					game.handleClick(touch.pageX, touch.pageY);
-					e.stopPropagation();
-					e.preventDefault();
-				}, false);
-			} else {
-				canvas.addEventListener("mouseup", function(e) {
-					game.handleClick(e.pageX, e.pageY);
-					e.stopPropagation();
-					e.preventDefault();
-				}, false);
-			}
+			canvas = initFullScreenCanvas("mainCanvas");
+			ctx = canvas.getContext("2d");
+			repaint();
 		}
 
 		function initFullScreenCanvas(canvasId) {
@@ -55,11 +36,32 @@
 		function resizeCanvas(canvas) {
 			canvas.width  = document.width || document.body.clientWidth;
 			canvas.height = document.height || document.body.clientHeight;
-			game && game.handleResize();
+			// Paint something to see the effect of changed orientation
+			repaint();
 		}
 
-		function isTouchDevice() {
-			return ('ontouchstart' in document.documentElement);
+		function repaint() {
+			if (!ctx)
+				return;
+
+			// Clear background
+			ctx.fillStyle = "white";
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+			reorient();
+			ctx.fillStyle = "darkgreen";
+			ctx.fillRect(10, 10, 250, 30);
+			ctx.fillRect(120, 10, 30, 300);
+		}
+
+		function reorient() {
+			var angle = window.orientation;
+			if (angle != null) {
+				var rot = -Math.PI*(angle/180);
+				ctx.translate(angle == -90 ? canvas.width : 0,
+						angle == 90 ? canvas.height : 0);
+				ctx.rotate(rot);
+			}
 		}
 
 	</script>
