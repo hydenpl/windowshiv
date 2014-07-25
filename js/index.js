@@ -16,10 +16,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+function init(){
+    var canvas = initFullScreenCanvas("mainCanvas");
+    
+}
+
+function initFullScreenCanvas(canvasId){
+    var canvas = document.getElementById(canvasId);
+    resizeCanvas(canvas);
+    windows.addEventListener("resize", function(){
+        resizeCanvas(canvas);
+    });
+    return canvas;
+}
+
+function resizeCanvas(canvas){
+    canvas.width = document.width || document.body.clientWidth;
+    canvas.height = document.height || document.body.clientHeight;
+}
+
+
+
+
+
+
 var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        
     },
     // Bind Event Listeners
     //
