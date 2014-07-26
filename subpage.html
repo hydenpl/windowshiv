@@ -1,71 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
 
-	<style>
-		html, body {
-			overflow: hidden;
-			width: 100%;
-			height: 100%;
-			margin:0;
-			padding:0;
-			border: 0;
-		}
-	</style>
+        <link href="css/subpage.css" rel="stylesheet" type="text/css">
 
-	<script src="js/BoardRenderer.js"></script>
-	<script src="js/BoardModel.js"></script>
-	<script src="js/Game.js"></script>
+        <script src="js/jquery.js"></script>
+        
+        <!--	<script src="js/BoardRenderer.js"></script>
+                <script src="js/BoardModel.js"></script>
+                <script src="js/Game.js"></script>-->
+        <script src="js/canvases.js"></script>
+        <script>
+            var ww = $(window).height();
+            var subHeaderHeight = 0.1*ww;
+            
+            function init() {
+                $('.sub-header h2').css('line-height', subHeaderHeight+"px");
+                $('.sub-header h2').css('font-size', subHeaderHeight*0.5+"px");
+                drawHome('home-canvas', 0.4*subHeaderHeight, subHeaderHeight);
+                drawBack('back-canvas', 0.4*subHeaderHeight, subHeaderHeight);
+            }
+        </script>
+    </head>
+    <body onload='init()'>
+        <div class='sub-header'>
+            <a class='back-button'>
+                <canvas id='back-canvas'></canvas>
+            </a>
+            <h2 class='sub-header-title'>Amfetamina</h2>
+            <a class='home-button' href='index.html'>
+                <canvas id='home-canvas'></canvas>
+            </a>
+            <div class='clear'></div>
+        </div>
 
-	<script>
-		var game;
+        <canvas class='sub-drug-icon'></canvas>
 
-		function init() {
-			var canvas = initFullScreenCanvas("mainCanvas");
-			game = new Game(canvas);
+        <p class='sub-drug-description'>
 
-			if (isTouchDevice()) {
-				canvas.addEventListener("touchstart", function(e) {
-					var touch = event.targetTouches[0];
-					game.handleClick(touch.pageX, touch.pageY);
-					e.stopPropagation();
-					e.preventDefault();
-				}, false);
-			} else {
-				canvas.addEventListener("mouseup", function(e) {
-					game.handleClick(e.pageX, e.pageY);
-					e.stopPropagation();
-					e.preventDefault();
-				}, false);
-			}
-		}
+        </p>
 
-		function initFullScreenCanvas(canvasId) {
-			var canvas = document.getElementById(canvasId);
-			resizeCanvas(canvas);
-			window.addEventListener("resize", function() {
-				resizeCanvas(canvas);
-			});
-			return canvas;
-		}
-
-		function resizeCanvas(canvas) {
-			canvas.width  = document.width || document.body.clientWidth;
-			canvas.height = document.height || document.body.clientHeight;
-			game && game.handleResize();
-		}
-
-		function isTouchDevice() {
-			return ('ontouchstart' in document.documentElement);
-		}
-
-	</script>
-</head>
-<body onload="init()">
-<!--<canvas id="mainCanvas" width="100" height="100"></canvas>-->
-<a href='orientation.html'>ORIENTATION</a>
-</body>
+        <div class='sub-footer'>
+            <a href='#'>
+                <canvas class='sub-footer-icon'></canvas>
+                <canvas class='sub-footer-icon'></canvas>
+            </a>
+        </div>
+    </body>
 </html>
