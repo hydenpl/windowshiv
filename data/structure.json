@@ -1,0 +1,28 @@
+{
+    "amfetamina":
+        {
+            "url": "subpage.html",
+            "back": "",
+            "background": "#2a98a2",
+            "links": [
+                {
+                    "key": "alkohol"
+                }
+            ]
+        },
+    "alkohol":
+        {
+            "url": "subpage.html",
+            "back": "amfetamina",
+            "background": "#a22a98",
+            "links": [
+                {
+                    "key": "amfetamina"
+                },
+                {
+                    "key": "alkolhol"
+                }
+
+            ]
+        }
+}

@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
 
-	<style>
-		html, body {
-			overflow: hidden;
-			width: 100%;
-			height: 100%;
-			margin:0;
-			padding:0;
-			border: 0;
-		}
-	</style>
+        <link href="css/subpage.css" rel="stylesheet" type="text/css">
 
-	<script src="js/BoardRenderer.js"></script>
-	<script src="js/BoardModel.js"></script>
-	<script src="js/Game.js"></script>
-
-	<script>
-		var game;
-
-		function init() {
-			var canvas = initFullScreenCanvas("mainCanvas");
-			game = new Game(canvas);
-
-			if (isTouchDevice()) {
-				canvas.addEventListener("touchstart", function(e) {
-					var touch = event.targetTouches[0];
-					game.handleClick(touch.pageX, touch.pageY);
-					e.stopPropagation();
-					e.preventDefault();
-				}, false);
-			} else {
-				canvas.addEventListener("mouseup", function(e) {
-					game.handleClick(e.pageX, e.pageY);
-					e.stopPropagation();
-					e.preventDefault();
-				}, false);
-			}
-		}
-
-		function initFullScreenCanvas(canvasId) {
-			var canvas = document.getElementById(canvasId);
-			resizeCanvas(canvas);
-			window.addEventListener("resize", function() {
-				resizeCanvas(canvas);
-			});
-			return canvas;
-		}
-
-		function resizeCanvas(canvas) {
-			canvas.width  = document.width || document.body.clientWidth;
-			canvas.height = document.height || document.body.clientHeight;
-			game && game.handleResize();
-		}
-
-		function isTouchDevice() {
-			return ('ontouchstart' in document.documentElement);
-		}
-
-	</script>
-</head>
-<body onload="init()">
-<!--<canvas id="mainCanvas" width="100" height="100"></canvas>-->
-<a href='orientation.html'>ORIENTATION</a>
-
-</body>
+        <script src="js/jquery.js"></script>
+        <script src="js/canvases.js"></script>
+        
+        <script src="js/subpage.js"></script>
+        
+        <script>
+            var wh;
+            var ww;
+            var fs;
+            var structure; //json ze struktura strony, backami, home itp
+            $(function(){
+                var key = 'amfetamina';
+                wh = $(window).height();
+                ww = $(window).width();
+                fs = Math.floor((wh+ww)*0.015);
+                $('body').css('font-size', fs);
+                drawHome('home-canvas', 1.6 * fs, 4 * fs);
+                drawBack('back-canvas', 1.6 * fs, 4 * fs);
+                $.parseJSON($.getJSON("data/structure.json", function(data){
+                    structure = data;
+                    $('html, body, .header').css('background-color', structure[key].background);
+                    initSubpage(key);
+                }));
+            });
+        </script>
+    </head>
+    <body>
+        <div class='header' >
+            <div class='header-apla'>
+                <a class='back-button'>
+                    <canvas id='back-canvas'></canvas>
+                </a>
+                <h2 class='header-title'>_</h2>
+                <a class='home-button' href='index.html'>
+                    <canvas id='home-canvas'></canvas>
+                </a>
+                <div class='clear'></div>
+            </div>
+        </div>
+        <div id='content'>
+            
+        </div>
+        <div class='footer' style='display:none'>
+            <a href='#'>
+                <canvas class='footer-icon'></canvas>
+                <canvas class='footer-icon'></canvas>
+            </a>
+        </div>
+    </body>
 </html>
