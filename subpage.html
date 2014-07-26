@@ -13,35 +13,44 @@
                 <script src="js/Game.js"></script>-->
         <script src="js/canvases.js"></script>
         <script>
-            var ww = $(window).height();
-            var subHeaderHeight = 0.1*ww;
-            
+            var wh = $(window).height();
+            var ww = $(window).width();
+            var fs = Math.floor((wh+ww)*0.015);
             function init() {
-                $('.sub-header h2').css('line-height', subHeaderHeight+"px");
-                $('.sub-header h2').css('font-size', subHeaderHeight*0.5+"px");
-                drawHome('home-canvas', 0.4*subHeaderHeight, subHeaderHeight);
-                drawBack('back-canvas', 0.4*subHeaderHeight, subHeaderHeight);
+                $('body').css('font-size', fs);
+                drawHome('home-canvas', 1.6*fs, 4*fs);
+                drawBack('back-canvas', 1.6*fs, 4*fs);
+                var iconHeight = 9*fs;
+                drawHexagon('sub-content-icon-canvas', iconHeight, '#3DD7E5','Am');
+                $(".sub-content-icon-title-container").height(iconHeight).children(".sub-content-icon-title").css('line-height', iconHeight+'px');
             }
         </script>
     </head>
     <body onload='init()'>
         <div class='sub-header'>
-            <a class='back-button'>
-                <canvas id='back-canvas'></canvas>
-            </a>
-            <h2 class='sub-header-title'>Amfetamina</h2>
-            <a class='home-button' href='index.html'>
-                <canvas id='home-canvas'></canvas>
-            </a>
-            <div class='clear'></div>
+            <div class='sub-header-apla'>
+                <a class='back-button'>
+                    <canvas id='back-canvas'></canvas>
+                </a>
+                <h2 class='sub-header-title'>Amfetamina</h2>
+                <a class='home-button' href='index.html'>
+                    <canvas id='home-canvas'></canvas>
+                </a>
+                <div class='clear'></div>
+            </div>
         </div>
+        <div class='sub-content'>
+            <div class='sub-content-icon'>
+                <canvas id='sub-content-icon-canvas' class='sub-content-icon-canvas'></canvas>
+                <div class='sub-content-icon-title-container'>
+                    <p class='sub-content-icon-title'>Amfetamina<p>
+                </div>
+            </div>
 
-        <canvas class='sub-drug-icon'></canvas>
-
-        <p class='sub-drug-description'>
-
-        </p>
-
+            <p class='sub-drug-description'>
+                Przyjęcie amfetaminy może spowodować poczucie siły, mocy. Pobudzenie jest o tyle specyficzne, że powoduje napięcia, przyśpieszenie pulsu i akcji serca. Codzienna czynność, której się pod jej wpływem oddasz, może stać się natręctwem na kilka kolejnych godzin. Mogą wystąpić także słowotoki, zaciśnięcie szczęki i wzmożenie napięcia mięśniowego. Amfetamina może powodować odwodnienie, dlatego pij wodę – ale nie więcej niż 1 litr w przeciągu imprezy, zaopatrz się też w kwaśne cukierki – pobudzają ślinianki, co pomoże Ci się nie odwodnić. Jeśli poczujesz się źle, powiadom o tym osobę, z którą przyszedłeś/aś i wyjdź na świeże powietrze. Jeśli Ci się nie poprawi, nie ryzykuj – wezwij pomoc. To, że jesteś pod wpływem jakiegokolwiek narkotyku NIE JEST PRZESTĘPSTWEM i nie będziesz mieć konsekwencji prawnych. Nielegalne jest posiadanie!
+            </p>
+        </div>
         <div class='sub-footer'>
             <a href='#'>
                 <canvas class='sub-footer-icon'></canvas>

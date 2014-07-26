@@ -78,3 +78,35 @@ function drawBack(canvasId, size, totalHeight) {
 }
 ;
 
+function drawHexagon(canvasId, size, color, info, tX, tY) {
+    if(typeof(tX)==='undefined') tX = 0;
+    if(typeof(tY)==='undefined') tY = 0;
+    
+    var canvas = document.getElementById(canvasId);
+    canvas.width = 0.866*size;
+    canvas.height = size;
+    var ctx = canvas.getContext('2d');
+    ctx.save();
+    ctx.scale(size / 100, size / 100);
+    
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(0, 25);
+    ctx.lineTo(0, 75);
+    ctx.lineTo(43.3, 100);
+    ctx.lineTo(86.6, 75);
+    ctx.lineTo(86.6, 25);
+    ctx.lineTo(43.3, 0);
+    ctx.closePath();
+    ctx.fill();
+    ctx.fillStyle = "#fff";
+    ctx.font= "bold 30px OpenSans";
+    ctx.textAlign = "center";
+    ctx.fillText(info,43.3,62);
+    
+    ctx.translate(tX, tY);
+    
+    ctx.restore();
+}
+;
+
