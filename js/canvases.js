@@ -78,11 +78,9 @@ function drawBack(canvasId, size, totalHeight) {
 }
 ;
 
-function drawHexagon(canvasId, size, color, info, tX, tY) {
-    if(typeof(tX)==='undefined') tX = 0;
-    if(typeof(tY)==='undefined') tY = 0;
-    
+function drawHexagon(canvasId, size, color, info) {
     var canvas = document.getElementById(canvasId);
+    
     canvas.width = 0.866*size;
     canvas.height = size;
     var ctx = canvas.getContext('2d');
@@ -99,14 +97,58 @@ function drawHexagon(canvasId, size, color, info, tX, tY) {
     ctx.lineTo(43.3, 0);
     ctx.closePath();
     ctx.fill();
+    
     ctx.fillStyle = "#fff";
     ctx.font= "bold 30px OpenSans";
     ctx.textAlign = "center";
     ctx.fillText(info,43.3,62);
     
-    ctx.translate(tX, tY);
-    
     ctx.restore();
 }
 ;
+
+
+function drawMix(canvasId, size, color1, color2, info1, info2){
+    var canvas = document.getElementById(canvasId);
+    
+    canvas.width = size/175*129.9;
+    canvas.height = size;
+    var ctx = canvas.getContext('2d');
+    ctx.save();
+    ctx.scale(size/175, size/175);
+    
+    ctx.fillStyle = color1;
+    ctx.beginPath();
+    ctx.moveTo(0, 25);
+    ctx.lineTo(0, 75);
+    ctx.lineTo(43.3, 100);
+    ctx.lineTo(86.6, 75);
+    ctx.lineTo(86.6, 25);
+    ctx.lineTo(43.3, 0);
+    ctx.closePath();
+    ctx.fill();
+    
+    ctx.fillStyle = "#fff";
+    ctx.font= "bold 25px OpenSans";
+    ctx.textAlign = "center";
+    ctx.fillText(info1,43.3,62);
+    
+    ctx.fillStyle = color2;
+    ctx.beginPath();
+    ctx.moveTo(43.3, 100);
+    ctx.lineTo(43.3, 150);
+    ctx.lineTo(86.6, 175);
+    ctx.lineTo(129.9, 150);
+    ctx.lineTo(129.9, 100);
+    ctx.lineTo(86.6, 75);
+    ctx.closePath();
+    ctx.fill();
+    
+    ctx.fillStyle = "#fff";
+    ctx.font= "bold 25px OpenSans";
+    ctx.textAlign = "center";
+    ctx.fillText(info2,86.6,137);
+    
+    ctx.restore();
+}
 

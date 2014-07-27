@@ -1,123 +1,3 @@
-@font-face {
-    font-family: OpenSans;
-    src: url(../fonts/open-sans/OpenSans-Regular.ttf);
-    font-weight:normal;
-}
-@font-face {
-    font-family: OpenSans;
-    src: url(../fonts/open-sans/OpenSans-Light.ttf);
-    font-weight: lighter;
-}
-
-@font-face {
-    font-family: OpenSans;
-    src: url(../fonts/open-sans/OpenSans-Bold.ttf);
-    font-weight: bold;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-        font-weight: normal;
-	vertical-align: baseline;
-        font-family: OpenSans, sans-serif;
-        color: #fff;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1.2;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-.clear{
-    clear:both;
-}
-
-html, body {
-    /*overflow: hidden;*/
-    width: 100%;
-    height: 100%;
-    margin:0;
-    padding:0;
-    border: 0;
-}
-
-.header{
-    position: fixed;
-    top:0;
-    width: 100%;
-    height: 4em;
-    font-weight: lighter;
-}
-
-.header-apla{
-    width: 100%;
-    height: 100%;
-    background-color:  rgba(0,0,0,0.4);
-}
-
-.header .back-button{
-    /*background-image:*/
-}
-
-.header h2{
-    float: left;
-    width: 60%;
-    line-height: 2em;
-    font-size: 2em;
-    text-align: center;
-    //line-height z js
-}
-
-.header a{
-    float: left;
-    width:20%;
-    height: 100%;
-    line-height: 100%;
-    text-align:center;
-}
-
-.header a canvas{
-    display: inline;
-}
-
-.sub-content{
-    margin-top: 4em;
-}
-
 .sub-content-icon{
     width:100%;
     text-align: center;
@@ -143,4 +23,40 @@ html, body {
 .sub-drug-description{
     padding: 1.5em;
     text-align: justify;
+}
+
+#footer{
+    display: block;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 4em;
+    overflow-x: auto;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#footer-wrapper{
+    display: block;
+    font-weight: lighter;
+    white-space: nowrap;
+    font-size: 0px; //to i niżej dla zlikwidowania marginów między elementami footera
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+/*
+#footer-apla{
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0,0,0,0.4);
+}*/
+
+#footer-wrapper div{
+    background-color: rgba(0,0,0,0.3);
+/*    display: inline-block;
+    text-align: center;*/
+}
+
+#footer canvas{
+    display: inline-block;
 }
