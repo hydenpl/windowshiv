@@ -16,17 +16,17 @@ function subpageReady(json, key) {
     drawHexagon('sub-content-icon-canvas', iconHeight, json[key].color, json[key].shortcut);
 
     //footer
-    appendFooterElement('footer1');
-    appendFooterElement('footer2');
+    appendFooterElement('footer1','');
+    appendFooterElement('footer2','',true);
     appendFooterElement('footer3');
-    appendFooterElement('footer4');
-    appendFooterElement('footer5');
-    appendFooterElement('footer6');
-    appendFooterElement('footer7');
-    appendFooterElement('footer8');
-    appendFooterElement('footer9');
-    appendFooterElement('footer10');
-    appendFooterElement('footer11');
+//    appendFooterElement('footer4');
+//    appendFooterElement('footer5');
+//    appendFooterElement('footer6');
+//    appendFooterElement('footer7');
+//    appendFooterElement('footer8');
+//    appendFooterElement('footer9');
+//    appendFooterElement('footer10');
+//    appendFooterElement('footer11');
 
 //    drawHexagon('sub-content-icon-canvas', 4*fs, json[key].color, json[key].shortcut);
 
@@ -34,12 +34,14 @@ function subpageReady(json, key) {
 }
 
 
-function appendFooterElement(key1, key2) {
+function appendFooterElement(key1, key2, chosen) {
     id = key1+key2+"Canvas";
     jQuery('<canvas/>', {
         id: id
     }).appendTo('#footer-wrapper');
-        
-    drawHexagon(id, 4*fs, '#657485', 'Foo' );
-    drawMix(id, 4*fs, '#657485', '#66a26a', 'Aa', 'Bb');
+    drawMix(id, 3*fs, '#657485', '#66a26a', 'Aa', 'Bb');
+    $('#'+id).css('padding',fs+'px '+Math.floor(1.39*fs)+"px");
+    if(chosen===true){
+        $('#'+id).addClass("chosen");
+    }
 }
