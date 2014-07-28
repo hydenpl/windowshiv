@@ -1,0 +1,24 @@
+
+ul.menu li{
+    position: absolute;
+}
+
+ul.menu li canvas,
+ul.menu li div,
+ul.menu li p
+{
+    float: left;
+}
+
+ul.menu li:nth-child(2) canvas,
+ul.menu li:nth-child(2) div,
+ul.menu li:nth-child(2) p
+{
+    float: right;
+}
+
+.menu-title{
+    padding: 0 1em;
+    font-size: 1.2em;
+}
+

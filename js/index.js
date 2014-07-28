@@ -3,7 +3,7 @@ var ww;
 var fs;
 var structure; //json ze struktura strony, backami, home itp
 $(function() {
-    var key = 'alkohol';
+    var key = 'main';
     wh = $(window).height();
     ww = $(window).width();
     fs = Math.floor((wh + ww) * 0.015);
@@ -25,8 +25,10 @@ function initPage(key){
 //        $(".back-button").addClass("link").data("link", structure[key].back);
         if(structure[key].type==='subpage'){
             initSubpage(key);
-        }else if(structure[key].type=='cosinnego'){
-            //
+        }else if(structure[key].type=='menu'){
+            initMenu(key);
+        }else if(structure[key].type=='drugs'){
+            //jeszcze nic
         }
     });
 }

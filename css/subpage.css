@@ -25,16 +25,6 @@
     text-align: justify;
 }
 
-#footer{
-    display: block;
-    position: fixed;
-    bottom:0;
-    width: 100%;
-    height: 5em;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
 #footer-apla,
 #footer-apla-bcg{
     position: fixed;
@@ -42,6 +32,17 @@
     width: 100%;
     height: 5em;
     background-color:  rgba(0,0,0,0.3);
+}
+
+#footer{
+    display: block;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 5em;
+    overflow: auto;
+    /*overflow-y: hidden;*/
+    -webkit-overflow-scrolling: touch;
 }
 
 #footer-wrapper{

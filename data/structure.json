@@ -2,49 +2,71 @@
     "amfetamina":
         {
             "type": "subpage",
+            "title": "Amfetamina",
             "back": "piguly",
             "background": "#2a98a2"
         },
     "piguly":
         {
-            "type": "subpage",
+            "type": "subpage",            
+            "title": "Piguły",
             "back": "mefedron",
             "background": "#a22a98"
         },
     "mefedron":
         {
-            "type": "subpage",
+            "type": "subpage",            
+            "title": "Mefedron",
             "back": "marihuana",
             "background": "#a22a98"
         },
     "marihuana":
         {
-            "type": "subpage",
+            "type": "subpage",           
+            "title": "Marihuana",
             "back": "kokaina",
             "background": "#a22a98"
         },
     "kokaina":
         {
-            "type": "subpage",
+            "type": "subpage",            
+            "title": "Kokaina",
             "back": "dopalacze",
             "background": "#a22a98"
         },
     "dopalacze":
         {
-            "type": "subpage",
+            "type": "subpage",            
+            "title": "Dopalacze",
             "back": "alkohol",
             "background": "#a22a98"
         },
     "alkohol":
         {
-            "type": "subpage",
+            "type": "subpage",            
+            "title": "Alkohol",
             "back": "amfetamina",
             "background": "#a22a98"
         },
     "drugs":
         {
             "type": "menu",
+            "title": "Substancje",
             "back": "main",
+            "background": "#a22a98"
+        },
+    "instytucje":
+        {
+            "type": "menu",
+            "title": "Instytucje",
+            "back": "main",
+            "background": "#a22a98"
+        },
+    "main":
+        {
+            "type": "menu",
+            "title": "",
+            "back": "close",
             "background": "#a22a98"
         }
 }
