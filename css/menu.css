@@ -1,18 +1,16 @@
 
-ul.menu li{
+ul#menu li{
     position: absolute;
 }
 
-ul.menu li canvas,
-ul.menu li div,
-ul.menu li p
+ul#menu li canvas,
+ul#menu li div
 {
     float: left;
 }
 
-ul.menu li:nth-child(2) canvas,
-ul.menu li:nth-child(2) div,
-ul.menu li:nth-child(2) p
+ul#menu li:nth-child(2) canvas,
+ul#menu li:nth-child(2) div
 {
     float: right;
 }

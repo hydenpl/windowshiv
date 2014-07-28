@@ -10,6 +10,7 @@ $(function() {
     $('body').css('font-size', fs);
     drawHome('home-canvas', 1.6 * fs, 4 * fs);
     drawBack('back-canvas', 1.6 * fs, 4 * fs);
+    
     initPage(key);
     
     $("body").on('click','.link', function() {
@@ -22,7 +23,9 @@ function initPage(key){
     $.getJSON("data/structure.json", function(data) {
         structure = data;
         $('html, body, .header').css('background-color', structure[key].background);
+        $('.header').hide();
 //        $(".back-button").addClass("link").data("link", structure[key].back);
+
         if(structure[key].type==='subpage'){
             initSubpage(key);
         }else if(structure[key].type=='menu'){
