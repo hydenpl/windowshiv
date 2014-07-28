@@ -33,7 +33,12 @@
     height: 5em;
     overflow-x: auto;
     overflow-y: hidden;
-    background-color: rgba(0,0,0,0.3);
+}
+
+#footer-apla{
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0,0,0,0.3);
 }
 
 #footer-wrapper{
@@ -44,14 +49,6 @@
     letter-spacing: 0px;
     word-spacing: 0px;
 }
-
-/*
-#footer-apla{
-    width: 100%;
-    height: 100%;
-    background-color:  rgba(0,0,0,0.4);
-}*/
-
 
 #footer canvas{
     display: inline-block;

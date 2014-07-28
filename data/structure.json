@@ -1,28 +1,50 @@
 {
     "amfetamina":
         {
-            "url": "subpage.html",
-            "back": "",
-            "background": "#2a98a2",
-            "links": [
-                {
-                    "key": "alkohol"
-                }
-            ]
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#2a98a2"
+        },
+    "piguly":
+        {
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#a22a98"
+        },
+    "mefedron":
+        {
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#a22a98"
+        },
+    "marihuana":
+        {
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#a22a98"
+        },
+    "kokaina":
+        {
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#a22a98"
+        },
+    "dopalacze":
+        {
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#a22a98"
         },
     "alkohol":
         {
-            "url": "subpage.html",
-            "back": "amfetamina",
-            "background": "#a22a98",
-            "links": [
-                {
-                    "key": "amfetamina"
-                },
-                {
-                    "key": "alkohol"
-                }
-
-            ]
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#a22a98"
+        },
+    "mdma":
+        {
+            "type": "subpage",
+            "back": "drugs",
+            "background": "#a22a98"
         }
 }

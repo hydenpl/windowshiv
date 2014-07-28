@@ -8,29 +8,13 @@
         <link href="css/subpage.css" rel="stylesheet" type="text/css">
 
         <script src="js/jquery.js"></script>
+        <script src="js/index.js"></script>
         <script src="js/canvases.js"></script>
         
         <script src="js/subpage.js"></script>
         
         <script>
-            var wh;
-            var ww;
-            var fs;
-            var structure; //json ze struktura strony, backami, home itp
-            $(function(){
-                var key = 'amfetamina';
-                wh = $(window).height();
-                ww = $(window).width();
-                fs = Math.floor((wh+ww)*0.015);
-                $('body').css('font-size', fs);
-                drawHome('home-canvas', 1.6 * fs, 4 * fs);
-                drawBack('back-canvas', 1.6 * fs, 4 * fs);
-                $.parseJSON($.getJSON("data/structure.json", function(data){
-                    structure = data;
-                    $('html, body, .header').css('background-color', structure[key].background);
-                    initSubpage(key);
-                }));
-            });
+            
         </script>
     </head>
     <body>

@@ -1,0 +1,199 @@
+{
+    "amfetamina": {
+        "type":"drug",
+        "title": "Amfetamina",
+        "shortcut": "Am",
+        "color": "#3DD7E5",
+        "description": "Przyjęcie amfetaminy może spowodować poczucie siły, mocy. Pobudzenie jest o tyle specyficzne, że powoduje napięcia, przyśpieszenie pulsu i akcji serca. Codzienna czynność, której się pod jej wpływem oddasz, może stać się natręctwem na kilka kolejnych godzin. Mogą wystąpić także słowotoki, zaciśnięcie szczęki i wzmożenie napięcia mięśniowego. Amfetamina może powodować odwodnienie, dlatego  pij wodę – ale nie więcej niż 1 litr w przeciągu imprezy, zaopatrz się też w kwaśne cukierki – pobudzają ślinianki, co pomoże Ci się nie odwodnić. Jeśli poczujesz się źle, powiadom o tym osobę, z którą przyszedłeś/aś i wyjdź na świeże powietrze. Jeśli Ci się nie poprawi, nie ryzykuj – wezwij pomoc. To, że jesteś pod wpływem jakiegokolwiek narkotyku NIE JEST PRZESTĘPSTWEM i nie będziesz mieć konsekwencji prawnych. Nielegalne jest posiadanie!"
+    },
+    "piguly": {
+        "type":"drug",
+        "title": "Piguły",
+        "shortcut": "Pi",
+        "color": "#7E3DD5",
+        "description": "Pod tą nazwą spotkać można różne substancje pochodzące od metamfetaminy lub amfetaminy (MDMA, PMA). Skład piguł nie jest nigdy na sto procent znany, nie jest też znana proporcja mieszania. W związku z tym może być tak, że będziesz po przyjęciu czuć rozluźnienie i pozorną bliskość z otaczającymi ludźmi, ale… Często są to substancje z opóźnionym działaniem, dlatego można je łatwo przedawkować. Po przyjęciu jednej dawki nie połykaj od razu następnej – nawet jeżeli minęło 30 minut i nic nie poczułeś/aś. Poczekaj minimum godzinę! Zdarzały się tabletki z opóźnionym czasem działania (do 50 minut od przyjęcia) - przyjmowanie kolejnych tabletek w czasie krótszym niż 50 minut mogło spowodować skumulowanie ich działania i przedawkowanie. Efekt jest taki, że substancja nagle zaczyna działać na organizm z siłą pomnożoną przez ilość przyjętych kolejnych tabletek. Skutki przyjęcia są podobne do przyjęcia amfetaminy (uwaga na serce!). Jeśli jednak zdecydujesz się wziąć i coś pójdzie nie tak, postępuj tak samo, jak opisano to w przypadku amfetaminy."
+    },
+    "mefedron": {
+        "type":"drug",
+        "title": "Mefedron",
+        "shortcut": "Me",
+        "color": "#7E3DD5",
+        "description": "Dokładny wpływ mefedronu na organizm ludzki nie jest znany. Jego działanie jest wypadkową działania MDMA i kokainy. Przyśpiesza akcję serca. W zależności od przyjętej dawki mefedron: <br>- w małych dawkach pobudza, ale też daje uczucie euforii, jedności z innymi ludźmi, radości ze świata, <br>- w dużych dawkach może powodować napięcie i wzrost agresji, drażliwość na innych ludzi.<br>W momencie ustępowania mefedron nie ma fazy, tzw. „zejścia”, aczkolwiek może pojawiać się poczucie odrętwienia ciała, gęsiej skórki, silny spadek nastroju. Mefedron działa krótko i intensywnie, w związku z czym bardzo ryzykowne jest mieszanie go z alkoholem, czy innymi substancjami psychoaktywnymi. Trudno jest również dać uniwersalną receptę co robić w momentach przedawkowania, ponieważ może wywołać różne, indywidualne objawy.<br>Najlepiej powiadomić o swoim stanie kogoś znajomego, wyjść na świeże powietrze i wezwać pomoc."
+    },
+    "marihuana": {
+        "type":"drug",
+        "title": "Marihuana",
+        "shortcut": "Ma",
+        "color": "#7E3DD5",
+        "description": "Nie wiem, czy wiesz, że to co właśnie masz zamiar zapalić, może nie być tym, czym myślisz?<br>Natura naturze nie równa, szczególnie jeśli jest modyfikowana chemią lub genetyką. W zależności od tego co palisz, możesz czuć, że wszystko Ci jedno, gdzie jesteś, bo ważne jest, że przecież jesteś. Samo w sobie jest to genialne i wspaniałe. Może też być tak, że pojawią się bóle serca, zaburzenia jego akcji, poczucie wyizolowania lub stany psychotyczne. Nie jesteś w stanie przewidzieć własnych reakcji. Zamiast chichotać wśród znajomych, możesz dygotać w kącie, uciekając od nich, z sercem bijącym nierówno. Nawet paląc marihuanę można zakazić się opryszczką, HCV, ale też HIV - podczas używania wspólnej lufki do palenia. Ktoś może się nią oparzyć, a krew z oparzonych ust przenieść na Twoje usta."
+    },
+    "kokaina": {
+        "type":"drug",
+        "title": "Kokaina",
+        "shortcut": "Ko",
+        "color": "#7E3DD5",
+        "description": "To stymulant o działaniu euforyzującym. Działa krótko, bo do 20-30 minut, ale bardzo intensywnie. Zaburza widzenie siebie, ocenę sytuacji, własnej sprawności, mocy. W tym przypadku „zaburza” oznacza przejaskrawia i przerysowuje. Z uwagi na krótkie działanie i częste powtarzanie kolejnych dawek, może spowodować zatrzymanie lub zaburzenie akcji serca szczególnie, że silnie pobudza seksualnie, co dodatkowo obciąża serce. Donosowe wciąganie amfetaminy, kokainy, czy mefedronu może podrażniać błonę śluzową nosa i powodować krwawienie – przekazując sobie „narzędzie” do wciągania (papierek, banknot, lufkę) ktoś może przekazać Ci go razem z zakażoną HCV lub HIV krwią."
+    },
+    "dopalacze": {
+        "type":"drug",
+        "title": "Dopalacze",
+        "shortcut": "Do",
+        "color": "#7E3DD5",
+        "description": "Ich używanie to trochę jak zgoda na operację w ciemno. Nigdy nie wiesz co tak naprawdę bierzesz i jakie są tego proporcje. Utrudnieniem może być trudność w wyliczeniu algorytmu bezpieczniejszej dawki na masę Twego ciała z uwzględnieniem metabolizmu. Działanie może być różne, często bardzo indywidualne. Najlepiej podziękować za użycie, a już na pewno nie mieszać z innymi substancjami."
+    },
+    "alkohol": {
+        "type":"drug",
+        "title": "Alkohol",
+        "shortcut": "Al",
+        "color": "#7E3DD5",
+        "description": "Jest depresantem. Obniża ciśnienie, może upośledzać układ oddechowy, powodować wymioty. W małej dawce rozluźnia. Wzmacnia odczuwany stan, bywa że wzmaga zachowania agresywne.<br Alkohol obniża Twoją ostrożność. Wypijany w dużych dawkach może spowodować obniżenie Twego popędu seksualnego i technicznych możliwości (po prostu Ci nie stanie). W małych dawkach alkohol może działać pobudzająco seksualnie, może też powodować, że zdecydujesz się na coś, na co na trzeźwo byś się nie zdecydował/a>"
+    },
+    "mdma": {
+        "type":"drug",
+        "title": "Mdma",
+        "shortcut": "Md",
+        "color": "#793a12",
+        "description": "Mdma czyli potocznie ecstasy"
+    },
+    "amko": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "amfetamina"
+            }, {
+                "key": "kokaina"
+            }
+        ],
+        "description": "To dwa bardzo silne stymulanty, które potęgują swoje działanie. Wariuje serce, wariuje umysł. Albo wybuchniesz albo zagadasz wszystkich na śmierć. To połączenie powoduje znaczny wzrost ciśnienia, zaburzenia akcji serca. Mogą pojawić się wymioty lub zawroty głowy. Jeśli jednak zdecydujesz się je połączyć, to nie bierz ich jednocześnie - zmniejsz też dawki, które zamierzasz wziąć."
+    },
+    "amme": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "amfetamina"
+            }, {
+                "key": "mefedron"
+            }
+        ],
+        "description": "To dwa bardzo silne stymulanty, które potęgują swoje działanie – również to psychotyczne (duże ryzyko występowania psychoz). Serce wali, oddech przyspiesza, ciśnienie wzrasta, mogą pojawić się wymioty lub zawroty głowy. W głowie lęki. Iść, uciekać, a może zemdleć? Jeśli zdecydujesz się je połączyć pamiętaj o tym, że zarówno mefedron, jak i amfetamina to jedne z najbardziej zanieczyszczonych substancji psychoaktywnych i nigdy do końca nie wiesz co kupujesz. W związku z tym zminimalizuj zakładane dawki przyjęcia."
+    },
+    "ammd": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "amfetamina"
+            }, {
+                "key": "mdma"
+            }
+        ],
+        "description": "To dwie substancje z tej samej grupy (stymulanty) o nieco innym potencjale. Tańczę, biegam, kocham. Wszystkich, wszystko.  Czuję ciepło, w sercu, głowie…hmm chyba się przegrzewam. Tak poważnie: takie łączenie może znacznie podwyższyć temperaturę ciała, odwodnić, spowodować wzrost ciśnienia, przyśpieszenie akcji serca. W skrajnych przypadkach może doprowadzić do psychoz."
+    },
+    "amma": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "amfetamina"
+            }, {
+                "key": "marihuana"
+            }
+        ],
+        "description": "To połączenie może spowodować obniżenie odczuwanych po amfetaminie napięć, ale może też wzmocnić lęki i paranoje. Może pojawić się zaburzenie akcji serca, zaburzenia ciśnienia, oddechu."
+    },
+    "koma": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "kokaina"
+            }, {
+                "key": "marihuana"
+            }
+        ],
+        "description": "W tym połączeniu może być różnie. Marihuana może osłabić pobudzeniowe działanie kokainy, lub je złagodzić. Jedna i druga substancja może pobudzić seksualnie. Mogą pojawić się zaburzenia w pracy serca."
+    },
+    "mema": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "mefedron"
+            }, {
+                "key": "marihuana"
+            }
+        ],
+        "description": "To połączenie może wywołać poczucie odprężenia lub euforii, ale równie dobrze może wzmocnić stany psychotyczne. Zdarza się, że działania obu substancji wzajemnie się niwelują. Możliwe zaburzenia akcji serca."
+    },
+    "madm": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "marihuana"
+            }, {
+                "key": "mdma"
+            }
+        ],
+        "description": "Takie połączenie może wzmocnić omamy i/lub halucynacje, ale także obniżyć pobudzające działanie mdma."
+    },
+    "mdko": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "mdma"
+            }, {
+                "key": "kokaina"
+            }
+        ],
+        "description": "Obydwie substancje przyśpieszają akcję serca, przy czym również mocno stymulują seksualnie. Mogą też zwiększyć ciepłotę ciała. To wszystko w połączeniu jest szczególnie niebezpieczne dla serca!"
+    },
+    "alma": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "alkohol"
+            }, {
+                "key": "marihuana"
+            }
+        ],
+        "description": "Obie substancje są depresantami, mogą więc potęgować swoje działanie. Marihuana zadziała szybciej niż alkohol, w związku z tym jest większe prawdopodobieństwo, że pijąc i paląc przedawkujesz obie substancje. Jeśli mimo wszystko zdecydujesz się na mieszanie, to najpierw pal, potem pij. Alkohol zaczyna działać po ok. 25-30 minutach od spożycia. Marihuana po ok. 5-15 minutach. Jeśli najpierw zapalisz, będziesz po kilku minutach czuł w jakim jesteś stanie i będziesz mógł względnie kontrolować chęć na spożywanie alkoholu."
+    },
+    "alam": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "alkohol"
+            }, {
+                "key": "amfetamina"
+            }
+        ],
+        "description": "Amfetamina przyspiesza funkcje życiowe i m.in. metabolizację alkoholu. Po przyjęciu jej w trakcie picia alkoholu lub po nim, poczujesz otrzeźwienie. Wypijany kolejny alkohol nie będzie dawał poczucia upicia się. Pity przez cały czas działania amfetaminy (4-6 godzin) może spowodować omdlenia, wynikające z zatrucia alkoholem, gdy amfetamina przestanie działać. Podczas mieszania tych dwóch substancji jest też większe prawdopodobieństwo odwodnienia, może wystąpić też tzw. efekt przepicia amfetaminy – kończy się on nieprzyjemnie: zapaścią i niezbędna jest interwencja medyczna."
+    },
+    "alme": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "alkohol"
+            }, {
+                "key": "mefedron"
+            }
+        ],
+        "description": "Podobnie jak w przypadku amfetaminy – mefedron przyspiesza metabolizację i może powodować nieodczuwanie wpływu wypijanego alkoholu. Z drugiej strony, mefedron przyjęty, gdy jest się pijanym (łącznie z alkoholem) niebezpiecznie podnosi ciśnienie. Mogą pojawiać się bóle głowy, szum w uszach, omdlenia, znaczne podniesienie temperatury ciała."
+    },
+    "alko": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "alkohol"
+            }, {
+                "key": "kokaina"
+            }
+        ],
+        "description": "Zdarza się, że łączenie to występuje przed wzięciem kokainy, jej „wejście” jest odczuwane wtedy przyjemniej. Kokaina działa dość krótko i również przyspiesza akcję serca, metabolizację i inne funkcje życiowe, dlatego pod jej wpływem nie odczuwa się skutków wypijanego alkoholu - aż do zejścia kokainy. Możesz wtedy doświadczać silnych stanów depresyjnych, zaburzeń akcji serca, co w skrajnych sytuacjach może doprowadzić do śmierci."
+    },
+    "almd": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "alkohol"
+            }, {
+                "key": "mdma"
+            }
+        ],
+        "description": "Połączenie to może spowodować szybsze odwodnienie. Dodatkowo alkohol niweluje działanie euforyzujące mdma. Może pojawić się poczucie ciągłego powtarzania tej samej czynności."
+    },
+    "aldo": {
+        "type":"mix",
+        "ingredients": [{
+                "key": "alkohol"
+            }, {
+                "key": "dopalacze"
+            }
+        ],
+        "description": "W zależności od rodzaju „dopalacza” może zadziałać różnie. Generalnie to ruletka. Mogą pojawić się zaburzenia akcji serca, odwodnienia, wzmacnianie swego działania lub niwelowanie go."
+    }
+  
+}
