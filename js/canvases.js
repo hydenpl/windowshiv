@@ -129,7 +129,7 @@ function drawMix(canvasId, size, color1, color2, info1, info2){
     ctx.fill();
     
     ctx.fillStyle = "#fff";
-    ctx.font= "bold 28px OpenSans";
+    ctx.font= "bold 30px OpenSans";
     ctx.textAlign = "center";
     ctx.fillText(info1,43.3,62);
     
@@ -145,7 +145,7 @@ function drawMix(canvasId, size, color1, color2, info1, info2){
     ctx.fill();
     
     ctx.fillStyle = "#fff";
-    ctx.font= "bold 28px OpenSans";
+    ctx.font= "bold 30px OpenSans";
     ctx.textAlign = "center";
     ctx.fillText(info2,86.6,137);
     
