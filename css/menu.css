@@ -1,12 +1,13 @@
-
 ul#menu li{
     position: absolute;
+    z-index: 0;
 }
 
 ul#menu li canvas,
 ul#menu li div
 {
     float: left;
+    padding-bottom: 3em;
 }
 
 ul#menu li:nth-child(even) canvas,
