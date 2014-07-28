@@ -19,7 +19,7 @@ function subpageReady(json, key) {
     $('.header').show();
     $('h2.header-title').text(json[parentKey].title);
     $(".sub-content-icon-title-container").height(iconHeight).children(".sub-content-icon-title").css('line-height', iconHeight + 'px');
-    $("#footer").css('background-color', structure[parentKey].background);
+    $("footer-apla-bcg").css('background-color', structure[parentKey].background);
     
     if(type==='drug'){
         drawHexagon('sub-content-icon-canvas', iconHeight, json[key].color, json[key].shortcut);

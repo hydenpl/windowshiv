@@ -3,7 +3,7 @@ var ww;
 var fs;
 var structure; //json ze struktura strony, backami, home itp
 $(function() {
-    var key = 'amfetamina';
+    var key = 'alkohol';
     wh = $(window).height();
     ww = $(window).width();
     fs = Math.floor((wh + ww) * 0.015);

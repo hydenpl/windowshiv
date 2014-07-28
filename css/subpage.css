@@ -35,9 +35,12 @@
     overflow-y: hidden;
 }
 
-#footer-apla{
+#footer-apla,
+#footer-apla-bcg{
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 5em;
     background-color:  rgba(0,0,0,0.3);
 }
 

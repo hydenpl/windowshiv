@@ -46,7 +46,7 @@
         "title": "Alkohol",
         "shortcut": "Al",
         "color": "#7E3DD5",
-        "description": "Jest depresantem. Obniża ciśnienie, może upośledzać układ oddechowy, powodować wymioty. W małej dawce rozluźnia. Wzmacnia odczuwany stan, bywa że wzmaga zachowania agresywne.<br Alkohol obniża Twoją ostrożność. Wypijany w dużych dawkach może spowodować obniżenie Twego popędu seksualnego i technicznych możliwości (po prostu Ci nie stanie). W małych dawkach alkohol może działać pobudzająco seksualnie, może też powodować, że zdecydujesz się na coś, na co na trzeźwo byś się nie zdecydował/a>"
+        "description": "Jest depresantem. Obniża ciśnienie, może upośledzać układ oddechowy, powodować wymioty. W małej dawce rozluźnia. Wzmacnia odczuwany stan, bywa że wzmaga zachowania agresywne.<br> Alkohol obniża Twoją ostrożność. Wypijany w dużych dawkach może spowodować obniżenie Twego popędu seksualnego i technicznych możliwości (po prostu Ci nie stanie). W małych dawkach alkohol może działać pobudzająco seksualnie, może też powodować, że zdecydujesz się na coś, na co na trzeźwo byś się nie zdecydował/a>"
     },
     "mdma": {
         "type":"drug",
