@@ -22,6 +22,7 @@ function initPage(key){
     $.getJSON("data/structure.json", function(data) {
         structure = data;
         $('html, body, .header').css('background-color', structure[key].background);
+//        $(".back-button").addClass("link").data("link", structure[key].back);
         if(structure[key].type==='subpage'){
             initSubpage(key);
         }else if(structure[key].type=='cosinnego'){
