@@ -30,7 +30,8 @@ function initPage(key){
             initSubpage(key);
         }else if(structure[key].type=='menu'){
             initMenu(key);
-        }else if(structure[key].type=='drugs'){
+        }else if(structure[key].type=='content'){
+            initContent(key);
             //jeszcze nic
         }
     });

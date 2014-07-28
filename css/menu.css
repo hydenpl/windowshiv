@@ -9,8 +9,8 @@ ul#menu li div
     float: left;
 }
 
-ul#menu li:nth-child(2) canvas,
-ul#menu li:nth-child(2) div
+ul#menu li:nth-child(even) canvas,
+ul#menu li:nth-child(even) div
 {
     float: right;
 }

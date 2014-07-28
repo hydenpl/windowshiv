@@ -54,5 +54,61 @@
                 }
             ]
             
+        },
+    "substancje":
+        {
+            "size": 6,
+            "links":[
+                {
+                    "key":"amfetamina",
+                    "color":"#54af52",
+                    "label":"Amfetamina",
+                    "shortcut":"Am",
+                    "image":""
+                },
+                {
+                    "key":"piguly",
+                    "color":"#54af52",
+                    "label":"Piguły",
+                    "shortcut":"Pi",
+                    "image":""
+                },
+                {
+                    "key":"mefedron",
+                    "color":"#54af52",
+                    "label":"Mefedron",
+                    "shortcut":"Me",
+                    "image":""
+                },
+                {
+                    "key":"marihuana",
+                    "color":"#54af52",
+                    "label":"Marihuana",
+                    "shortcut":"Ma",
+                    "image":""
+                },
+                {
+                    "key":"kokaina",
+                    "color":"#54af52",
+                    "label":"Kokaina",
+                    "shortcut":"Ko",
+                    "image":""
+                },
+                {
+                    "key":"dopalacze",
+                    "color":"#54af52",
+                    "label":"Dopalacze",
+                    "shortcut":"Do",
+                    "image":""
+                },
+                {
+                    "key":"alkohol",
+                    "color":"#54af52",
+                    "label":"Alkohol",
+                    "shortcut":"Al",
+                    "image":""
+                }
+            ]
+            
         }
 }

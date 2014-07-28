@@ -3,52 +3,52 @@
         {
             "type": "subpage",
             "title": "Amfetamina",
-            "back": "piguly",
+            "back": "substancje",
             "background": "#2a98a2"
         },
     "piguly":
         {
             "type": "subpage",            
             "title": "Piguły",
-            "back": "mefedron",
+            "back": "substancje",
             "background": "#a22a98"
         },
     "mefedron":
         {
             "type": "subpage",            
             "title": "Mefedron",
-            "back": "marihuana",
+            "back": "substancje",
             "background": "#a22a98"
         },
     "marihuana":
         {
             "type": "subpage",           
             "title": "Marihuana",
-            "back": "kokaina",
+            "back": "substancje",
             "background": "#a22a98"
         },
     "kokaina":
         {
             "type": "subpage",            
             "title": "Kokaina",
-            "back": "dopalacze",
+            "back": "substancje",
             "background": "#a22a98"
         },
     "dopalacze":
         {
             "type": "subpage",            
             "title": "Dopalacze",
-            "back": "alkohol",
+            "back": "substancje",
             "background": "#a22a98"
         },
     "alkohol":
         {
             "type": "subpage",            
             "title": "Alkohol",
-            "back": "amfetamina",
+            "back": "substancje",
             "background": "#a22a98"
         },
-    "drugs":
+    "substancje":
         {
             "type": "menu",
             "title": "Substancje",
@@ -67,6 +67,27 @@
             "type": "menu",
             "title": "",
             "back": "close",
+            "background": "#a22a98"
+        },
+    "instytucje_narkotyki":
+        {
+            "type": "content",
+            "title": "Narkotyki",
+            "back": "instytucje",
+            "background": "#a22a98"
+        },
+    "instytucje_alkohol":
+        {
+            "type": "content",
+            "title": "Alkohol",
+            "back": "instytucje",
+            "background": "#a22a98"
+        },
+    "instytucje_hiv":
+        {
+            "type": "content",
+            "title": "HIV/AIDS",
+            "back": "instytucje",
             "background": "#a22a98"
         }
 }

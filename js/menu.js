@@ -22,7 +22,6 @@ function menuReady(json, key) {
         marginTop = 2*fs + (contenerHeight-contentHeight)/2;
     }
     
-    
     var marginSide = ww / 2 - hexWidth * 3 / 4;
     
     if(structure[key].title!==""){
