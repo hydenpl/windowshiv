@@ -38,12 +38,6 @@
     "alkohol":
         {
             "type": "subpage",
-            "back": "mdma",
-            "background": "#a22a98"
-        },
-    "mdma":
-        {
-            "type": "subpage",
             "back": "amfetamina",
             "background": "#a22a98"
         },

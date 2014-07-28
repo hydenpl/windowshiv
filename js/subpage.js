@@ -7,7 +7,7 @@ function initSubpage(key) {
 }
 
 function subpageReady(json, key) {
-    var iconHeight = 9 * fs;
+    
     var type = json[key].type;
     var parentKey;
     if(type==='drug'){
@@ -18,20 +18,25 @@ function subpageReady(json, key) {
     
     $('.header').show();
     $('h2.header-title').text(json[parentKey].title);
-    $(".sub-content-icon-title-container").height(iconHeight).children(".sub-content-icon-title").css('line-height', iconHeight + 'px');
+    
     $("#footer-apla-bcg").css('background-color', structure[parentKey].background);
     
     $(".back-button").addClass("link").data("link", structure[parentKey].back);
     
     if(type==='drug'){
+        var iconHeight = 8 * fs;
         drawHexagon('sub-content-icon-canvas', iconHeight, json[key].color, json[key].shortcut);
+        $('.sub-content-icon-title-container').hide();
     }else{
+        var iconHeight = 5 * fs;
         $('h2.header-title').addClass('link').data('link',parentKey);
         var ingredient1 = json[key].ingredients[0].key;
         var ingredient2 = json[key].ingredients[1].key;
         $('.sub-content-icon-title').text(json[ingredient1].title+" + "+json[ingredient2].title);
         drawMix('sub-content-icon-canvas', iconHeight, json[ingredient1].color, json[ingredient2].color, json[ingredient1].shortcut, json[ingredient2].shortcut);
+        $(".sub-content-icon-title-container").height(iconHeight).children(".sub-content-icon-title").css('line-height', iconHeight + 'px');
     }
+    
 
     $('.sub-drug-description').html(json[key].description);
     
@@ -58,9 +63,9 @@ function appendFooterElement(mix, json, chosen) {
         id: id,
         class: 'mix-link'
     }).appendTo('#footer-wrapper');
-    drawMix(id, 3*fs, json[ingrKey1].color, json[ingrKey2].color, json[ingrKey1].shortcut, json[ingrKey2].shortcut);
+    drawMix(id, 3.5*fs, json[ingrKey1].color, json[ingrKey2].color, json[ingrKey1].shortcut, json[ingrKey2].shortcut);
     $('#'+id).data("mix-link",mix);
-    $('#'+id).css('padding',fs+'px '+Math.floor(1.39*fs)+"px")
+    $('#'+id).css('padding',Math.floor(0.74*fs)+'px '+Math.floor(1.39*fs)+"px")
     
     if(chosen===true){
         $('#'+id).addClass("chosen");
