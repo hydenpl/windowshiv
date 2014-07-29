@@ -6,7 +6,7 @@ $(function() {
     var key = 'main';
     wh = $(window).height();
     ww = $(window).width();
-    fs = Math.floor((wh + ww) * 0.015);
+    fs = Math.floor((wh + ww) * 0.015); //0.015 dla tabletu, do 0.019 dla najmniejszych ekranów
     $('body').css('font-size', fs);
     drawHome('home-canvas', 1.6 * fs, 4 * fs);
     drawBack('back-canvas', 1.6 * fs, 4 * fs);

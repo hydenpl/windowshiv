@@ -17,7 +17,7 @@ function rysujStacjaLogo(){
     canvas.width = 11*fs;
     canvas.height = 16*fs;
     var ctx = canvas.getContext('2d');
-ctx.scale(0.6,0.6);  
+ctx.scale(0.6*fs/23, 0.6*fs/23);  
     
 ctx.save();
 ctx.translate(0,0);
@@ -272,7 +272,7 @@ function rysujMazowszeLogo(){
     canvas.width = 14*fs;
     canvas.height = 2.5*fs;
     var ctx = canvas.getContext('2d');
-ctx.scale(0.6,0.6);  
+ctx.scale(0.6*fs/23,0.6*fs/23);  
 ctx.save();
 ctx.translate(0,0);
 ctx.beginPath();
@@ -488,7 +488,7 @@ function rysujWarszawaLogo(){
     canvas.width = 12*fs;
     canvas.height = 12*fs;
     var ctx = canvas.getContext('2d');
-    ctx.scale(0.6,0.6);  
+    ctx.scale(0.6*fs/23,0.6*fs/23);  
 ctx.save();
 ctx.translate(0,0);
 ctx.beginPath();
