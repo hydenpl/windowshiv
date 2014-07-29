@@ -53,49 +53,49 @@
             "type": "menu",
             "title": "Substancje",
             "back": "main",
-            "background": "#be0c0c"
+            "background": "#940000"
         },
     "main":
         {
             "type": "menu",
             "title": "",
             "back": "close",
-            "background": "#d06110"
+            "background": "#571c4a"
         },
     "instytucje":
         {
             "type": "menu",
             "title": "Instytucje",
             "back": "main",
-            "background": "#239bcd"
+            "background": "#006893"
         },
     "instytucje_narkotyki":
         {
             "type": "content",
             "title": "Narkotyki",
             "back": "instytucje",
-            "background": "#91a61b"
+            "background": "#788a11"
         },
     "instytucje_alkohol":
         {
             "type": "content",
             "title": "Alkohol",
             "back": "instytucje",
-            "background": "#f07100"
+            "background": "#d04e00"
         },
     "instytucje_hiv":
         {
             "type": "content",
             "title": "HIV/AIDS",
             "back": "instytucje",
-            "background": "#f58585"
+            "background": "#c90000"
         },
     "bezpieczniej":
         {
             "type": "content",
             "title": "Bezpieczniej",
             "back": "main",
-            "background": "#5bb000"
+            "background": "#26be3f"
         },
     "tworcy":
         {
