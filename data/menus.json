@@ -8,49 +8,49 @@
                     "color":"#54af52",
                     "label":"Instytucje",
                     "shortcut":"IN",
-                    "image":""
+                    "image":"institutions"
                 },
                 {
                     "key":"substancje",
                     "color":"#54af52",
                     "label":"Substancje",
                     "shortcut":"SU",
-                    "image":""
+                    "image":"substances"
                 },
                 {
                     "key":"tworcy",
                     "color":"#54af52",
                     "label":"Twórcy",
                     "shortcut":"TW",
-                    "image":""
+                    "image":"stacja"
                 }
             ]
             
         },
     "instytucje":
         {
-            "size": 6,
+            "size": 8,
             "links":[
                 {
                     "key":"instytucje_narkotyki",
                     "color":"#54af52",
                     "label":"Narkotyki",
                     "shortcut":"IN",
-                    "image":""
+                    "image":"drugs"
                 },
                 {
                     "key":"instytucje_alkohol",
                     "color":"#54af52",
                     "label":"Alkohol",
                     "shortcut":"IA",
-                    "image":""
+                    "image":"alcohol"
                 },
                 {
                     "key":"instytucje_hiv",
                     "color":"#54af52",
                     "label":"HIV/AIDS",
                     "shortcut":"HA",
-                    "image":""
+                    "image":"aids"
                 }
             ]
             

@@ -51,8 +51,12 @@ function menuReady(json, key) {
             class: "menu-title",
             text: loopVal.label
         }).appendTo('#'+id);
+        if(loopVal.image===""){
+            drawHexagon(canvasId, hexHeight, loopVal.color, loopVal.shortcut);
+        }else{
+            drawHexagonWithImage(canvasId, hexHeight, loopVal.color, loopVal.image);
+        }
         
-        drawHexagon(canvasId, hexHeight, loopVal.color, loopVal.shortcut);
         if(loopKey%2===0){
             $('#'+id).css('top', marginTop + loopKey*hexHeight*0.75 + 'px').css('left', marginSide + "px");
         }else{
