@@ -11,83 +11,104 @@
             "type": "subpage",            
             "title": "Piguły",
             "back": "substancje",
-            "background": "#a22a98"
+            "background": "#973986"
         },
     "mefedron":
         {
             "type": "subpage",            
             "title": "Mefedron",
             "back": "substancje",
-            "background": "#a22a98"
+            "background": "#c2a624"
         },
     "marihuana":
         {
             "type": "subpage",           
             "title": "Marihuana",
             "back": "substancje",
-            "background": "#a22a98"
+            "background": "#c42525"
         },
     "kokaina":
         {
             "type": "subpage",            
             "title": "Kokaina",
             "back": "substancje",
-            "background": "#a22a98"
+            "background": "#c77500"
         },
     "dopalacze":
         {
             "type": "subpage",            
             "title": "Dopalacze",
             "back": "substancje",
-            "background": "#a22a98"
+            "background": "#1b78c6"
         },
     "alkohol":
         {
             "type": "subpage",            
             "title": "Alkohol",
             "back": "substancje",
-            "background": "#a22a98"
+            "background": "#05ab28"
         },
     "substancje":
         {
             "type": "menu",
             "title": "Substancje",
             "back": "main",
-            "background": "#a22a98"
-        },
-    "instytucje":
-        {
-            "type": "menu",
-            "title": "Instytucje",
-            "back": "main",
-            "background": "#a22a98"
+            "background": "#be0c0c"
         },
     "main":
         {
             "type": "menu",
             "title": "",
             "back": "close",
-            "background": "#a22a98"
+            "background": "#d06110"
+        },
+    "instytucje":
+        {
+            "type": "menu",
+            "title": "Instytucje",
+            "back": "main",
+            "background": "#239bcd"
         },
     "instytucje_narkotyki":
         {
             "type": "content",
             "title": "Narkotyki",
             "back": "instytucje",
-            "background": "#a22a98"
+            "background": "#91a61b"
         },
     "instytucje_alkohol":
         {
             "type": "content",
             "title": "Alkohol",
             "back": "instytucje",
-            "background": "#a22a98"
+            "background": "#f07100"
         },
     "instytucje_hiv":
         {
             "type": "content",
             "title": "HIV/AIDS",
             "back": "instytucje",
-            "background": "#a22a98"
+            "background": "#f58585"
+        },
+    "bezpieczniej":
+        {
+            "type": "content",
+            "title": "Bezpieczniej",
+            "back": "main",
+            "background": "#5bb000"
+        },
+    "tworcy":
+        {
+            "type": "content",
+            "title": "Twórcy",
+            "back": "main",
+            "background": "#f59c00"
+        },
+    "splash":
+        {
+            "type": "splash",
+            "title": "Splash",
+            "back": "close",
+            "background": "#f59c00"
         }
 }

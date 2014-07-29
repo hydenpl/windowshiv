@@ -4,22 +4,29 @@
             "size": 8,
             "links":[
                 {
-                    "key":"instytucje",
-                    "color":"#54af52",
-                    "label":"Instytucje",
-                    "shortcut":"IN",
-                    "image":"institutions"
-                },
-                {
                     "key":"substancje",
-                    "color":"#54af52",
+                    "color":"#be0c0c",
                     "label":"Substancje",
                     "shortcut":"SU",
                     "image":"substances"
                 },
                 {
+                    "key":"bezpieczniej",
+                    "color":"#3cb500",
+                    "label":"Bezpieczniej",
+                    "shortcut":"SU",
+                    "image":"rescue"
+                },
+                {
+                    "key":"instytucje",
+                    "color":"#239bcd",
+                    "label":"Instytucje",
+                    "shortcut":"IN",
+                    "image":"institutions"
+                },
+                {
                     "key":"tworcy",
-                    "color":"#54af52",
+                    "color":"#f59c00",
                     "label":"Twórcy",
                     "shortcut":"TW",
                     "image":"stacja"
@@ -33,21 +40,21 @@
             "links":[
                 {
                     "key":"instytucje_narkotyki",
-                    "color":"#54af52",
+                    "color":"#91a61b",
                     "label":"Narkotyki",
                     "shortcut":"IN",
                     "image":"drugs"
                 },
                 {
                     "key":"instytucje_alkohol",
-                    "color":"#54af52",
+                    "color":"#f07100",
                     "label":"Alkohol",
                     "shortcut":"IA",
                     "image":"alcohol"
                 },
                 {
                     "key":"instytucje_hiv",
-                    "color":"#54af52",
+                    "color":"#f50000",
                     "label":"HIV/AIDS",
                     "shortcut":"HA",
                     "image":"aids"
@@ -109,6 +116,5 @@
                     "image":""
                 }
             ]
-            
         }
 }
