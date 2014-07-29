@@ -99,7 +99,7 @@
         },
     "tworcy":
         {
-            "type": "content",
+            "type": "tworcy",
             "title": "Twórcy",
             "back": "main",
             "background": "#f59c00"

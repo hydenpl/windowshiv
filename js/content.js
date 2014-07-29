@@ -1,5 +1,4 @@
 function initContent(key) {
-    
     $('#content').load('content.html', function() {
         $.getJSON("data/content.json", function(json) {
             contentReady(json, key);

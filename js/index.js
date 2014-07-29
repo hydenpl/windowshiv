@@ -32,6 +32,8 @@ function initPage(key){
             initMenu(key);
         }else if(structure[key].type=='content'){
             initContent(key);
+        }else if(structure[key].type=='tworcy'){
+            initTworcy(key);
             //jeszcze nic
         }
     });
