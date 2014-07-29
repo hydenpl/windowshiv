@@ -1,0 +1,18 @@
+#splash{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333333;
+    padding: 1em;
+}
+
+#splash canvas,
+#splash .splash-text{
+    padding: 1em;
+    color: #ddd;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}

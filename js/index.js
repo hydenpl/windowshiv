@@ -3,7 +3,7 @@ var ww;
 var fs;
 var structure; //json ze struktura strony, backami, home itp
 $(function() {
-    var key = 'main';
+    var key = 'splash';
     wh = $(window).height();
     ww = $(window).width();
     fs = Math.floor((wh + ww) * 0.016); //0.015 dla tabletu, do 0.019 dla najmniejszych ekranów
@@ -34,6 +34,9 @@ function initPage(key){
             initContent(key);
         }else if(structure[key].type=='tworcy'){
             initTworcy(key);
+            //jeszcze nic
+        }else{
+            initSplash(key);
             //jeszcze nic
         }
     });
