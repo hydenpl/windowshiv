@@ -68,49 +68,49 @@
             "links":[
                 {
                     "key":"amfetamina",
-                    "color":"#54af52",
+                    "color":"#3dd7e5",
                     "label":"Amfetamina",
                     "shortcut":"Am",
                     "image":""
                 },
                 {
                     "key":"piguly",
-                    "color":"#54af52",
+                    "color":"#c761b5",
                     "label":"Piguły",
                     "shortcut":"Pi",
                     "image":""
                 },
                 {
                     "key":"mefedron",
-                    "color":"#54af52",
+                    "color":"#e5d73d",
                     "label":"Mefedron",
                     "shortcut":"Me",
                     "image":""
                 },
                 {
                     "key":"marihuana",
-                    "color":"#54af52",
+                    "color":"#ff3333",
                     "label":"Marihuana",
                     "shortcut":"Ma",
                     "image":""
                 },
                 {
                     "key":"kokaina",
-                    "color":"#54af52",
+                    "color":"#f59c00",
                     "label":"Kokaina",
                     "shortcut":"Ko",
                     "image":""
                 },
                 {
                     "key":"dopalacze",
-                    "color":"#54af52",
+                    "color":"#309bf6",
                     "label":"Dopalacze",
                     "shortcut":"Do",
                     "image":""
                 },
                 {
                     "key":"alkohol",
-                    "color":"#54af52",
+                    "color":"#0bd636",
                     "label":"Alkohol",
                     "shortcut":"Al",
                     "image":""
