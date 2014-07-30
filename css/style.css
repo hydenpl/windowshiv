@@ -103,7 +103,7 @@ body{
     //line-height z js
 }
 
-.header div{
+.header .header-icon{
     float: left;
     /*display: inline-block;*/
     width:20%;
@@ -112,7 +112,7 @@ body{
     text-align:center;
 }
 
-.header div canvas{
+.header .header-icon canvas{
     display: inline;
 }
 
