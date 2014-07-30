@@ -133,3 +133,7 @@ body{
 .link{
     cursor: pointer;
 }
+
+a{
+    text-decoration: underline;
+}
