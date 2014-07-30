@@ -2,6 +2,10 @@
     padding: 2em;
 }
 
+#tresc.content-tresc{
+    text-align:left;
+}
+
 #tresc hr{
     margin: 2em 0;
     color: #FFF;

@@ -20,11 +20,12 @@ $(function() {
 
     document.addEventListener("backbutton", function(){
         backKey = $('.back-button').data('link');
-        if(backKey==="close"){
-            navigator.app.exitApp();
-        }else{
-            initPage(backKey);
-        }
+        navigator.app.exitApp();
+//        if(backKey==="close"){
+//            navigator.app.exitApp();
+//        }else{
+//            initPage(backKey);
+//        }
     }, false);
 
    
