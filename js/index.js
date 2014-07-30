@@ -5,7 +5,7 @@ var structure; //json ze struktura strony, backami, home itp
 var globalKey
 
 $(function() {
-//    document.addEventListener("deviceready", function() {
+    document.addEventListener("deviceready", function() {
         initPage('splash');
 
         $("body").on('click', '.link', function() {
@@ -25,9 +25,7 @@ $(function() {
             }
         }, ".link");
 
-//        $(".link").on("click", function(){
-//            
-//        });
+    });
 
     document.addEventListener("backbutton", function(){
         backKey = $('.back-button').data('link');
