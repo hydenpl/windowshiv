@@ -9,22 +9,13 @@ $(function() {
         initPage('splash');
 
         $("body").on('click', '.link', function() {
+            $(this).addClass("selected");
             initPage($(this).data("link"));
         });
 
         window.addEventListener("resize", function() {
             initPage(globalKey);
         });
-        
-        $(document).on({
-            mouseenter: function () {
-                $(this).addClass("selected");
-            },
-            mouseleave: function () {
-                $(this).removeClass("selected");
-            }
-        }, ".link");
-
     });
 
     document.addEventListener("backbutton", function(){
