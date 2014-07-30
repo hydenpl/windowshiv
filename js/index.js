@@ -20,12 +20,11 @@ $(function() {
 
     document.addEventListener("backbutton", function(){
         backKey = $('.back-button').data('link');
-        navigator.app.exitApp();
-//        if(backKey==="close"){
-//            navigator.app.exitApp();
-//        }else{
-//            initPage(backKey);
-//        }
+        if(backKey==='close'){
+            navigator.app.exitApp();
+        }else{
+            initPage(backKey);
+        }
     }, false);
 
    
@@ -42,6 +41,7 @@ function initPage(key) {
     drawHome('home-canvas', 1.6 * fs, 4 * fs);
     drawBack('back-canvas', 1.6 * fs, 4 * fs);
     $(".home-button").data('link', 'main');
+    $(".back-button").addClass("link").data("link", "close"); //do nadpisania dalej
 
     $.getJSON("data/structure.json", function(data) {
         structure = data;
@@ -49,7 +49,7 @@ function initPage(key) {
         $('.header').hide();
 //        $(".back-button").addClass("link").data("link", structure[key].back);
 
-        if (structure[key].type === 'subpage') {
+        if (structure[key].type == 'subpage') {
             initSubpage(key);
         } else if (structure[key].type == 'menu') {
             initMenu(key);

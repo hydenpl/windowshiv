@@ -424,8 +424,28 @@ ctx.fill();
 ctx.stroke();
 ctx.restore();
 ctx.restore();
-        
-        
+
+
+
+
+ctx.fillStyle = '#239bcd';
+        //kropki plaster institutions
+ctx.beginPath();
+ctx.arc(215, 180, 12, 0, 2 * Math.PI, false);
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(145, 180, 12, 0, 2 * Math.PI, false);
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(180, 145, 12, 0, 2 * Math.PI, false);
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(180, 215, 12, 0, 2 * Math.PI, false);
+ctx.fill();
+  
     }else if(image==="stacja"){
         ctx.translate(21,27);
         ctx.scale(0.14,0.14);
