@@ -3,7 +3,7 @@ function initSplash(key) {
         rysujSplashLogo();
 //        rysujSplashOk();/6FC400
         drawHexagon('splashOkCanvas', 5*fs, "#6FC400", "OK");
-        ('#splashOkCanvas').addClass("link").data("link", "main");
+        $('#splashOkCanvas').addClass("link").data("link", "main");
         
     });
 }

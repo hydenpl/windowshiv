@@ -11,18 +11,18 @@
                     "image":"substances"
                 },
                 {
-                    "key":"bezpieczniej",
-                    "color":"#26be3f",
-                    "label":"Bezpieczniej",
-                    "shortcut":"SU",
-                    "image":"rescue"
-                },
-                {
                     "key":"instytucje",
                     "color":"#239bcd",
                     "label":"Instytucje",
                     "shortcut":"IN",
                     "image":"institutions"
+                },
+                {
+                    "key":"bezpieczniej",
+                    "color":"#26be3f",
+                    "label":"Bezpieczniej",
+                    "shortcut":"SU",
+                    "image":"rescue"
                 },
                 {
                     "key":"tworcy",
