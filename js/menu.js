@@ -1,6 +1,7 @@
 function initMenu(key) {
-    
+    $('#content').empty();
     $('#content').load('menu.html', function() {
+        
         $.getJSON("data/menus.json", function(json) {
             menuReady(json, key);
         });
@@ -62,7 +63,6 @@ function menuReady(json, key) {
         }else{
             $('#'+id).css('top', marginTop + loopKey*hexHeight*0.75 + 'px').css('right', marginSide + "px");
         }
-        
     });
     
     $('.menu-title').css('line-height', hexHeight + "px");

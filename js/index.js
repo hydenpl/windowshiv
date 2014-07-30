@@ -5,7 +5,7 @@ var structure; //json ze struktura strony, backami, home itp
 var globalKey
 
 $(function() {
-    document.addEventListener("deviceready", function() {
+//    document.addEventListener("deviceready", function() {
         initPage('splash');
 
         $("body").on('click', '.link', function() {
@@ -15,8 +15,19 @@ $(function() {
         window.addEventListener("resize", function() {
             initPage(globalKey);
         });
+        
+        $(document).on({
+            mouseenter: function () {
+                $(this).addClass("selected");
+            },
+            mouseleave: function () {
+                $(this).removeClass("selected");
+            }
+        }, ".link");
 
-    }, false);
+//        $(".link").on("click", function(){
+//            
+//        });
 
     document.addEventListener("backbutton", function(){
         backKey = $('.back-button').data('link');
@@ -34,6 +45,7 @@ $(function() {
 
 function initPage(key) {
     globalKey=key;
+    $(".link").removeClass("selected");
     wh = $(window).height();
     ww = $(window).width();
     fs = Math.floor((wh + ww) * 0.016); //0.015 dla tabletu, do 0.019 dla najmniejszych ekranów
@@ -49,6 +61,8 @@ function initPage(key) {
         $('.header').hide();
 //        $(".back-button").addClass("link").data("link", structure[key].back);
 
+        $('#content').empty();
+//        alert($('#content').html());
         if (structure[key].type == 'subpage') {
             initSubpage(key);
         } else if (structure[key].type == 'menu') {

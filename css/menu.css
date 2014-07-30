@@ -1,3 +1,8 @@
+#menu .menu-title{
+    color: #ddd;
+}
+
+
 ul#menu li{
     position: absolute;
     z-index: 0;

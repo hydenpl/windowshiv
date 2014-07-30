@@ -120,3 +120,16 @@ body{
     padding-top: 4em;
     padding-bottom: 5em;
 }
+
+.header .link.selected{
+    background: rgba(0,0,0,0.5);
+}
+
+#content #menu .link.selected .menu-title{
+    /*text-decoration: underline;*/
+    color: #fff;
+}
+
+.link{
+    cursor: pointer;
+}
