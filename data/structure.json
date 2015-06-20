@@ -110,5 +110,12 @@
             "title": "Splash",
             "back": "close",
             "background": "#f59c00"
+        },
+    "game":
+        {
+            "type": "game",
+            "title": "Gra",
+            "back": "main",
+            "background": "#26be3f"
         }
 }

@@ -4,6 +4,13 @@
             "size": 8,
             "links":[
                 {
+                    "key":"game",
+                    "color":"#26be3f",
+                    "label":"Gra",
+                    "shortcut":"GA",
+                    "image":"rescue"
+                },
+                {
                     "key":"substancje",
                     "color":"#be0c0c",
                     "label":"Substancje",
