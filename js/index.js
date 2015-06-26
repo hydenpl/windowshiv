@@ -2,7 +2,7 @@ var wh;
 var ww;
 var fs;
 var structure; //json ze struktura strony, backami, home itp
-var globalKey
+var globalKey;
 
 $(function() {
 //    document.addEventListener("deviceready", function() {
