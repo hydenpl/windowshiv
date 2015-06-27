@@ -8,9 +8,7 @@ function initGame(key) {
         
         var game = $('#game');
         
-        console.log(game);
-        
-        drawParameters('game-parameters', game.width(), '#8ED6FF', 'black' );
+        drawParameters(game.width());
         
         if(buttons === undefined){
             buttons = {};
@@ -19,6 +17,8 @@ function initGame(key) {
             buttons.third = randomDrug();
             buttons.waiting = randomDrug();
         }
+        
+        drawButtons(game.width());
         
         
                 
@@ -35,8 +35,17 @@ function randomDrug(){
     return drug;
 }
 
-function drawParameters(canvasId, size) {
-    var canvas = document.getElementById(canvasId);
+function drawButtons(size) {
+    for(button in buttons){
+        var drug = buttons[button];
+        drawHexagon('button-'+button, size/5, drugs[drug].color, drugs[drug].shortcut);
+//        $('#button-'+button+'-text').text(buttons[button].title);
+        $('#button-'+button+'-text').text(drugs[drug].title);
+    }
+}
+
+function drawParameters(size) {
+    var canvas = document.getElementById('game-parameters');
     var gap = 2;
     var height = 10;
     canvas.width = size;
@@ -67,7 +76,7 @@ function drawParameters(canvasId, size) {
         ctx.closePath();
         
         ctx.beginPath();
-        ctx.fillStyle = "#fff";
+        ctx.fillStyle = font_color;
         ctx.font = "5px OpenSans";
         ctx.textAlign = "right";
         ctx.fillText(parameters[parKey].name, 95, i * ( height + gap) + 7);

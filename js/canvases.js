@@ -104,8 +104,7 @@ function drawHexagon(canvasId, size, color, info) {
     ctx.fillText(info,43.3,62);
     
     ctx.restore();
-}
-;
+};
 
 
 function drawMix(canvasId, size, color1, color2, info1, info2){

@@ -114,8 +114,8 @@
     "game":
         {
             "type": "game",
-            "title": "Gra",
+            "title": "(i)grasz?",
             "back": "main",
-            "background": "#26be3f"
+            "background": "#591d4c"
         }
 }

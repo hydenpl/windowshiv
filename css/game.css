@@ -1,5 +1,25 @@
 #game{
     margin: 5%;
+}
+
+#game-buttons{
+    margin-top: 10%;
+}
+
+.button{
+    float:left;
+    width: 25%;
+    text-align: center;
+}
+
+.button-text{
+    font-size: 0.8em;
+}
+
+.button-waiting{
     
-    
+}
+
+.button canvas{
+    margin: 0 auto;
 }
