@@ -78,7 +78,8 @@ function drawBack(canvasId, size, totalHeight) {
 }
 ;
 
-function drawHexagon(canvasId, size, color, info) {
+function drawHexagon(canvasId, size, color, info, text_color) {
+    text_color = typeof text_color !== 'undefined' ? text_color : '#fff';
     var canvas = document.getElementById(canvasId);
     
     canvas.width = 0.866*size;
@@ -98,7 +99,7 @@ function drawHexagon(canvasId, size, color, info) {
     ctx.closePath();
     ctx.fill();
     
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = text_color;
     ctx.font= "bold 30px OpenSans";
     ctx.textAlign = "center";
     ctx.fillText(info,43.3,62);

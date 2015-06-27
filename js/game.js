@@ -1,5 +1,5 @@
 function initGame(key) {
-    $('#content').load('game.html', function() {
+    $('#content').load('game.html?v='+Math.random(), function() {
         $('.header').show();
         $('h2.header-title').text("(i)grasz?");
         $(".back-button").addClass("link").data("link", "main")
@@ -38,10 +38,22 @@ function randomDrug(){
 function drawButtons(size) {
     for(button in buttons){
         var drug = buttons[button];
-        drawHexagon('button-'+button, size/5, drugs[drug].color, drugs[drug].shortcut);
+        if(button=='waiting'){
+            drawHexagon('button-'+button, size/5, 'rgba(32, 32, 32, 0.4', drugs[drug].shortcut, 'rgba(255, 255, 255, 0.4');
+        }else{
+            drawHexagon('button-'+button, size/5, drugs[drug].color, drugs[drug].shortcut);
+        }
 //        $('#button-'+button+'-text').text(buttons[button].title);
         $('#button-'+button+'-text').text(drugs[drug].title);
     }
+}
+
+function hexToRgb(hex) {
+    var bigint = parseInt(hex, 16);
+    var r = (bigint >> 16) & 255;
+    var g = (bigint >> 8) & 255;
+    var b = bigint & 255;
+    return r + "," + g + "," + b;
 }
 
 function drawParameters(size) {
