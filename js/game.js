@@ -20,9 +20,29 @@ function initGame(key) {
         
         drawButtons(game.width());
         
+        $('.button').on('click', function(){
+            var btn = $(this).data('button');
+            console.log("button clicked: "+btn);
+            if(btn != 'waiting'){
+                console.log(buttons[btn]);
+                changeParamsByDrug(buttons[btn]);
+                drawParameters(game.width());
+                buttons[btn] = buttons.waiting;
+                buttons.waiting = randomDrug();
+                drawButtons(game.width());
+            }
+        });
         
                 
     });
+}
+
+function changeParamsByDrug(drug){
+    for(param in drugs[drug].params){
+        var drug_params = drugs[drug].params;
+        parameters[param].diff = drug_params[param];
+        parameters[param].val += drug_params[param];
+    }
 }
 
 function randomDrug(){
