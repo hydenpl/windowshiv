@@ -3,7 +3,8 @@
 }
 
 #game-buttons{
-    margin-top: 10%;
+    margin: 10% -3% 0;
+    overflow: hidden;
 }
 
 .button{
@@ -22,4 +23,15 @@
 
 .button canvas{
     margin: 0 auto;
+}
+
+#game-history{
+    clear:both;
+    margin-top: 5%;
+}
+
+#game-history canvas{
+    display: inline-block;
+    /*height: 40px;*/
+    
 }

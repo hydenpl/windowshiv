@@ -24,17 +24,41 @@ function initGame(key) {
             var btn = $(this).data('button');
             console.log("button clicked: "+btn);
             if(btn != 'waiting'){
-                console.log(buttons[btn]);
+                counter++;
+                var drugTaken = buttons[btn];
                 changeParamsByDrug(buttons[btn]);
                 drawParameters(game.width());
                 buttons[btn] = buttons.waiting;
                 buttons.waiting = randomDrug();
                 drawButtons(game.width());
+                addToHistory(game.width(), drugTaken)
             }
         });
         
                 
     });
+}
+
+function addToHistory(size, drug){
+    if(drugHistory.length>8){
+        drugHistory.shift();
+    }
+    drugHistory.push(drug);
+    
+    drawHistory(size);
+}
+
+function drawHistory(size){
+    $('#game-history').empty();
+    var width = $('#game-history').width() / 9 * 1.15470053838;
+    for(var drug in drugHistory){
+        canvasId = "history-"+historyIdCounter++;
+        jQuery('<canvas/>', {
+                id: canvasId
+            }).appendTo('#game-history');
+        console.log("width: "+width);
+        drawHexagon(canvasId, width, drugs[drugHistory[drug]]["color"], drugs[drugHistory[drug]]["shortcut"]);
+    }
 }
 
 function changeParamsByDrug(drug){
@@ -59,9 +83,9 @@ function drawButtons(size) {
     for(button in buttons){
         var drug = buttons[button];
         if(button=='waiting'){
-            drawHexagon('button-'+button, size/5, 'rgba(32, 32, 32, 0.4', drugs[drug].shortcut, 'rgba(255, 255, 255, 0.4');
+            drawDrugButton('button-'+button, size/4.5, drug, true);
         }else{
-            drawHexagon('button-'+button, size/5, drugs[drug].color, drugs[drug].shortcut);
+            drawDrugButton('button-'+button, size/4.5, drug, false);
         }
 //        $('#button-'+button+'-text').text(buttons[button].title);
         $('#button-'+button+'-text').text(drugs[drug].title);

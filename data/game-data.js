@@ -1,3 +1,11 @@
+var counter = 0;
+var animationState = 0;
+var animationDuration = 30;
+
+var historyIdCounter = 0;
+
+var drugHistory = [];
+
 var parameters = {
     "sleepness":{
       "name": "Zmęczenie",
