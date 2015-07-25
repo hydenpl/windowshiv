@@ -40,7 +40,7 @@ var drugs = {
         "type":"drug",
         "title": "Amfetamina",
         "shortcut": "Am",
-        "color": "#3dd7e5",
+        "color": "#ff3333",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -52,7 +52,7 @@ var drugs = {
         "type":"drug",
         "title": "Cukierek",
         "shortcut": "Cu",
-        "color": "#3dd7e5",
+        "color": "#e5d73d",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -64,7 +64,7 @@ var drugs = {
         "type":"drug",
         "title": "Dopalacze",
         "shortcut": "Do",
-        "color": "#3dd7e5",
+        "color": "#309bf6",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -76,7 +76,7 @@ var drugs = {
         "type":"drug",
         "title": "Kebab",
         "shortcut": "Ke",
-        "color": "#3dd7e5",
+        "color": "#f59c00",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -88,7 +88,7 @@ var drugs = {
         "type":"drug",
         "title": "Kokaina",
         "shortcut": "Ko",
-        "color": "#f59c00",
+        "color": "#3dd7e5       ",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -100,7 +100,7 @@ var drugs = {
         "type":"drug",
         "title": "Marihuana",
         "shortcut": "Ma",
-        "color": "#ff3333",
+        "color": "#0bd636",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -112,7 +112,7 @@ var drugs = {
         "type":"drug",
         "title": "MDMA",
         "shortcut": "Md",
-        "color": "#ff3333",
+        "color": "#e5d73d",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -124,7 +124,7 @@ var drugs = {
         "type":"drug",
         "title": "Mefedron",
         "shortcut": "Me",
-        "color": "#ff3333",
+        "color": "#c761b5",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -136,7 +136,7 @@ var drugs = {
         "type":"drug",
         "title": "Odpoczynek",
         "shortcut": "Od",
-        "color": "#ff3333",
+        "color": "#0bd636",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -148,7 +148,7 @@ var drugs = {
         "type":"drug",
         "title": "Piwo",
         "shortcut": "Pi",
-        "color": "#ff3333",
+        "color": "#f59c00",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -160,7 +160,7 @@ var drugs = {
         "type":"drug",
         "title": "Powietrze",
         "shortcut": "Po",
-        "color": "#ff3333",
+        "color": "#3dd7e5",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -184,7 +184,7 @@ var drugs = {
         "type":"drug",
         "title": "Woda",
         "shortcut": "Wo",
-        "color": "#ff3333",
+        "color": "#309bf6",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -194,9 +194,9 @@ var drugs = {
     },
     "wodka": {
         "type":"drug",
-        "title": "Marihuana",
+        "title": "Wódka",
         "shortcut": "Vo",
-        "color": "#ff3333",
+        "color": "#f59c00",
         "params": {
             "sleepness": -20,
             "heart": 20,
