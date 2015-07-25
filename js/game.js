@@ -49,15 +49,18 @@ function addToHistory(size, drug){
 }
 
 function drawHistory(size){
-    $('#game-history').empty();
-    var width = $('#game-history').width() / 9 * 1.15470053838;
+    var canvasId = 'game-history';
+    var canvas = document.getElementById(canvasId);
+    
+    var width = canvas.width;
+    canvas.height = width / 9 * 1.15470053838;
+    
+    var size = canvas.height;
+    
+    var ctx = canvas.getContext('2d');    
+    var counter = 9 - drugHistory.length;
     for(var drug in drugHistory){
-        canvasId = "history-"+historyIdCounter++;
-        jQuery('<canvas/>', {
-                id: canvasId
-            }).appendTo('#game-history');
-        console.log("width: "+width);
-        drawHexagon(canvasId, width, drugs[drugHistory[drug]]["color"], drugs[drugHistory[drug]]["shortcut"]);
+        drawHistoryDrug(ctx, size, counter++, drugHistory[drug], 0.1*counter);
     }
 }
 

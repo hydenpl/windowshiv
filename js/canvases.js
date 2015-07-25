@@ -177,10 +177,39 @@ function drawHexagonWithImage(canvasId, size, color, image) {
 }
 ;
 
+function drawHistoryDrug(ctx, size, offset, drugName, opacity){
+    
+    
+    ctx.save();
+    
+    ctx.globalAlpha = opacity;
+    ctx.scale(size / 100, size / 100);
+    
+    ctx.fillStyle = drugs[drugName]['color'];
+    
+    ctx.save();
+    ctx.translate(100 * offset / 1.15470053838, 0);
+    
+    ctx.beginPath();
+    ctx.moveTo(0, 25);
+    ctx.lineTo(0, 75);
+    ctx.lineTo(43.3, 100);
+    ctx.lineTo(86.6, 75);
+    ctx.lineTo(86.6, 25);
+    ctx.lineTo(43.3, 0);
+    ctx.closePath();
+    ctx.fill();
+    
+    drawDrugIcon(ctx, drugName);
+    
+    ctx.restore();
+    
+    ctx.globalAlpha = 1;
+    ctx.restore();
+};
 
 function drawDrugButton(canvasId, size, drugName, muted){
-    
-    var canvas = document.getElementById(canvasId);
+     var canvas = document.getElementById(canvasId);
     
     canvas.width = 0.866*size;
     canvas.height = size;
