@@ -46,11 +46,11 @@ var drugs = {
             "breath": 20
         }
     },
-    "piguly": {
+    "cukierek": {
         "type":"drug",
-        "title": "Piguły",
-        "shortcut": "Pi",
-        "color": "#c761b5",
+        "title": "Cukierek",
+        "shortcut": "Cu",
+        "color": "#3dd7e5",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -58,11 +58,35 @@ var drugs = {
             "breath": 20
         }
     },
-    "mefedron": {
+    "dopalacze": {
         "type":"drug",
-        "title": "Mefedron",
-        "shortcut": "Me",
-        "color": "#e5d73d",
+        "title": "Dopalacze",
+        "shortcut": "Do",
+        "color": "#3dd7e5",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "kebab": {
+        "type":"drug",
+        "title": "Kebab",
+        "shortcut": "Ke",
+        "color": "#3dd7e5",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "kokaina": {
+        "type":"drug",
+        "title": "Kokaina",
+        "shortcut": "Ko",
+        "color": "#f59c00",
         "params": {
             "sleepness": -20,
             "heart": 20,
@@ -82,12 +106,96 @@ var drugs = {
             "breath": 20
         }
     },
-    "kokaina": {
+    "mdma": {
         "type":"drug",
-        "title": "Kokaina",
-        "shortcut": "Ko",
-        "color": "#f59c00",
-       "params": {
+        "title": "MDMA",
+        "shortcut": "Md",
+        "color": "#ff3333",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "mefedron": {
+        "type":"drug",
+        "title": "Mefedron",
+        "shortcut": "Me",
+        "color": "#ff3333",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "odpoczynek": {
+        "type":"drug",
+        "title": "Odpoczynek",
+        "shortcut": "Od",
+        "color": "#ff3333",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "piwo": {
+        "type":"drug",
+        "title": "Piwo",
+        "shortcut": "Pi",
+        "color": "#ff3333",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "powietrze": {
+        "type":"drug",
+        "title": "Powietrze",
+        "shortcut": "Po",
+        "color": "#ff3333",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "wino": {
+        "type":"drug",
+        "title": "Wino",
+        "shortcut": "Wi",
+        "color": "#ff3333",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "woda": {
+        "type":"drug",
+        "title": "Woda",
+        "shortcut": "Wo",
+        "color": "#ff3333",
+        "params": {
+            "sleepness": -20,
+            "heart": 20,
+            "hydration": 0,
+            "breath": 20
+        }
+    },
+    "wodka": {
+        "type":"drug",
+        "title": "Marihuana",
+        "shortcut": "Vo",
+        "color": "#ff3333",
+        "params": {
             "sleepness": -20,
             "heart": 20,
             "hydration": 0,
