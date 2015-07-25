@@ -5,10 +5,10 @@
             "links":[
                 {
                     "key":"game",
-                    "color":"#26be3f",
+                    "color":"#591d4c",
                     "label":"Gra",
                     "shortcut":"GA",
-                    "image":"rescue"
+                    "image":"game"
                 },
                 {
                     "key":"substancje",

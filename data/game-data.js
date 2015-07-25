@@ -1,3 +1,5 @@
+$.ajaxSetup({cache: false}); //TODO do usunięcia
+
 var counter = 0;
 var animationState = 0;
 var animationDuration = 30;
