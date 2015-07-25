@@ -4,31 +4,35 @@ var counter = 0;
 var animationState = 0;
 var animationDuration = 30;
 
-var historyIdCounter = 0;
-
 var drugHistory = [];
 
 var parameters = {
-    "sleepness":{
-      "name": "Zmęczenie",
+    "puls":{
+      "name": "Puls",
       "goal": 0,
       "val": 50,
       "diff": 10
     },
-    "heart":{
-      "name": "Bicie serca",
+    "rownowaga":{
+      "name": "Równowaga",
+      "goal": 0,
+      "val": 50,
+      "diff": 10
+    },
+    "nawodnienie":{
+      "name": "Nawodnienie",
       "goal": 100,
       "val": 85,
       "diff": 20
     },
-    "hydration":{
-      "name": "Nawodnienie",
+    "koncentracja":{
+      "name": "Koncentracja",
       "goal": 100,
       "val": 20,
       "diff": -10
     },
-    "breath":{
-      "name": "Oddech",
+    "energia":{
+      "name": "Energia",
       "goal": 0,
       "val": 50,
       "diff": 0
@@ -42,10 +46,11 @@ var drugs = {
         "shortcut": "Am",
         "color": "#ff3333",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": -20,
+            "rownowaga": -20,
+            "nawodnienie": 20,
+            "koncentracja": 0,
+            "energia": 20
         }
     },
     "cukierek": {
@@ -54,10 +59,11 @@ var drugs = {
         "shortcut": "Cu",
         "color": "#e5d73d",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": -20,
+            "rownowaga": -20,
+            "nawodnienie": 20,
+            "koncentracja": 0,
+            "energia": 20
         }
     },
     "dopalacze": {
@@ -66,10 +72,11 @@ var drugs = {
         "shortcut": "Do",
         "color": "#309bf6",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "kebab": {
@@ -78,10 +85,11 @@ var drugs = {
         "shortcut": "Ke",
         "color": "#f59c00",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "kokaina": {
@@ -90,10 +98,11 @@ var drugs = {
         "shortcut": "Ko",
         "color": "#3dd7e5       ",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "marihuana": {
@@ -102,10 +111,11 @@ var drugs = {
         "shortcut": "Ma",
         "color": "#0bd636",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "mdma": {
@@ -114,10 +124,11 @@ var drugs = {
         "shortcut": "Md",
         "color": "#e5d73d",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "mefedron": {
@@ -126,10 +137,11 @@ var drugs = {
         "shortcut": "Me",
         "color": "#c761b5",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "odpoczynek": {
@@ -138,10 +150,11 @@ var drugs = {
         "shortcut": "Od",
         "color": "#0bd636",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "piwo": {
@@ -150,10 +163,11 @@ var drugs = {
         "shortcut": "Pi",
         "color": "#f59c00",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "powietrze": {
@@ -162,10 +176,11 @@ var drugs = {
         "shortcut": "Po",
         "color": "#3dd7e5",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "wino": {
@@ -174,10 +189,11 @@ var drugs = {
         "shortcut": "Wi",
         "color": "#ff3333",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "woda": {
@@ -186,10 +202,11 @@ var drugs = {
         "shortcut": "Wo",
         "color": "#309bf6",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     },
     "wodka": {
@@ -198,10 +215,11 @@ var drugs = {
         "shortcut": "Vo",
         "color": "#f59c00",
         "params": {
-            "sleepness": -20,
-            "heart": 20,
-            "hydration": 0,
-            "breath": 20
+            "puls": 20,
+            "rownowaga": 20,
+            "nawodnienie": 20,
+            "koncentracja": 20,
+            "energia": 20
         }
     }
 };
