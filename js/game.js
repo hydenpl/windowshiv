@@ -105,40 +105,72 @@ function hexToRgb(hex) {
 
 function drawParameters(size) {
     var canvas = document.getElementById('game-parameters');
-    var gap = 2;
-    var height = 10;
+    var gap = 0.5;
+    var height = 9;
     canvas.width = size;
     canvas.height = size * (Object.keys(parameters).length * height / 100 + (Object.keys(parameters).length - 1) * gap / 100 );
     
     var ctx = canvas.getContext('2d');
     
     ctx.save();
-    ctx.scale(size / 100, size / 100);
+        
+    var scale = size/100;
     
     var background_color = "#3e1435";
-    var bar_color = "#c761b5";
+    var bar_color = "#f49b00";
     var font_color = "#fff";
     
     var i = 0;
     for (parKey in parameters) {
     
         ctx.beginPath();
-        ctx.rect(0, i * ( height + gap), 100, height);
+        ctx.rect(0, i * ( height + gap) * scale, 100 * scale, height * scale);
         ctx.fillStyle = background_color;
         ctx.fill();
         ctx.closePath();
         
+        var ptn = document.createElement('canvas');
+        ptn.width = 10 * scale;
+        ptn.height = 10 * scale;
+        var pctx = ptn.getContext('2d');
+        
+        pctx.save();
+        
+        pctx.beginPath();
+        pctx.moveTo(0.0, 0.0);
+        pctx.lineTo(200 * scale / 40, 0.0);
+        pctx.lineTo(0.0, 200 * scale / 40);
+        pctx.closePath();
+        pctx.fillStyle = "rgb(188, 222, 178)";
+        pctx.fill();
+
+        pctx.beginPath();
+        pctx.moveTo(400 * scale / 40, 0.0);
+        pctx.lineTo(400 * scale / 40, 200.0 * scale / 40);
+        pctx.lineTo(200 * scale / 40, 400 * scale / 40);
+        pctx.lineTo(0, 400 * scale / 40);
+        pctx.closePath();
+
+        pctx.fillStyle = "rgb(188, 222, 178)";
+        pctx.fill();
+                
+        
+        pctx.restore();
+        
+        var pat = ctx.createPattern(ptn, "repeat");
+        
         ctx.beginPath();
-        ctx.rect(0, i * ( height + gap), parameters[parKey].val, height);
-        ctx.fillStyle = bar_color;
+        ctx.rect(0, i * ( height + gap) * scale, parameters[parKey].val * scale, height * scale);
+        ctx.fillStyle = pat; //bar_color;
         ctx.fill();
         ctx.closePath();
         
         ctx.beginPath();
         ctx.fillStyle = font_color;
-        ctx.font = "5px OpenSans";
+        var fontSize = 0.2 * scale;
+        ctx.font = fontSize + "em OpenSans";
         ctx.textAlign = "right";
-        ctx.fillText(parameters[parKey].name, 95, i * ( height + gap) + 7);
+        ctx.fillText(parameters[parKey].name, 95 * scale, ( i * ( height + gap) + 6 )  * scale);
         
         ctx.closePath();
         
