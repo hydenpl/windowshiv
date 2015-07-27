@@ -60,7 +60,8 @@ function drawHistory(size){
     var canvasId = 'game-history';
     var canvas = document.getElementById(canvasId);
     
-    var width = canvas.width;
+    var width = $('#'+canvasId).width();
+    canvas.width  = width;
     canvas.height = width / 9 * 1.15470053838;
     
     var size = canvas.height;
@@ -141,7 +142,7 @@ function drawParameters(size) {
     for (parKey in parameters) {
     
         //background
-        drawBar(ctx, i, scale, height, gap, background_color, 100);
+        drawBar(ctx, i, scale, height, gap, background_color, 0, 100);
         
         if(parameters[parKey].diff > 0){
             drawBar(ctx, i, scale, height, gap, bar_color, 0, parameters[parKey].val - parameters[parKey].diff);
