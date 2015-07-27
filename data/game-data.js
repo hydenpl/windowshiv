@@ -9,30 +9,64 @@ var loopAnimationDuration = 30;
 
 var drugHistory = [];
 
+//var parameters = {
+//    "puls":{
+//      "name": "Puls",
+//      "goal": 0,
+//      "val": 50,
+//      "diff": 20
+//    },
+//    "rownowaga":{
+//      "name": "Równowaga",
+//      "goal": 0,
+//      "val": 50,
+//      "diff": 20
+//    },
+//    "nawodnienie":{
+//      "name": "Nawodnienie",
+//      "goal": 100,
+//      "val": 85,
+//      "diff": 20
+//    },
+//    "koncentracja":{
+//      "name": "Koncentracja",
+//      "goal": 100,
+//      "val": 20,
+//      "diff": -40
+//    },
+//    "energia":{
+//      "name": "Energia",
+//      "goal": 0,
+//      "val": 50,
+//      "diff": 0
+//    }
+//};
+
+
 var parameters = {
     "puls":{
       "name": "Puls",
       "goal": 0,
       "val": 50,
-      "diff": 10
+      "diff": 20
     },
     "rownowaga":{
       "name": "Równowaga",
       "goal": 0,
       "val": 50,
-      "diff": 10
+      "diff": 20
     },
     "nawodnienie":{
       "name": "Nawodnienie",
       "goal": 100,
-      "val": 85,
+      "val": 50,
       "diff": 20
     },
     "koncentracja":{
       "name": "Koncentracja",
       "goal": 100,
-      "val": 20,
-      "diff": -10
+      "val": 50,
+      "diff": -40
     },
     "energia":{
       "name": "Energia",
@@ -49,11 +83,11 @@ var drugs = {
         "shortcut": "Am",
         "color": "#ff3333",
         "params": {
-            "puls": -20,
-            "rownowaga": -20,
-            "nawodnienie": 20,
-            "koncentracja": 0,
-            "energia": 20
+            "puls": +15,
+            "rownowaga": 0,
+            "nawodnienie": -20,
+            "koncentracja": 20,
+            "energia": 30
         }
     },
     "cukierek": {
@@ -62,11 +96,11 @@ var drugs = {
         "shortcut": "Cu",
         "color": "#e5d73d",
         "params": {
-            "puls": -20,
-            "rownowaga": -20,
+            "puls": 0,
+            "rownowaga": 10,
             "nawodnienie": 20,
-            "koncentracja": 0,
-            "energia": 20
+            "koncentracja": 10,
+            "energia": 10
         }
     },
     "dopalacze": {
@@ -75,11 +109,11 @@ var drugs = {
         "shortcut": "Do",
         "color": "#309bf6",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": -20,
+            "rownowaga": 0,
+            "nawodnienie": 10,
+            "koncentracja": 0,
+            "energia": 0
         }
     },
     "kebab": {
@@ -88,10 +122,10 @@ var drugs = {
         "shortcut": "Ke",
         "color": "#f59c00",
         "params": {
-            "puls": 20,
+            "puls": 0,
             "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
+            "nawodnienie": 10,
+            "koncentracja": 0,
             "energia": 20
         }
     },
@@ -101,11 +135,11 @@ var drugs = {
         "shortcut": "Ko",
         "color": "#3dd7e5       ",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": -20,
+            "rownowaga": 10,
+            "nawodnienie": -20,
+            "koncentracja": 40,
+            "energia": 40
         }
     },
     "marihuana": {
@@ -114,11 +148,11 @@ var drugs = {
         "shortcut": "Ma",
         "color": "#0bd636",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": 10,
+            "rownowaga": -10,
+            "nawodnienie": 10,
+            "koncentracja": -30,
+            "energia": -40
         }
     },
     "mdma": {
@@ -127,10 +161,10 @@ var drugs = {
         "shortcut": "Md",
         "color": "#e5d73d",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
+            "puls": 30,
+            "rownowaga": 10,
+            "nawodnienie": -20,
+            "koncentracja": -10,
             "energia": 20
         }
     },
@@ -141,10 +175,10 @@ var drugs = {
         "color": "#c761b5",
         "params": {
             "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "rownowaga": 10,
+            "nawodnienie": -25,
+            "koncentracja": 25,
+            "energia": 35
         }
     },
     "odpoczynek": {
@@ -153,10 +187,10 @@ var drugs = {
         "shortcut": "Od",
         "color": "#0bd636",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
+            "puls": 0,
+            "rownowaga": 30,
+            "nawodnienie": 0,
+            "koncentracja": 10,
             "energia": 20
         }
     },
@@ -166,11 +200,11 @@ var drugs = {
         "shortcut": "Pi",
         "color": "#f59c00",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": 10,
+            "rownowaga": -10,
+            "nawodnienie": -10,
+            "koncentracja": -15,
+            "energia": -10
         }
     },
     "powietrze": {
@@ -179,11 +213,11 @@ var drugs = {
         "shortcut": "Po",
         "color": "#3dd7e5",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": 0,
+            "rownowaga": 30,
+            "nawodnienie": 0,
+            "koncentracja": 10,
+            "energia": 10
         }
     },
     "wino": {
@@ -192,11 +226,11 @@ var drugs = {
         "shortcut": "Wi",
         "color": "#ff3333",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": 15,
+            "rownowaga": -15,
+            "nawodnienie": -15,
+            "koncentracja": -20,
+            "energia": -15
         }
     },
     "woda": {
@@ -205,11 +239,11 @@ var drugs = {
         "shortcut": "Wo",
         "color": "#309bf6",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": -10,
+            "rownowaga": 10,
+            "nawodnienie": 40,
+            "koncentracja": 0,
+            "energia": 10
         }
     },
     "wodka": {
@@ -218,11 +252,11 @@ var drugs = {
         "shortcut": "Vo",
         "color": "#f59c00",
         "params": {
-            "puls": 20,
-            "rownowaga": 20,
-            "nawodnienie": 20,
-            "koncentracja": 20,
-            "energia": 20
+            "puls": 30,
+            "rownowaga": -30,
+            "nawodnienie": -30,
+            "koncentracja": -30,
+            "energia": -30
         }
     }
 };

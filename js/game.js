@@ -124,6 +124,7 @@ function drawParameters(size) {
     
     var background_color = "#3e1435";
     var bar_color = "#f49b00";
+//    var bar_color = "#f49b00";
     var font_color = "#fff";
     
     var i = 0;
@@ -142,7 +143,7 @@ function drawParameters(size) {
         
         pctx.save();
         
-        pctx.fillStyle = "rgb(188, 222, 178)";
+        pctx.fillStyle = "rgba(100, 100, 0, 1)";
         
         pctx.beginPath();
         pctx.moveTo(offset - 400 * scale / 40, 0.0);
