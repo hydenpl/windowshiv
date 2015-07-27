@@ -2077,3 +2077,53 @@ ctx.restore();
     ctx.fill();
 }
 
+
+function createPattern(scale, color, bgColor, offset){
+    var ptn = document.createElement('canvas');
+    ptn.width = 10 * scale;
+    ptn.height = 10 * scale;
+    var pctx = ptn.getContext('2d');
+
+    pctx.save();
+
+    pctx.beginPath();
+    pctx.moveTo(offset - 400 * scale / 40, 0.0);
+    pctx.lineTo(offset + 400 * scale / 40, 0.0);
+    pctx.lineTo(offset + 400 * scale / 40, 400 * scale / 40);
+    pctx.lineTo(offset - 400 * scale / 40, 400 * scale / 40);
+    pctx.closePath();
+    pctx.fillStyle = bgColor;
+    pctx.fill();
+
+    pctx.fillStyle = color;
+
+    pctx.beginPath();
+    pctx.moveTo(offset - 400 * scale / 40, 0.0);
+    pctx.lineTo(offset - 200 * scale / 40, 0.0);
+    pctx.lineTo(offset - 400 * scale / 40, 200 * scale / 40);
+    pctx.closePath();
+    pctx.fill();
+
+    pctx.beginPath();
+    pctx.moveTo(offset, 0.0);
+    pctx.lineTo(offset + 200 * scale / 40, 0.0);
+    pctx.lineTo(offset - 200 * scale / 40, 400 * scale / 40);
+    pctx.lineTo(offset - 400 * scale / 40, 400 * scale / 40);
+    pctx.closePath();
+
+    pctx.fill();
+
+    pctx.beginPath();
+    pctx.moveTo(offset + 400 * scale / 40, 0.0);
+    pctx.lineTo(offset + 400 * scale / 40, 200.0 * scale / 40);
+    pctx.lineTo(offset + 200 * scale / 40, 400 * scale / 40);
+    pctx.lineTo(offset + 0, 400 * scale / 40);
+    pctx.closePath();
+
+    pctx.fill();
+
+
+    pctx.restore();
+    
+    return ptn;
+}

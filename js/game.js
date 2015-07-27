@@ -13,6 +13,9 @@ function initGame(key) {
         setInterval(function(){ 
             loopAnimationState = (loopAnimationState + 1)%loopAnimationDuration; 
             drawParameters($('#game').width());
+            if(animationState > 0 && animationState < animationDuration){
+                animationState++;
+            }
         }, 30);
         
         if(buttons === undefined){
@@ -32,11 +35,11 @@ function initGame(key) {
                 counter++;
                 var drugTaken = buttons[btn];
                 changeParamsByDrug(buttons[btn]);
-                drawParameters(game.width());
                 buttons[btn] = buttons.waiting;
                 buttons.waiting = randomDrug();
                 drawButtons(game.width());
                 addToHistory(game.width(), drugTaken)
+                animationState = 1;
             }
         });
         
@@ -121,66 +124,34 @@ function drawParameters(size) {
         
     var scale = size/100;
     var offset = 10 * scale * loopAnimationState / loopAnimationDuration;
+    var animationProgress = animationState / animationDuration;
     
     var background_color = "#3e1435";
     var bar_color = "#f49b00";
-//    var bar_color = "#f49b00";
+    var upColor = "#d88900";
+    var upColorBg = "#f49b00";
+    var downColor = "#b20002";
+    var downColorBg = "#ff0000";
     var font_color = "#fff";
     
+    var patternUp = ctx.createPattern(createPattern(scale, upColor, upColorBg, offset), "repeat");
+    var patternDown = ctx.createPattern(createPattern(scale, downColor, downColorBg, offset), "repeat");
+        
     var i = 0;
     for (parKey in parameters) {
     
-        ctx.beginPath();
-        ctx.rect(0, i * ( height + gap) * scale, 100 * scale, height * scale);
-        ctx.fillStyle = background_color;
-        ctx.fill();
-        ctx.closePath();
+        //background
+        drawBar(ctx, i, scale, height, gap, background_color, 100);
         
-        var ptn = document.createElement('canvas');
-        ptn.width = 10 * scale;
-        ptn.height = 10 * scale;
-        var pctx = ptn.getContext('2d');
+        if(parameters[parKey].diff > 0){
+            drawBar(ctx, i, scale, height, gap, bar_color, 0, parameters[parKey].val - parameters[parKey].diff);
+            drawBar(ctx, i, scale, height, gap, patternUp, parameters[parKey].val - parameters[parKey].diff, parameters[parKey].diff * animationProgress);
+        }else{
+            drawBar(ctx, i, scale, height, gap, bar_color, 0, parameters[parKey].val - parameters[parKey].diff * (1 - animationProgress));
+            drawBar(ctx, i, scale, height, gap, patternDown, parameters[parKey].val - parameters[parKey].diff * (1 - animationProgress), - parameters[parKey].diff * animationProgress);
+        }
         
-        pctx.save();
-        
-        pctx.fillStyle = "rgba(100, 100, 0, 1)";
-        
-        pctx.beginPath();
-        pctx.moveTo(offset - 400 * scale / 40, 0.0);
-        pctx.lineTo(offset - 200 * scale / 40, 0.0);
-        pctx.lineTo(offset - 400 * scale / 40, 200 * scale / 40);
-        pctx.closePath();
-        pctx.fill();
-        
-        pctx.beginPath();
-        pctx.moveTo(offset, 0.0);
-        pctx.lineTo(offset + 200 * scale / 40, 0.0);
-        pctx.lineTo(offset - 200 * scale / 40, 400 * scale / 40);
-        pctx.lineTo(offset - 400 * scale / 40, 400 * scale / 40);
-        pctx.closePath();
-        
-        pctx.fill();
-
-        pctx.beginPath();
-        pctx.moveTo(offset + 400 * scale / 40, 0.0);
-        pctx.lineTo(offset + 400 * scale / 40, 200.0 * scale / 40);
-        pctx.lineTo(offset + 200 * scale / 40, 400 * scale / 40);
-        pctx.lineTo(offset + 0, 400 * scale / 40);
-        pctx.closePath();
-
-        pctx.fill();
-                
-        
-        pctx.restore();
-        
-        var pat = ctx.createPattern(ptn, "repeat");
-        
-        ctx.beginPath();
-        ctx.rect(0, i * ( height + gap) * scale, parameters[parKey].val * scale, height * scale);
-        ctx.fillStyle = pat; //bar_color;
-        ctx.fill();
-        ctx.closePath();
-        
+        //name
         ctx.beginPath();
         ctx.fillStyle = font_color;
         var fontSize = 0.2 * scale;
@@ -195,3 +166,11 @@ function drawParameters(size) {
 
     ctx.restore();
 };
+
+function drawBar(ctx, i, scale, height, gap, fillStyle, offset, value){
+    ctx.beginPath();
+    ctx.rect(offset * scale, i * ( height + gap) * scale, value * scale, height * scale);
+    ctx.fillStyle = fillStyle; //bar_color;
+    ctx.fill();
+    ctx.closePath();
+}
