@@ -8,8 +8,7 @@ function initGame(key) {
         
         var game = $('#game');
         
-//        drawParameters(game.width());
-        
+        drawParameters($('#game').width());
         setInterval(function(){ 
             loopAnimationState = (loopAnimationState + 1)%loopAnimationDuration; 
             drawParameters($('#game').width());

@@ -1,72 +1,38 @@
 $.ajaxSetup({cache: false}); //TODO do usunięcia
 
 var counter = 0;
-var animationState = 0;
 var animationDuration = 30;
+var animationState = animationDuration;
 
 var loopAnimationState = 0;
 var loopAnimationDuration = 30;
 
 var drugHistory = [];
 
-//var parameters = {
-//    "puls":{
-//      "name": "Puls",
-//      "goal": 0,
-//      "val": 50,
-//      "diff": 20
-//    },
-//    "rownowaga":{
-//      "name": "Równowaga",
-//      "goal": 0,
-//      "val": 50,
-//      "diff": 20
-//    },
-//    "nawodnienie":{
-//      "name": "Nawodnienie",
-//      "goal": 100,
-//      "val": 85,
-//      "diff": 20
-//    },
-//    "koncentracja":{
-//      "name": "Koncentracja",
-//      "goal": 100,
-//      "val": 20,
-//      "diff": -40
-//    },
-//    "energia":{
-//      "name": "Energia",
-//      "goal": 0,
-//      "val": 50,
-//      "diff": 0
-//    }
-//};
-
-
 var parameters = {
     "puls":{
       "name": "Puls",
       "goal": 0,
       "val": 50,
-      "diff": 20
+      "diff": 0
     },
     "rownowaga":{
       "name": "Równowaga",
       "goal": 0,
       "val": 50,
-      "diff": 20
+      "diff": 0
     },
     "nawodnienie":{
       "name": "Nawodnienie",
       "goal": 100,
       "val": 50,
-      "diff": 20
+      "diff": 0
     },
     "koncentracja":{
       "name": "Koncentracja",
       "goal": 100,
       "val": 50,
-      "diff": -40
+      "diff": 0
     },
     "energia":{
       "name": "Energia",
