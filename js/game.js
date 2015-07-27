@@ -8,7 +8,12 @@ function initGame(key) {
         
         var game = $('#game');
         
-        drawParameters(game.width());
+//        drawParameters(game.width());
+        
+        setInterval(function(){ 
+            loopAnimationState = (loopAnimationState + 1)%loopAnimationDuration; 
+            drawParameters($('#game').width());
+        }, 30);
         
         if(buttons === undefined){
             buttons = {};
@@ -115,6 +120,7 @@ function drawParameters(size) {
     ctx.save();
         
     var scale = size/100;
+    var offset = 10 * scale * loopAnimationState / loopAnimationDuration;
     
     var background_color = "#3e1435";
     var bar_color = "#f49b00";
@@ -136,22 +142,31 @@ function drawParameters(size) {
         
         pctx.save();
         
-        pctx.beginPath();
-        pctx.moveTo(0.0, 0.0);
-        pctx.lineTo(200 * scale / 40, 0.0);
-        pctx.lineTo(0.0, 200 * scale / 40);
-        pctx.closePath();
         pctx.fillStyle = "rgb(188, 222, 178)";
+        
+        pctx.beginPath();
+        pctx.moveTo(offset - 400 * scale / 40, 0.0);
+        pctx.lineTo(offset - 200 * scale / 40, 0.0);
+        pctx.lineTo(offset - 400 * scale / 40, 200 * scale / 40);
+        pctx.closePath();
+        pctx.fill();
+        
+        pctx.beginPath();
+        pctx.moveTo(offset, 0.0);
+        pctx.lineTo(offset + 200 * scale / 40, 0.0);
+        pctx.lineTo(offset - 200 * scale / 40, 400 * scale / 40);
+        pctx.lineTo(offset - 400 * scale / 40, 400 * scale / 40);
+        pctx.closePath();
+        
         pctx.fill();
 
         pctx.beginPath();
-        pctx.moveTo(400 * scale / 40, 0.0);
-        pctx.lineTo(400 * scale / 40, 200.0 * scale / 40);
-        pctx.lineTo(200 * scale / 40, 400 * scale / 40);
-        pctx.lineTo(0, 400 * scale / 40);
+        pctx.moveTo(offset + 400 * scale / 40, 0.0);
+        pctx.lineTo(offset + 400 * scale / 40, 200.0 * scale / 40);
+        pctx.lineTo(offset + 200 * scale / 40, 400 * scale / 40);
+        pctx.lineTo(offset + 0, 400 * scale / 40);
         pctx.closePath();
 
-        pctx.fillStyle = "rgb(188, 222, 178)";
         pctx.fill();
                 
         

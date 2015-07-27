@@ -4,6 +4,9 @@ var counter = 0;
 var animationState = 0;
 var animationDuration = 30;
 
+var loopAnimationState = 0;
+var loopAnimationDuration = 30;
+
 var drugHistory = [];
 
 var parameters = {
