@@ -189,11 +189,13 @@ function drawBar(ctx, i, scale, height, gap, fillStyle, offset, value){
 }
 
 function drawCounter(){
+    
+    var canvasId = 'game-counter';
     var width = $('#'+canvasId).width();
     if(width == null){
         return;
     }
-    var canvasId = 'game-counter';
+    
     var canvas = document.getElementById(canvasId);
     
     canvas.width  = width;
