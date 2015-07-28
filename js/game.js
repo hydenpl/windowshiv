@@ -1,4 +1,5 @@
 function initGame(key) {
+    
     $('#content').load('game.html?v='+Math.random(), function() {
         $('.header').show();
         $('h2.header-title').text("(i)grasz?");
@@ -6,12 +7,21 @@ function initGame(key) {
         
         console.log('game');
         
+        $("#game-msg").on('click', function(){
+            $(this).toggleClass('hidden');
+        });
+        
         var game = $('#game');
         
+        drawHistory(game.width());
         drawParameters($('#game').width());
-        setInterval(function(){ 
+        if(interval){
+            clearInterval(interval);
+        }
+        interval = setInterval(function(){ 
             loopAnimationState = (loopAnimationState + 1)%loopAnimationDuration; 
             drawParameters($('#game').width());
+            drawCounter();
             if(animationState > 0 && animationState < animationDuration){
                 animationState++;
             }
@@ -112,6 +122,9 @@ function hexToRgb(hex) {
 }
 
 function drawParameters(size) {
+    if(size == null){
+        return;
+    }
     var canvas = document.getElementById('game-parameters');
     var gap = 0.5;
     var height = 9;
@@ -154,8 +167,8 @@ function drawParameters(size) {
         //name
         ctx.beginPath();
         ctx.fillStyle = font_color;
-        var fontSize = 0.2 * scale;
-        ctx.font = fontSize + "em OpenSans";
+        var fontSize = 4 * scale;
+        ctx.font = fontSize + "px OpenSans";
         ctx.textAlign = "right";
         ctx.fillText(parameters[parKey].name, 95 * scale, ( i * ( height + gap) + 6 )  * scale);
         
@@ -173,4 +186,53 @@ function drawBar(ctx, i, scale, height, gap, fillStyle, offset, value){
     ctx.fillStyle = fillStyle; //bar_color;
     ctx.fill();
     ctx.closePath();
+}
+
+function drawCounter(){
+    var canvasId = 'game-counter';
+    var canvas = document.getElementById(canvasId);
+    
+    var width = $('#'+canvasId).width();
+    canvas.width  = width;
+    canvas.height = $('#'+canvasId).height();
+    
+    var x = width / 2;
+    var y = canvas.height / 2;
+    
+    var radius = 0.1 * width;
+    var color = '#ffffff';
+    var PI = 3.14;
+    
+    var ctx = canvas.getContext('2d');
+    ctx.save();
+    
+    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
+    
+    ctx.beginPath();
+    
+    var text = counter;
+    
+    if(animationState > 0 && animationState < animationDuration){
+        if(animationState < animationDuration / 2){
+            var progress = animationState / animationDuration * 2;
+            ctx.arc(x, y, radius, PI * 1.5 , PI * 1.5 + 2 * PI * progress, true);
+            text = text - 1;
+        }else{
+            var progress = (animationState - animationDuration / 2) / animationDuration * 2;
+            ctx.arc(x, y, radius, PI * 1.5, PI * 1.5 + 2 * PI * progress, false);
+        }
+    }else{
+        ctx.arc(x, y, radius, 0, 2 * Math.PI, true);
+    }
+    
+    ctx.lineWidth = 3;
+    ctx.stroke();
+    
+    ctx.font = radius * 0.8 + "px OpenSans";
+    ctx.textAlign = "center";
+    ctx.fillText(text, x, y + 0.25 * radius);
+    
+    
+    
 }

@@ -9,6 +9,8 @@ var loopAnimationDuration = 30;
 
 var drugHistory = [];
 
+var interval;
+
 var parameters = {
     "puls":{
       "name": "Puls",
