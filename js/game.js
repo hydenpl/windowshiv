@@ -72,6 +72,7 @@ function drawHistory(size){
     var width = $('#'+canvasId).width();
     canvas.width  = width;
     canvas.height = width / 9 * 1.15470053838;
+    $('#'+canvasId).height(canvas.height+"px");
     
     var size = canvas.height;
     
