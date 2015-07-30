@@ -40,7 +40,7 @@ function initGame(key) {
         $('.button').on('click', function(){
             var btn = $(this).data('button');
             console.log("button clicked: "+btn);
-            if(btn != 'waiting'){
+            if(btn != 'waiting' && animationState == animationDuration){
                 counter++;
                 var drugTaken = buttons[btn];
                 changeParamsByDrug(buttons[btn]);
