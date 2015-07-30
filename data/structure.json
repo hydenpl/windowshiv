@@ -117,5 +117,12 @@
             "title": "(i)grasz?",
             "back": "main",
             "background": "#591d4c"
+        },
+    "instructions":
+        {
+            "type": "instructions",
+            "title": "Instrukcje",
+            "back": "game",
+            "background": "#3e1435"
         }
 }

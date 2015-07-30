@@ -77,3 +77,46 @@ $(function() {
         initSubpage($(this).data("mix-link"));
     });
 });
+
+
+function initInstructions() {
+    
+    $('#content').load('instructions.html?v='+Math.random(), function() {
+        $('.header').show();
+        $('h2.header-title').text("Instrukcje");
+        $(".back-button").addClass("link").data("link", "game")
+                
+        var size = $('.header').width();
+                
+        for(drug in drugs){
+            var canvasId = 'drug'+drug+'Id';
+            jQuery('<canvas/>', {
+                id: canvasId
+            }).appendTo('.instructions-drugs');
+            
+            var canvas = document.getElementById(canvasId);
+    
+            canvas.width = size;
+            canvas.height = size / 8;
+            
+            $('#'+canvasId).height(canvas.height+"px");
+            
+            var ctx = canvas.getContext('2d');
+            ctx.save();
+            
+//            ctx.scale(size / 600, size / 600);
+         
+            drawHistoryDrug(ctx, size/10, 0.8, drug, 1.0);
+            
+            var color = '#ffffff';
+            ctx.fillStyle = color;
+            ctx.strokeStyle = color;
+            ctx.font = size / 30 + "px OpenSans";
+            ctx.textAlign = "left";
+            ctx.fillText(drugs[drug].title, size/5, size/16);
+            
+            ctx.restore();
+        }
+                        
+    });
+}

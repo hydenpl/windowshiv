@@ -64,6 +64,9 @@ function initPage(key) {
         } else if (structure[key].type == 'game') {
             initGame(key);
             //jeszcze nic
+        } else if (structure[key].type == 'instructions') {
+            initInstructions(key);
+            //jeszcze nic
         } else {
             initSplash(key);
             //jeszcze nic

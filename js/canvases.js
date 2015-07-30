@@ -77,6 +77,36 @@ function drawBack(canvasId, size, totalHeight) {
 }
 ;
 
+
+function drawInfo(canvasId) {
+    
+    var canvas = document.getElementById(canvasId);
+    var size = canvas.width;
+    var totalHeight = canvas.height;
+    
+    var ctx = canvas.getContext('2d');
+    canvas.width = canvas.width;
+    
+    ctx.save();
+    ctx.translate(0, (totalHeight - size) / 2);
+    ctx.scale(size / 100, size / 100);
+    
+    var color = '#ffffff';
+    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
+    ctx.arc(50, 50, 45, 0, 2 * Math.PI, true);
+    ctx.lineWidth = 4;
+    ctx.stroke();
+    
+    ctx.font = 60 + "px OpenSans";
+    ctx.textAlign = "center";
+    ctx.fillText("i", 50, 70);
+            
+    ctx.restore();
+    ctx.restore();
+}
+;
+
 function drawHexagon(canvasId, size, color, info, text_color) {
     text_color = typeof text_color !== 'undefined' ? text_color : '#fff';
     var canvas = document.getElementById(canvasId);
