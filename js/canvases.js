@@ -87,6 +87,8 @@ function drawInfo(canvasId) {
     var ctx = canvas.getContext('2d');
     canvas.width = canvas.width;
     
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
     ctx.save();
     ctx.translate(0, (totalHeight - size) / 2);
     ctx.scale(size / 100, size / 100);
