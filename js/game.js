@@ -119,8 +119,8 @@ function drawHistory(size){
 
 function changeParamsByDrug(drug){
     var finished = false;
+    var drug_params = getDrugParams(drug);
     for(param in drugs[drug].params){
-        var drug_params = drugs[drug].params;
         parameters[param].diff = drug_params[param];
         parameters[param].val += drug_params[param];
         if(parameters[param].val<0){
@@ -130,6 +130,18 @@ function changeParamsByDrug(drug){
         }
     }
     return finished;
+}
+
+function getDrugParams(drug){
+    var ret = {};
+    for(param in parameters){
+        ret[param] = 10;
+    }
+    var msg = "Blabla!";
+    if(msg){
+        $('#game-msg').text(msg).removeClass('hidden');
+    }
+    return ret;
 }
 
 function randomDrug(){
