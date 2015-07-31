@@ -7,7 +7,9 @@ function initGame(key) {
         drawInfo('back-canvas');
         $(".back-button").addClass("link").data("link", "instructions")
         
-        console.log('game');
+        var game = $('#game');
+        var height = $('body').height() - $('.header').height() - $('#game-footer').height();
+        game.width(height / 1.5);
         
         if(gameFinished){
             counter = 0;
@@ -33,7 +35,6 @@ function initGame(key) {
             $(this).toggleClass('hidden');
         });
         
-        var game = $('#game');
         
         drawHistory(game.width());
         drawParameters($('#game').width());

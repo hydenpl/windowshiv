@@ -1,5 +1,6 @@
 #game{
-    margin: 8%;
+    margin: 8% auto;
+    width: 84%;
     height: 60%;
 }
 
