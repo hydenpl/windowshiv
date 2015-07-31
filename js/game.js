@@ -9,6 +9,26 @@ function initGame(key) {
         
         console.log('game');
         
+        if(gameFinished){
+            counter = 0;
+            animationDuration = 30;
+            animationState = animationDuration;
+            loopAnimationState = 0;
+            loopAnimationDuration = 30;
+            drugHistory = [];
+            gameFinished = false;
+
+            for(param in parameters){
+                parameters[param].val = 50;
+                parameters[param].diff = 0;
+            }
+            
+            $('#game-history').show();
+            $('#game-buttons').show();
+            $('#game-finished').hide();
+
+        }
+        
         $("#game-msg").on('click', function(){
             $(this).toggleClass('hidden');
         });
@@ -45,12 +65,23 @@ function initGame(key) {
             if(btn != 'waiting' && animationState == animationDuration){
                 counter++;
                 var drugTaken = buttons[btn];
-                changeParamsByDrug(buttons[btn]);
+                var finished = changeParamsByDrug(buttons[btn]);
                 buttons[btn] = buttons.waiting;
                 buttons.waiting = randomDrug();
                 drawButtons(game.width());
                 addToHistory(game.width(), drugTaken)
                 animationState = 1;
+                if(finished){
+                    gameFinished = true;
+                    $('#game-history').hide();
+                    $('#game-buttons').hide();
+                    
+                    $('.finished-msg').text(finished);
+                    $('#game-finished').show();
+                    $('.finished-button').on("click", function(){
+                        initGame();
+                    });
+                }
             }
         });
         
@@ -86,11 +117,18 @@ function drawHistory(size){
 }
 
 function changeParamsByDrug(drug){
+    var finished = false;
     for(param in drugs[drug].params){
         var drug_params = drugs[drug].params;
         parameters[param].diff = drug_params[param];
         parameters[param].val += drug_params[param];
+        if(parameters[param].val<0){
+            finished = finishedMsgs[param][0];
+        }else if(parameters[param].val > 100){
+            finished = finishedMsgs[param][100];
+        }
     }
+    return finished;
 }
 
 function randomDrug(){

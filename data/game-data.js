@@ -9,6 +9,8 @@ var loopAnimationDuration = 30;
 
 var drugHistory = [];
 
+var gameFinished = false;
+
 var interval;
 
 var parameters = {
@@ -43,6 +45,29 @@ var parameters = {
       "diff": 0
     }
 };
+
+var finishedMsgs = {
+    "puls":{
+      0: "Muzyka może gra, ale Twoje serce straciło rytm.",
+      100: "Serce nie sługa - ma swoje granice!"
+    },
+    "rownowaga":{
+      0: "Padłeś/aś, nie powstaniesz!",
+      100: "Zastygasz w miejscu!"
+    },
+    "nawodnienie":{
+      0: "Odwodnienie. Z pustego i Salomon nie naleje!",
+      100: "Pęcherz pęka w szwach, a krew się rozrzedza!"
+    },
+    "koncentracja":{
+      0: "Koncentracja siadła.. Twój mózg mówi \"pa pa\"!",
+      100: "Dość, znaczy dość - wszystkiego nie ogarniesz! Idzie zwariować!"
+    },
+    "energia":{
+      0: "Baterie siadły!",
+      100: "Wystrzelony/a w kosmos po Ziemi nie pochodzisz."
+    }
+}
 
 var drugs = {
     "amfetamina": {

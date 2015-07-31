@@ -78,3 +78,22 @@
 canvas.instructions-drug{
     width: 100%;
 }
+
+.finished-title{
+    font-size: 2em;
+    text-align: center;
+    margin: 5% 0;
+    
+}
+
+.finished-msg{
+    text-align: center;
+    margin: 5% 0;
+}
+
+.finished-button{
+    text-align: center;
+    padding: 5% 5%;
+    margin: 5% auto;
+    background-color: #c761b5;
+}
