@@ -94,8 +94,13 @@ function addToHistory(size, drug){
     if(drugHistory.length>8){
         drugHistory.shift();
     }
-    drugHistory.push(drug);
-    
+    for(element in drugHistory){
+        if(drugHistory[element].effect > 0.1){
+            drugHistory[element].effect -= 0.5 / drugs[drugHistory[element].drug].duration;
+        }
+    }
+    drugHistory.push({"drug": drug,
+                      "effect": 1});
     drawHistory(size);
 }
 
@@ -113,7 +118,7 @@ function drawHistory(size){
     var ctx = canvas.getContext('2d');    
     var counter = 9 - drugHistory.length;
     for(var drug in drugHistory){
-        drawHistoryDrug(ctx, size, counter++, drugHistory[drug], 0.1*counter);
+        drawHistoryDrug(ctx, size, counter++, drugHistory[drug].drug, 0.2 + 0.8*drugHistory[drug].effect);
     }
 }
 
@@ -135,7 +140,7 @@ function changeParamsByDrug(drug){
 function getDrugParams(drug){
     var ret = {};
     for(param in parameters){
-        ret[param] = 10;
+        ret[param] = 2;
     }
     var msg = "Blabla!";
     if(msg){
@@ -146,9 +151,14 @@ function getDrugParams(drug){
 
 function randomDrug(){
     var drug = '';
+    var arr = [];
+    for(drug in drugs){
+        for(var i = 0; i< drugs[drug].ratio; i++){
+            arr.push(drug);
+        }
+    }
     do{
-        var keys = Object.keys(drugs)
-        drug = keys[ keys.length * Math.random() << 0];
+        drug = arr[ arr.length * Math.random() << 0];
     }
     while(buttons.first == drug || buttons.second == drug || buttons.third == drug || buttons.waiting == drug);
     return drug;

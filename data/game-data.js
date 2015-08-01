@@ -72,6 +72,8 @@ var finishedMsgs = {
 var drugs = {
     "amfetamina": {
         "type":"drug",
+        "duration": 3,
+        "ratio":1,
         "title": "Amfetamina",
         "shortcut": "Am",
         "color": "#ff3333",
@@ -85,6 +87,8 @@ var drugs = {
     },
     "cukierek": {
         "type":"drug",
+        "duration": 1,
+        "ratio":2,
         "title": "Cukierek",
         "shortcut": "Cu",
         "color": "#e5d73d",
@@ -98,6 +102,8 @@ var drugs = {
     },
     "dopalacze": {
         "type":"drug",
+        "duration": 3,
+        "ratio":1,
         "title": "Dopalacze",
         "shortcut": "Do",
         "color": "#309bf6",
@@ -111,6 +117,8 @@ var drugs = {
     },
     "kebab": {
         "type":"drug",
+        "duration": 2,
+        "ratio":1,
         "title": "Kebab",
         "shortcut": "Ke",
         "color": "#f59c00",
@@ -124,6 +132,8 @@ var drugs = {
     },
     "kokaina": {
         "type":"drug",
+        "duration": 1,
+        "ratio":1,
         "title": "Kokaina",
         "shortcut": "Ko",
         "color": "#3dd7e5       ",
@@ -137,6 +147,8 @@ var drugs = {
     },
     "marihuana": {
         "type":"drug",
+        "duration": 1,
+        "ratio":1,
         "title": "Marihuana",
         "shortcut": "Ma",
         "color": "#0bd636",
@@ -150,6 +162,8 @@ var drugs = {
     },
     "mdma": {
         "type":"drug",
+        "duration": 2,
+        "ratio":1,
         "title": "MDMA",
         "shortcut": "Md",
         "color": "#e5d73d",
@@ -163,6 +177,8 @@ var drugs = {
     },
     "mefedron": {
         "type":"drug",
+        "duration": 3,
+        "ratio":1,
         "title": "Mefedron",
         "shortcut": "Me",
         "color": "#c761b5",
@@ -176,6 +192,8 @@ var drugs = {
     },
     "odpoczynek": {
         "type":"drug",
+        "duration": 2,
+        "ratio":2,
         "title": "Odpoczynek",
         "shortcut": "Od",
         "color": "#0bd636",
@@ -189,6 +207,8 @@ var drugs = {
     },
     "piwo": {
         "type":"drug",
+        "duration": 3,
+        "ratio":1,
         "title": "Piwo",
         "shortcut": "Pi",
         "color": "#f59c00",
@@ -202,6 +222,8 @@ var drugs = {
     },
     "powietrze": {
         "type":"drug",
+        "duration": 1,
+        "ratio":2,
         "title": "Powietrze",
         "shortcut": "Po",
         "color": "#3dd7e5",
@@ -215,6 +237,8 @@ var drugs = {
     },
     "wino": {
         "type":"drug",
+        "duration": 3,
+        "ratio":1,
         "title": "Wino",
         "shortcut": "Wi",
         "color": "#ff3333",
@@ -228,6 +252,8 @@ var drugs = {
     },
     "woda": {
         "type":"drug",
+        "duration": 1,
+        "ratio":2,
         "title": "Woda",
         "shortcut": "Wo",
         "color": "#309bf6",
@@ -241,6 +267,8 @@ var drugs = {
     },
     "wodka": {
         "type":"drug",
+        "duration": 4,
+        "ratio":1,
         "title": "Wódka",
         "shortcut": "Vo",
         "color": "#f59c00",
