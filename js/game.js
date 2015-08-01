@@ -3,9 +3,9 @@ function initGame(key) {
     $('#content').load('game.html?v='+Math.random(), function() {
         $('.header').show();
         $('h2.header-title').text("(i)grasz?");
-//        $(".back-button").addClass("link").data("link", "main")
-        drawInfo('back-canvas');
-        $(".back-button").addClass("link").data("link", "instructions")
+        $(".back-button").addClass("link").data("link", "main")
+//        drawInfo('back-canvas');
+//        $(".back-button").addClass("link").data("link", "instructions")
         
         var game = $('#game');
         var height = $('body').height() - $('.header').height() - $('#game-footer').height();
@@ -138,9 +138,30 @@ function changeParamsByDrug(drug){
 }
 
 function getDrugParams(drug){
+    var historyEffects = {};
+    for(element in drugHistory){
+        if(drugHistory[element].effect > 0.1){
+            if(!(element in historyEffects)){
+                historyEffects[element] = drugHistory[element].effect;
+            }else{
+                historyEffects[element] += drugHistory[element].effect;
+            }
+        }
+    }
+    
     var ret = {};
     for(param in parameters){
-        ret[param] = 2;
+        var calc = drugs[drug].params[param];
+        if((typeof calc === 'string' || calc instanceof String) && calc.substr(0, 5) == "reset"){
+            var resetVal = parseInt(calc.substr(6, 10));
+            if(parameters[param] > 50){
+                ret[param] = -1 * Math.min( parameters[param].val - 50, resetVal)
+            }else{
+                ret[param] = Math.min( 50 - parameters[param].val, resetVal)
+            }
+        }else{
+            ret[param] = drugs[drug].params[param];
+        }
     }
     var msg = "Blabla!";
     if(msg){

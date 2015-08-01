@@ -193,16 +193,16 @@ var drugs = {
     "odpoczynek": {
         "type":"drug",
         "duration": 2,
-        "ratio":2,
+        "ratio":20,
         "title": "Odpoczynek",
         "shortcut": "Od",
         "color": "#0bd636",
         "params": {
-            "puls": 0,
-            "rownowaga": 30,
+            "puls": "reset:10",
+            "rownowaga": "reset:50",
             "nawodnienie": 0,
-            "koncentracja": 10,
-            "energia": 20
+            "koncentracja": "reset:50",
+            "energia": "reset:50"
         }
     },
     "piwo": {
