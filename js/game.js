@@ -163,8 +163,8 @@ function getDrugParams(drug){
             ret[param] = drugs[drug].params[param];
         }
     }
-    var msg = "Blabla!";
-    if(msg){
+    var msg = "Wiadomość!";
+    if(drug == "woda"){
         $('#game-msg').text(msg).removeClass('hidden');
     }
     return ret;
