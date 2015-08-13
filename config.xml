@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<widget id="pl.org.programstacja.igrasz" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="pl.org.programstacja.igrasz" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>(i)grasz?</name>
     <description>
        Niniejsza aplikacja nie ma na celu zachęcania Cię do używania substancji psychoaktywnych, lecz przedstawienie informacji na temat ich działania i mieszania z innymi substancjami. Rzetelna wiedza o tym, jak działają i jak zmniejszać ryzyko wystąpienia niebezpiecznych skutków może uratować zdrowie lub życie.
@@ -9,7 +9,7 @@
     </author>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.7.0" />
-    <preference name="orientation" value="default" />
+    <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
