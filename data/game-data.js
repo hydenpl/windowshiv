@@ -282,4 +282,24 @@ var drugs = {
     }
 };
 
+var messages = {
+    "piwo":{
+        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. <br/>Alkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
+        "wodka":"Gratulujemy! ;P Zamiast zasady pnij się procentowo do góry, zegniesz się w pół… do wymiotów. Picie najpierw mocniejszych, a potem słabszych alkoholi może spowodować wymioty i bóle głowy.",
+        "wino":"Gratulujemy! ;P Zamiast zasady pnij się procentowo do góry, zegniesz się w pół… do wymiotów. Picie najpierw mocniejszych, a potem słabszych alkoholi może spowodować wymioty i bóle głowy."
+    },
+    "wino":{
+        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. <br/>Alkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
+        "wodka":"Gratulujemy! ;P Zamiast zasady pnij się procentowo do góry, zegniesz się w pół… do wymiotów.Picie najpierw mocniejszych, a potem słabszych alkoholi może spowodować wymioty i bóle głowy."
+    },
+    "wodka":{
+        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. <br/>Alkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
+    },
+    "dopalacze":{
+        "amfetamina": "Gratulujemy! ;P Twój organizm zwariował. <br/> Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
+        "kokaina": "Gratulujemy! ;P Twój organizm zwariował. <br/> Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
+        "mefedron": "Gratulujemy! ;P Twój organizm zwariował. <br/> Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
+    }
+}
+
 var buttons;

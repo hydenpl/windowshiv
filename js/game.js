@@ -62,7 +62,6 @@ function initGame(key) {
         
         $('.button').on('click', function(){
             var btn = $(this).data('button');
-            console.log("button clicked: "+btn);
             if(btn != 'waiting' && animationState == animationDuration){
                 counter++;
                 var drugTaken = buttons[btn];
@@ -182,10 +181,27 @@ function getDrugParams(drug){
             ret[param] = drugs[drug].params[param];
         }
     }
-    var msg = "Wiadomość!";
-    if(drug == "woda"){
-        $('#game-msg').text(msg).removeClass('hidden');
+    
+    if(drug in messages){
+        var possible = messages[drug];
+        var maxDrugEffect = 0.2;
+        var maxDrug = undefined;
+        for(historyDrug in drugHistory){
+            if(drugHistory[historyDrug].effect > maxDrugEffect && drugHistory[historyDrug].drug in possible){
+                maxDrugEffect = drugHistory[historyDrug].effect;
+                maxDrug = drugHistory[historyDrug].drug;
+            }
+        }
+        if(maxDrugEffect > 0.3){
+            $('#game-msg').text(possible[maxDrug]).removeClass('hidden');
+        }else{
+            $('#game-msg').addClass('hidden');
+        }
+    }else{
+        $('#game-msg').addClass('hidden');
     }
+    
+    
     return ret;
 }
 
