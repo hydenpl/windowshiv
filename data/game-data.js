@@ -108,11 +108,11 @@ var drugs = {
         "shortcut": "Do",
         "color": "#309bf6",
         "params": {
-            "puls": -20,
-            "rownowaga": 0,
-            "nawodnienie": 0,
-            "koncentracja": 0,
-            "energia": 0
+            "puls": 'vary:40',
+            "rownowaga": 'vary:40',
+            "nawodnienie": 'vary:20',
+            "koncentracja": 'vary:30',
+            "energia": 'vary:30'
         }
     },
     "kebab": {
@@ -213,11 +213,11 @@ var drugs = {
         "shortcut": "Pi",
         "color": "#f59c00",
         "params": {
-            "puls": 10,
-            "rownowaga": -10,
-            "nawodnienie": -10,
-            "koncentracja": -15,
-            "energia": -10
+            "puls": 7,
+            "rownowaga": -7,
+            "nawodnienie": -7,
+            "koncentracja": -10,
+            "energia": -7
         }
     },
     "powietrze": {
@@ -243,11 +243,11 @@ var drugs = {
         "shortcut": "Wi",
         "color": "#ff3333",
         "params": {
-            "puls": 15,
-            "rownowaga": -15,
-            "nawodnienie": -15,
-            "koncentracja": -20,
-            "energia": -15
+            "puls": 10,
+            "rownowaga": -10,
+            "nawodnienie": -10,
+            "koncentracja": -15,
+            "energia": -10
         }
     },
     "woda": {
@@ -273,11 +273,11 @@ var drugs = {
         "shortcut": "Vo",
         "color": "#f59c00",
         "params": {
-            "puls": 30,
-            "rownowaga": -30,
-            "nawodnienie": -30,
-            "koncentracja": -30,
-            "energia": -30
+            "puls": 20,
+            "rownowaga": -20,
+            "nawodnienie": -20,
+            "koncentracja": -20,
+            "energia": -20
         }
     }
 };

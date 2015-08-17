@@ -153,38 +153,32 @@ function getDrugParams(drug){
     for(param in parameters){
         var calc = drugs[drug].params[param];
         if(typeof calc === 'string' || calc instanceof String){
-            console.log("calc is string:'" + calc + "' for param: "+param);
             if(calc.substr(0, 5) === "reset"){
-                console.log("param type: reset");
                 var resetVal = parseInt(calc.substr(6, 10));
-                console.log("resetVal: "+resetVal);
                 if(parameters[param].val > 50){
                     ret[param] = -1 * Math.min( parameters[param].val - 50, resetVal)
                 }else{
                     ret[param] = Math.min( 50 - parameters[param].val, resetVal)
                 }
             }else if(calc.substr(0, 4) === "down"){
-                console.log("param type: down");
                 var resetVal = parseInt(calc.substr(5, 10));
-                console.log("resetVal: "+resetVal);
                 if(parameters[param].val > 50){
                     ret[param] = -1 * Math.min( parameters[param].val - 50, resetVal)
                 }else{
                     ret[param] = 0;
                 }
             }else if(calc.substr(0, 2) === "up"){
-                console.log("param type: up");
                 var resetVal = parseInt(calc.substr(3, 10));
-                console.log("resetVal: "+resetVal);
                 if(parameters[param].val < 50){
                     ret[param] = Math.min( 50 - parameters[param].val, resetVal)
                 }else{
                     ret[param] = 0;
                 }
+            }else if(calc.substr(0, 4) === "vary"){
+                var resetVal = parseInt(calc.substr(5, 10));
+                ret[param] = resetVal * ( 2 * Math.random() - 1); 
             }
-            console.log("ret_param: "+ret[param]);
         }else{
-            console.log(calc);
             ret[param] = drugs[drug].params[param];
         }
     }
@@ -347,7 +341,4 @@ function drawCounter(){
     ctx.font = radius * 0.8 + "px OpenSans";
     ctx.textAlign = "center";
     ctx.fillText(text, x, y + 0.25 * radius);
-    
-    
-    
 }
