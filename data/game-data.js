@@ -306,8 +306,8 @@ var messages = {
         "wino": "Gratulujemy! ;P Takim połączeniem udowodniłeś, że liczy się „zgon”. Najpierw alkohol, potem marihuana…Ta kolejność łączenia może spowodować utratę świadomości szybszą niż się spodziewasz.",
     },
     "kokaina":{
-        "amfetamina": "Gratulujemy! ;P Masz tyle energii i napięcia, że nie wiesz co z tym zrobić. Ból w klatce piersiowej? Spokojnie, może Twoje serce za chwile stanie! Łączenie amfetaminy z kokainą może spowodować duże przeciążenie dla Twego serca oraz odwodnienie. Mogą się uaktywnić stany lękowe.",
-        "mefedron": "Gratulujemy! ;P Masz tyle energii i napięcia, że nie wiesz co z tym zrobić. Ból w klatce piersiowej? Spokojnie, może Twoje serce za chwile stanie! Łączenie mefedronu z kokainą może spowodować duże przeciążenie dla Twego serca oraz odwodnienie. Mogą się uaktywnić stany lękowe.",
+        "amfetamina": "Masz tyle energii i napięcia, że nie wiesz co z tym zrobić. Ból w klatce piersiowej? Spokojnie, może Twoje serce za chwile stanie! Łączenie amfetaminy z kokainą może spowodować duże przeciążenie dla Twego serca oraz odwodnienie. Mogą się uaktywnić stany lękowe.",
+        "mefedron": "Masz tyle energii i napięcia, że nie wiesz co z tym zrobić. Ból w klatce piersiowej? Spokojnie, może Twoje serce za chwile stanie! Łączenie mefedronu z kokainą może spowodować duże przeciążenie dla Twego serca oraz odwodnienie. Mogą się uaktywnić stany lękowe.",
     },
     "cukierek":{
         "amfetamina": "Gratulujemy! ;) Ślinianki pracują, żuchwa się rusza! Kwaśny cukierek uruchomi ślinianki i zmniejszy ryzyko odwodnienia. Może też rozluźnić spiętą żuchwę"
@@ -324,11 +324,11 @@ var messages = {
         "piwo": "Gratulujemy! Twój organizm, mimo że tego możesz nie czuć, podziękuje Ci za nie zagłodzenie go! Jedzenie dostarczy Twojemu organizmowi energii i doda Ci sił.",
     },
     "odpoczynek":{
-        "mefedron":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
-        "wodka":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
-        "piwo":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
-        "wino":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
-        "kokaina":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "mefedron":"Gratulujemy! Dałeś/aś organizmowi szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "wodka":"Gratulujemy! Dałeś/aś organizmowi szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "piwo":"Gratulujemy! Dałeś/aś organizmowi szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "wino":"Gratulujemy! Dałeś/aś organizmowi szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "kokaina":"Gratulujemy! Dałeś/aś organizmowi szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
     }
 }
 
