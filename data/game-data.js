@@ -299,6 +299,36 @@ var messages = {
         "amfetamina": "Gratulujemy! ;P Twój organizm zwariował. \n Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
         "kokaina": "Gratulujemy! ;P Twój organizm zwariował. \n Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
         "mefedron": "Gratulujemy! ;P Twój organizm zwariował. \n Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
+    },
+    "marihuana":{
+        "piwo": "Gratulujemy! ;P Takim połączeniem udowodniłeś, że liczy się „zgon”. Najpierw alkohol, potem marihuana…Ta kolejność łączenia może spowodować utratę świadomości szybszą niż się spodziewasz.",
+        "wodka": "Gratulujemy! ;P Takim połączeniem udowodniłeś, że liczy się „zgon”. Najpierw alkohol, potem marihuana…Ta kolejność łączenia może spowodować utratę świadomości szybszą niż się spodziewasz.",
+        "wino": "Gratulujemy! ;P Takim połączeniem udowodniłeś, że liczy się „zgon”. Najpierw alkohol, potem marihuana…Ta kolejność łączenia może spowodować utratę świadomości szybszą niż się spodziewasz.",
+    },
+    "kokaina":{
+        "amfetamina": "Gratulujemy! ;P Masz tyle energii i napięcia, że nie wiesz co z tym zrobić. Ból w klatce piersiowej? Spokojnie, może Twoje serce za chwile stanie! Łączenie amfetaminy z kokainą może spowodować duże przeciążenie dla Twego serca oraz odwodnienie. Mogą się uaktywnić stany lękowe.",
+        "mefedron": "Gratulujemy! ;P Masz tyle energii i napięcia, że nie wiesz co z tym zrobić. Ból w klatce piersiowej? Spokojnie, może Twoje serce za chwile stanie! Łączenie mefedronu z kokainą może spowodować duże przeciążenie dla Twego serca oraz odwodnienie. Mogą się uaktywnić stany lękowe.",
+    },
+    "cukierek":{
+        "amfetamina": "Gratulujemy! ;) Ślinianki pracują, żuchwa się rusza! Kwaśny cukierek uruchomi ślinianki i zmniejszy ryzyko odwodnienia. Może też rozluźnić spiętą żuchwę"
+    },
+    "woda":{
+        "amfetamina": "Gratulujemy! ;) Przeciwdziałasz odwodnieniu. Tylko nie przesadzaj – nie więcej niż 0,5 litra wody na godzinę. Co za dużo, to nie zdrowo i możesz sobie zaszkodzić zamiast pomóc.",
+        "mdma": "Gratulujemy! ;) Przeciwdziałasz odwodnieniu. Tylko nie przesadzaj – nie więcej niż 0,5 litra wody na godzinę. Co za dużo, to nie zdrowo i możesz sobie zaszkodzić zamiast pomóc.",
+        "wodka": "Gratulujemy! ;) Przeciwdziałasz odwodnieniu. Tylko nie przesadzaj – nie więcej niż 0,5 litra wody na godzinę. Co za dużo, to nie zdrowo i możesz sobie zaszkodzić zamiast pomóc.",
+    },
+    "kebab":{
+        "amfetamina": "Gratulujemy! Twój organizm, mimo że tego możesz nie czuć, podziękuje Ci za nie zagłodzenie go! Jedzenie dostarczy Twojemu organizmowi energii i doda Ci sił.",
+        "kokaina": "Gratulujemy! Twój organizm, mimo że tego możesz nie czuć, podziękuje Ci za nie zagłodzenie go! Jedzenie dostarczy Twojemu organizmowi energii i doda Ci sił.",
+        "mefedron": "Gratulujemy! Twój organizm, mimo że tego możesz nie czuć, podziękuje Ci za nie zagłodzenie go! Jedzenie dostarczy Twojemu organizmowi energii i doda Ci sił.",
+        "piwo": "Gratulujemy! Twój organizm, mimo że tego możesz nie czuć, podziękuje Ci za nie zagłodzenie go! Jedzenie dostarczy Twojemu organizmowi energii i doda Ci sił.",
+    },
+    "odpoczynek":{
+        "mefedron":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "wodka":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "piwo":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "wino":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
+        "kokaina":"Gratulujemy! Dałeś/aś organizmowi  szansę na regenerację. Sen pozwoli Twojemu organizmowi na regenerację i powrót do równowagi.",
     }
 }
 
