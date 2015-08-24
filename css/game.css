@@ -99,3 +99,19 @@ canvas.instructions-drug{
     margin: 5% auto;
     background-color: #c761b5;
 }
+
+#game-msg h3{
+    font-size: 1.2em;
+    margin-bottom: 0.1em;
+}
+
+#game-msg #game-msg-canvas{
+    float: right;
+    width: 2.6em;
+    height: 3.5em;
+    margin: 0 0 0.2em 0.5em;
+}
+/*
+#game-msg .content{
+    f
+}*/

@@ -36,7 +36,7 @@ function initGame(key) {
         });
         
         
-        drawHistory(game.width());
+        drawHistory(game.width(), drugHistory);
         drawParameters($('#game').width());
         if(interval){
             clearInterval(interval);
@@ -65,11 +65,11 @@ function initGame(key) {
             if(btn != 'waiting' && animationState == animationDuration){
                 counter++;
                 var drugTaken = buttons[btn];
+                addToHistory(game.width(), drugTaken)
                 var finished = changeParamsByDrug(buttons[btn]);
                 buttons[btn] = buttons.waiting;
                 buttons.waiting = randomDrug();
                 drawButtons(game.width());
-                addToHistory(game.width(), drugTaken)
                 animationState = 1;
                 if(finished){
                     gameFinished = true;
@@ -100,12 +100,14 @@ function addToHistory(size, drug){
     }
     drugHistory.push({"drug": drug,
                       "effect": 1});
-    drawHistory(size);
+    drawHistory(size, drugHistory);
 }
 
-function drawHistory(size){
+function drawHistory(size, history){
     var canvasId = 'game-history';
     var canvas = document.getElementById(canvasId);
+    
+    
     
     var width = $('#'+canvasId).width();
     canvas.width  = width;
@@ -115,9 +117,9 @@ function drawHistory(size){
     var size = canvas.height;
     
     var ctx = canvas.getContext('2d');    
-    var counter = 9 - drugHistory.length;
-    for(var drug in drugHistory){
-        drawHistoryDrug(ctx, size, counter++, drugHistory[drug].drug, 0.2 + 0.8*drugHistory[drug].effect);
+    var counter = 9 - history.length;
+    for(var drug in history){
+        drawHistoryDrug(ctx, size, counter++, history[drug].drug, 0.2 + 0.8*history[drug].effect);
     }
 }
 
@@ -193,7 +195,9 @@ function getDrugParams(drug){
             }
         }
         if(maxDrugEffect > 0.3){
-            $('#game-msg').text(possible[maxDrug]).removeClass('hidden');
+            $('#game-msg').removeClass('hidden');
+            $("#game-msg-content").text(possible[maxDrug]);
+            drawMsgCanvas('game-msg-canvas', $('#game').width()/10, maxDrug, drug);
         }else{
             $('#game-msg').addClass('hidden');
         }

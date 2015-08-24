@@ -94,10 +94,10 @@ var drugs = {
         "color": "#e5d73d",
         "params": {
             "puls": 0,
-            "rownowaga": "up:10",
-            "nawodnienie": "up:20",
-            "koncentracja": "up:10",
-            "energia": "up:10"
+            "rownowaga": "up:5",
+            "nawodnienie": "up:10",
+            "koncentracja": "up:5",
+            "energia": "up:5"
         }
     },
     "dopalacze": {
@@ -124,10 +124,10 @@ var drugs = {
         "color": "#f59c00",
         "params": {
             "puls": 0,
-            "rownowaga": "up:20",
-            "nawodnienie": "up:10",
+            "rownowaga": "up:10",
+            "nawodnienie": "up:5",
             "koncentracja": 0,
-            "energia": "up:20"
+            "energia": "up:10"
         }
     },
     "kokaina": {
@@ -198,11 +198,11 @@ var drugs = {
         "shortcut": "Od",
         "color": "#0bd636",
         "params": {
-            "puls": "reset:10",
-            "rownowaga": "reset:20",
+            "puls": "reset:5",
+            "rownowaga": "reset:10",
             "nawodnienie": 0,
-            "koncentracja": "reset:20",
-            "energia": "reset:20"
+            "koncentracja": "reset:10",
+            "energia": "reset:10"
         }
     },
     "piwo": {
@@ -229,10 +229,10 @@ var drugs = {
         "color": "#3dd7e5",
         "params": {
             "puls": 0,
-            "rownowaga": "up:30",
+            "rownowaga": "up:15",
             "nawodnienie": 0,
-            "koncentracja": "up:10",
-            "energia": "up:10"
+            "koncentracja": "up:5",
+            "energia": "up:5"
         }
     },
     "wino": {
@@ -258,11 +258,11 @@ var drugs = {
         "shortcut": "Wo",
         "color": "#309bf6",
         "params": {
-            "puls": "down:10",
-            "rownowaga": "up:10",
-            "nawodnienie": "up:40",
+            "puls": "down:5",
+            "rownowaga": "up:5",
+            "nawodnienie": "up:20",
             "koncentracja": 0,
-            "energia": "up:10"
+            "energia": "up:5"
         }
     },
     "wodka": {
@@ -284,21 +284,21 @@ var drugs = {
 
 var messages = {
     "piwo":{
-        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. <br/>Alkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
+        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. \nAlkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
         "wodka":"Gratulujemy! ;P Zamiast zasady pnij się procentowo do góry, zegniesz się w pół… do wymiotów. Picie najpierw mocniejszych, a potem słabszych alkoholi może spowodować wymioty i bóle głowy.",
         "wino":"Gratulujemy! ;P Zamiast zasady pnij się procentowo do góry, zegniesz się w pół… do wymiotów. Picie najpierw mocniejszych, a potem słabszych alkoholi może spowodować wymioty i bóle głowy."
     },
     "wino":{
-        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. <br/>Alkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
+        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. \nAlkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
         "wodka":"Gratulujemy! ;P Zamiast zasady pnij się procentowo do góry, zegniesz się w pół… do wymiotów.Picie najpierw mocniejszych, a potem słabszych alkoholi może spowodować wymioty i bóle głowy."
     },
     "wodka":{
-        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. <br/>Alkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
+        "amfetamina":"Gratulujemy! ;P Po amfetaminie działania alkoholu nie odczujesz, a za dodatkowe odwodnienie Twój organizm raczej Ci nie podziękuje. \nAlkohol i amfetamina odwadniają organizm. Jeśli działają w połączeniu - szybkość odwodnienia się zwiększa.",
     },
     "dopalacze":{
-        "amfetamina": "Gratulujemy! ;P Twój organizm zwariował. <br/> Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
-        "kokaina": "Gratulujemy! ;P Twój organizm zwariował. <br/> Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
-        "mefedron": "Gratulujemy! ;P Twój organizm zwariował. <br/> Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
+        "amfetamina": "Gratulujemy! ;P Twój organizm zwariował. \n Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
+        "kokaina": "Gratulujemy! ;P Twój organizm zwariował. \n Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
+        "mefedron": "Gratulujemy! ;P Twój organizm zwariował. \n Ta mieszanka jest o tyle niebezpieczna, że nigdy nie wiesz do końca co z czym mieszasz. Może to doprowadzić do skrajnych i trudnych do przewidzenia reakcji organizmu.",
     }
 }
 

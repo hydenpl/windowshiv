@@ -2159,3 +2159,53 @@ function createPattern(scale, color, bgColor, offset){
     
     return ptn;
 }
+
+
+function drawMsgCanvas(canvasId, size, first, second){
+    var canvas = document.getElementById(canvasId);
+    
+    canvas.width = 3/2*0.866*size;
+    canvas.height = 7/4*size;
+    var ctx = canvas.getContext('2d');
+    ctx.save();
+    ctx.scale(size / 100, size / 100);
+    
+    ctx.fillStyle = drugs[first]['color'];
+    
+    ctx.beginPath();
+    ctx.moveTo(0, 25);
+    ctx.lineTo(0, 75);
+    ctx.lineTo(43.3, 100);
+    ctx.lineTo(86.6, 75);
+    ctx.lineTo(86.6, 25);
+    ctx.lineTo(43.3, 0);
+    ctx.closePath();
+    ctx.fill();
+        
+    drawDrugIcon(ctx, first, false);
+
+    ctx.restore();    
+    
+    //second
+    ctx.save();
+    ctx.scale(size / 100, size / 100);
+    
+    ctx.fillStyle = drugs[second]['color'];
+    
+    ctx.translate(86.6/2, 75);
+    
+    ctx.beginPath();
+    ctx.moveTo(0, 25);
+    ctx.lineTo(0, 75);
+    ctx.lineTo(43.3, 100);
+    ctx.lineTo(86.6, 75);
+    ctx.lineTo(86.6, 25);
+    ctx.lineTo(43.3, 0);
+    ctx.closePath();
+    ctx.fill();
+        
+    drawDrugIcon(ctx, second, false);
+
+    ctx.restore();   
+}
+
