@@ -1,16 +1,9 @@
 function initMenu(key) {
-    $('#content').empty();
-    $('#content').load('menu.html', function() {
-        
-        $.getJSON("data/menus.json", function(json) {
-            menuReady(json, key);
-        });
-    });
-    
+    console.log('initMenu: '+key);
+    menuReady(key);
 }
 
-function menuReady(json, key) {
-    
+function menuReady(key) {
     if(structure[key].title!==""){
         $('.header').show();
         $('h2.header-title').text(structure[key].title);
@@ -19,7 +12,7 @@ function menuReady(json, key) {
     
     var id;
     var canvasId;
-    $.each(json[key].links, function (loopKey, loopVal) {
+    $.each(menus[key].links, function (loopKey, loopVal) {
         id = "menuElement"+loopVal.key;
         canvasId = "menuElementCanvas"+loopVal.key;
         

@@ -42,34 +42,33 @@ function initPage(key) {
     $(".home-button").data('link', 'main');
     $(".back-button").addClass("link").data("link", "close"); //do nadpisania dalej
 
-    $.getJSON("data/structure.json", function(data) {
-        structure = data;
-        $('html, body, .header');
-        $('.header').hide();
+    $('html, body, .header');
+    $('.header').hide();
 //        $(".back-button").addClass("link").data("link", structure[key].back);
 
-        $('#content').empty();
+    $('#content').empty();
+    $('#menu').empty();
+    
 //        alert($('#content').html());
-        if (structure[key].type == 'subpage') {
-            initSubpage(key);
-        } else if (structure[key].type == 'menu') {
-            initMenu(key);
-        } else if (structure[key].type == 'content') {
-            initContent(key);
-        } else if (structure[key].type == 'tworcy') {
-            initTworcy(key);
-            //jeszcze nic
-        } else if (structure[key].type == 'game') {
-            initGame(key);
-            //jeszcze nic
-        } else if (structure[key].type == 'instructions') {
-            initInstructions(key);
-            //jeszcze nic
-        } else {
-            initSplash(key);
-            //jeszcze nic
-        }
-    });
+    if (structure[key].type == 'subpage') {
+        initSubpage(key);
+    } else if (structure[key].type == 'menu') {
+        initMenu(key);
+    } else if (structure[key].type == 'content') {
+        initContent(key);
+    } else if (structure[key].type == 'tworcy') {
+        initTworcy(key);
+        //jeszcze nic
+    } else if (structure[key].type == 'game') {
+        initGame(key);
+        //jeszcze nic
+    } else if (structure[key].type == 'instructions') {
+        initInstructions(key);
+        //jeszcze nic
+    } else {
+        initSplash(key);
+        //jeszcze nic
+    }
 }
 
 

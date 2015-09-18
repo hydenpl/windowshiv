@@ -1,8 +1,9 @@
 function initSubpage(key) {
     $('#content').load('subpage.html', function() {
-        $.getJSON("data/substances.json", function(json) {
-            subpageReady(json, key);
-        });
+        //NIEAKTUALNE
+//        $.getJSON("data/substances.json", function(json) {
+//            subpageReady(json, key);
+//        });
     });
 }
 
