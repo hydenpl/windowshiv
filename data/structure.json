@@ -1,128 +1,74 @@
 {
-    "amfetamina":
+    "splash":
         {
-            "type": "subpage",
-            "title": "Amfetamina",
-            "back": "substancje",
-            "background": "#2a98a2"
-        },
-    "piguly":
-        {
-            "type": "subpage",            
-            "title": "Piguły",
-            "back": "substancje",
-            "background": "#973986"
-        },
-    "mefedron":
-        {
-            "type": "subpage",            
-            "title": "Mefedron",
-            "back": "substancje",
-            "background": "#c2a624"
-        },
-    "marihuana":
-        {
-            "type": "subpage",           
-            "title": "Marihuana",
-            "back": "substancje",
-            "background": "#c42525"
-        },
-    "kokaina":
-        {
-            "type": "subpage",            
-            "title": "Kokaina",
-            "back": "substancje",
-            "background": "#c77500"
-        },
-    "dopalacze":
-        {
-            "type": "subpage",            
-            "title": "Dopalacze",
-            "back": "substancje",
-            "background": "#1b78c6"
-        },
-    "alkohol":
-        {
-            "type": "subpage",            
-            "title": "Alkohol",
-            "back": "substancje",
-            "background": "#05ab28"
-        },
-    "substancje":
-        {
-            "type": "menu",
-            "title": "Substancje",
-            "back": "main",
-            "background": "#940000"
+            "type": "splash",
+            "title": "",
+            "back": "close"
         },
     "main":
         {
             "type": "menu",
             "title": "",
-            "back": "close",
-            "background": "#ce4e00"
+            "back": "close"
         },
-    "instytucje":
+    "gra_drzewko":
         {
             "type": "menu",
-            "title": "Instytucje",
-            "back": "main",
-            "background": "#006893"
+            "title": "Mnie to nie dotyczy",
+            "back": "main"
         },
-    "instytucje_narkotyki":
+    "gra_bezpieczne":
+        {
+            "type": "menu",
+            "title": "Bezpieczne czy ryzykowne",
+            "back": "main"
+        },
+    "test":
+        {
+            "type": "content",            
+            "title": "Test",
+            "back": "main"
+        },
+    "strefa_wiedzy":
+        {
+            "type": "menu",
+            "title": "Strefa wiedzy",
+            "back": "main"
+        },
+    "sw_podstawowe":
         {
             "type": "content",
-            "title": "Narkotyki",
-            "back": "instytucje",
-            "background": "#788a11"
+            "title": "HIV I AIDS - podstawowe informacje",
+            "back": "strefa_wiedzy"
         },
-    "instytucje_alkohol":
+    "sw_drogi":
         {
             "type": "content",
-            "title": "Alkohol",
-            "back": "instytucje",
-            "background": "#d04e00"
+            "title": "Drogi zakażenia",
+            "back": "strefa_wiedzy"
         },
-    "instytucje_hiv":
+    "sw_techniki":
         {
             "type": "content",
-            "title": "HIV/AIDS",
-            "back": "instytucje",
-            "background": "#c90000"
+            "title": "Techniki seksualne a ryzyko zakażenia HIV",
+            "back": "strefa_wiedzy"
         },
-    "bezpieczniej":
+    "sw_co_zwieksza":
         {
             "type": "content",
-            "title": "Bezpieczniej",
-            "back": "main",
-            "background": "#26be3f"
+            "title": "Co zwiększa ryzyko?",
+            "back": "strefa_wiedzy"
+        },
+    "sw_jak_zmniejszyc":
+        {
+            "type": "content",
+            "title": "Jak zmniejszyć ryzyko podczas seksu?",
+            "back": "strefa_wiedzy"
         },
     "tworcy":
         {
-            "type": "tworcy",
+            "type": "content",
             "title": "Twórcy",
-            "back": "main",
-            "background": "#d77400"
-        },
-    "splash":
-        {
-            "type": "splash",
-            "title": "Splash",
-            "back": "close",
-            "background": "#f59c00"
-        },
-    "game":
-        {
-            "type": "game",
-            "title": "(i)grasz?",
-            "back": "main",
-            "background": "#591d4c"
-        },
-    "instructions":
-        {
-            "type": "instructions",
-            "title": "Instrukcje",
-            "back": "game",
-            "background": "#3e1435"
+            "back": "main"
         }
 }

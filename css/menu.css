@@ -1,10 +1,10 @@
-.menu {
+#menu {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.menu li {
+#menu li {
   display: block;
   height: 3em;
   line-height: 3em;
@@ -12,9 +12,9 @@
   text-transform: uppercase;
   font-weight: bold;
 }
-.menu li:nth-child(even) {
+#menu li:nth-child(even) {
   background-color: #c9006e;
 }
-.menu li:nth-child(odd) {
+#menu li:nth-child(odd) {
   background-color: #e5007d;
 }

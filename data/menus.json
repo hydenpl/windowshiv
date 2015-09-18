@@ -1,127 +1,54 @@
 {
     "main":
         {
-            "size": 8,
             "links":[
                 {
-                    "key":"game",
-                    "color":"#591d4c",
-                    "label":"Gra",
-                    "shortcut":"GA",
-                    "image":"game"
+                    "key":"gra_drzewko",
+                    "label":"Mnie to nie dotyczy"
                 },
                 {
-                    "key":"substancje",
-                    "color":"#be0c0c",
-                    "label":"Substancje",
-                    "shortcut":"SU",
-                    "image":"substances"
+                    "key":"gra_bezpieczne",
+                    "label":"Bezpieczne czy ryzykowne"
                 },
                 {
-                    "key":"instytucje",
-                    "color":"#239bcd",
-                    "label":"Instytucje",
-                    "shortcut":"IN",
-                    "image":"institutions"
+                    "key":"test",
+                    "label":"Test"
                 },
                 {
-                    "key":"bezpieczniej",
-                    "color":"#26be3f",
-                    "label":"Bezpieczniej",
-                    "shortcut":"SU",
-                    "image":"rescue"
+                    "key":"strefa_wiedzy",
+                    "label":"Strefa wiedzy"
                 },
                 {
                     "key":"tworcy",
-                    "color":"#f59c00",
-                    "label":"Twórcy",
-                    "shortcut":"TW",
-                    "image":"stacja"
+                    "label":"Twórcy"
                 }
             ]
             
         },
-    "instytucje":
+    "strefa_wiedzy":
         {
-            "size": 8,
             "links":[
                 {
-                    "key":"instytucje_narkotyki",
-                    "color":"#91a61b",
-                    "label":"Narkotyki",
-                    "shortcut":"IN",
-                    "image":"drugs"
+                    "key":"sw_podstawowe",
+                    "label":"HIV I AIDS - podstawowe informacje"
                 },
                 {
-                    "key":"instytucje_alkohol",
-                    "color":"#f07100",
-                    "label":"Alkohol",
-                    "shortcut":"IA",
-                    "image":"alcohol"
+                    "key":"sw_drogi",
+                    "label":"Drogi zakażenia"
                 },
                 {
-                    "key":"instytucje_hiv",
-                    "color":"#f50000",
-                    "label":"HIV/AIDS",
-                    "shortcut":"HA",
-                    "image":"aids"
+                    "key":"sw_techniki",
+                    "label":"Techniki seksualne"
+                },
+                {
+                    "key":"sw_co_zwieksza",
+                    "label":"Co zwiększa ryzyko?"
+                },
+                {
+                    "key":"sw_jak_zmniejszyc",
+                    "label":"Jak zmniejszyć ryzyko?"
                 }
             ]
             
-        },
-    "substancje":
-        {
-            "size": 6,
-            "links":[
-                {
-                    "key":"amfetamina",
-                    "color":"#3dd7e5",
-                    "label":"Amfetamina",
-                    "shortcut":"Am",
-                    "image":""
-                },
-                {
-                    "key":"piguly",
-                    "color":"#c761b5",
-                    "label":"Piguły",
-                    "shortcut":"Pi",
-                    "image":""
-                },
-                {
-                    "key":"mefedron",
-                    "color":"#e5d73d",
-                    "label":"Mefedron",
-                    "shortcut":"Me",
-                    "image":""
-                },
-                {
-                    "key":"marihuana",
-                    "color":"#ff3333",
-                    "label":"Marihuana",
-                    "shortcut":"Ma",
-                    "image":""
-                },
-                {
-                    "key":"kokaina",
-                    "color":"#f59c00",
-                    "label":"Kokaina",
-                    "shortcut":"Ko",
-                    "image":""
-                },
-                {
-                    "key":"dopalacze",
-                    "color":"#309bf6",
-                    "label":"Dopalacze",
-                    "shortcut":"Do",
-                    "image":""
-                },
-                {
-                    "key":"alkohol",
-                    "color":"#0bd636",
-                    "label":"Alkohol",
-                    "shortcut":"Al",
-                    "image":""
-                }
-            ]
         }
 }
