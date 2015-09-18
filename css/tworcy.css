@@ -1,15 +1,13 @@
-.white-background{
-    background-color: white;
-    width:100%;
+.white-background {
+  background-color: white;
+  width: 100%;
 }
-
-.white-background canvas{
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    padding: 3em 0 1em;
+.white-background canvas {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3em 0 1em;
 }
-
-#tresc{
-    text-align: justify;
+#tresc {
+  text-align: justify;
 }

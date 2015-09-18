@@ -44,7 +44,7 @@ function initPage(key) {
 
     $.getJSON("data/structure.json", function(data) {
         structure = data;
-        $('html, body, .header').css('background-color', structure[key].background);
+        $('html, body, .header');
         $('.header').hide();
 //        $(".back-button").addClass("link").data("link", structure[key].back);
 
