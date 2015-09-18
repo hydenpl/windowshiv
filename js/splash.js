@@ -1,5 +1,5 @@
 function initSplash(key) {
-    $('#content').load('splash.html', function() {
+    $('#content').addClass('no-header').load('splash.html', function() {
         rysujLogo();
         var id = 'ok-button';
         jQuery('<li/>', {
@@ -13,10 +13,10 @@ function initSplash(key) {
 function rysujLogo(){
     var canvas = document.getElementById('logo');
     
-    canvas.width = 15*fs;
-    canvas.height = 10*fs;
+    canvas.width = 18*fs;
+    canvas.height = 12*fs;
     var ctx = canvas.getContext('2d');
-ctx.scale(1.2*fs/17, 1.2*fs/17);  
+ctx.scale(1.2*fs/14, 1.2*fs/14);  
 
 ctx.save();
 ctx.translate(0,0);

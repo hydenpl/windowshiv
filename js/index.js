@@ -46,7 +46,7 @@ function initPage(key) {
     $('.header').hide();
 //        $(".back-button").addClass("link").data("link", structure[key].back);
 
-    $('#content').empty();
+    $('#content').empty().removeClass('no-header');
     $('#menu').empty();
     
 //        alert($('#content').html());

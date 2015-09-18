@@ -81,8 +81,13 @@ body{
     background-color: @background-color;
 }
 
+@header-height: 4em;
+
 #content {
     margin-top: 4em;
+    &.no-header{
+        margin-top: 0em;
+    }
     width: 100%;
 }
 
@@ -90,7 +95,7 @@ body{
     position: fixed;
     top:0;
     width: 100%;
-    height: 4em;
+    height: @header-height;
     font-weight: lighter;
     z-index: 100;
     h2 {
@@ -137,7 +142,8 @@ a{
 
 #logo{
     display: block;
-    margin: 1em auto;
+    margin: 0 auto;
+    padding: 2em 0;
 }
 
 h2.header-title{
@@ -146,5 +152,8 @@ h2.header-title{
     font-size: 2em;
     text-transform: uppercase;
     text-align: center;
-    
+    &.big-title{
+        font-size: 3em;
+        font-weight: bold;
+    }
 }
