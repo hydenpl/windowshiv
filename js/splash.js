@@ -1,15 +1,12 @@
 function initSplash(key) {
     $('#content').load('splash.html', function() {
-        rysujSplashLogo();
-//        rysujSplashOk();/6FC400
-        drawHexagon('splashOkCanvas', 5*fs, "#6FC400", "OK");
-        $('#splashOkCanvas').addClass("link").data("link", "main");
-        
+        rysujLogo();
+        $('#splash-ok').addClass("link").data("link", "main");
     });
 }
 
-function rysujSplashLogo(){
-    var canvas = document.getElementById('splashLogoCanvas');
+function rysujLogo(){
+    var canvas = document.getElementById('logo');
     
     canvas.width = 17*fs;
     canvas.height = 10*fs;

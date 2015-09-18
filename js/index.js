@@ -26,9 +26,7 @@ $(function() {
             initPage(backKey);
         }
     }, false);
-
-   
-
+    
 });
 
 
