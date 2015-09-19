@@ -4,7 +4,7 @@ function initTworcy(key) {
         $('h2.header-title').text("Twórcy");
         $(".back-button").addClass("link").data("link", "main");
         rysujStacjaLogo();
-        rysujMazowszeLogo();
+//        rysujMazowszeLogo();
         rysujWarszawaLogo();
     });
 

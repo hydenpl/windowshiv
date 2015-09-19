@@ -67,7 +67,7 @@ structure = {
         },
     "tworcy":
         {
-            "type": "content",
+            "type": "tworcy",
             "title": "Twórcy",
             "back": "main"
         }
