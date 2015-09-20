@@ -17,9 +17,15 @@ structure = {
             "title": "Mnie to nie dotyczy",
             "back": "main"
         },
-    "gra_zabezpiecz":
+    "gra_zabezpiecz_splash":
         {
             "type": "menu",
+            "title": "Zabezpiecz się",
+            "back": "main"
+        },
+    "gra_zabezpiecz":
+        {
+            "type": "gra_zabezpiecz",
             "title": "Zabezpiecz się",
             "back": "main"
         },

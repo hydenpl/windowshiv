@@ -7,7 +7,7 @@ menus = {
                     "label":"Mnie to nie dotyczy"
                 },
                 {
-                    "key":"gra_zabezpiecz",
+                    "key":"gra_zabezpiecz_splash",
                     "label":"Zabezpiecz się"
                 },
                 {
@@ -47,6 +47,16 @@ menus = {
                 {
                     "key":"sw_jak_zmniejszyc",
                     "label":"Jak zmniejszyć ryzyko?"
+                }
+            ]
+            
+        },
+    "gra_zabezpiecz_splash":
+            {
+            "links":[
+                {
+                    "key":"gra_zabezpiecz",
+                    "label":"START"
                 }
             ]
             

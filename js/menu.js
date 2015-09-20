@@ -6,6 +6,9 @@ function initMenu(key) {
             $('.header').show();
             $('h2.header-title').addClass('big-title').text(structure[key].title);
             $(".back-button").addClass("link").data("link", structure[key].back);
+            if(key in content_json){
+                $("#tresc").html(content_json[key].content);
+            }
             menuReady(key);
         });
     }else{
