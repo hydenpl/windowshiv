@@ -134,7 +134,22 @@
 
     .result{
         display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        
         .answer{
+            font-size: 2em;
+            height: 3em;
+            width: 3em;
+            line-height: 3em;
+            border-radius: 50%;
+            background-color: #e5007d;
+            text-align: center;
+            font-weight: bold;
+            margin: 0 auto;
+            
             &.answer-ok{
                 display: none;
             }
@@ -144,10 +159,22 @@
         }
 
         .description{
-
+            padding: 2em;
+            font-size: 0.85em;
+            text-align: justify;
         }
 
         .buttons{
+            .button{
+                font-size: 1.33em;
+                height: 3.5em;
+                line-height: 3.5em;
+                background-color: #c9006e;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            
             &.buttons-ok{
                 display: none;
                 .button{
@@ -159,13 +186,18 @@
             &.buttons-wrong{
                 display: block;
                 .button{
+                    width: 50%;
+                    float: left;
                     &.improve{
-
+                        background-color: #e5007d;
                     }
-                    &.next{
-
+                    &.next:after{
+                        clear: both;
                     }
                 }
+            }
+            &:after{
+                clear: both;
             }
         }
         &.result-ok{
@@ -189,12 +221,13 @@
         }
     }
     
-    &with-result{
-        .result{
-            display: block;
-        }
+    &.with-result{
         .quiz{
             display: none;
         }
+        .result{
+            display: block;
+        }
+        
     }
 }
