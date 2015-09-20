@@ -78,7 +78,7 @@ zabezpiecz_content = [
         "name": "STOSUNEK ORALNY",
         "desc": "usta-penis",
         "correct": {
-            "answer":"Prezerwatywa –smakowa, klasyczna lub wzmacniania ",
+            "answer":"Prezerwatywa – smakowa, klasyczna lub wzmacniania ",
             "desc":"W kontaktach oralnych błona śluzowa jamy ustnej wrażliwa jest na zakażenie HIV, należy więc unikać jej kontaktu z nasieniem i preejakulatem. Najlepszą metodą zabezpieczenia się przez zakażeniem HIV w kontaktach oralnych jest używanie prezerwatywy. Prawidłowo stosowana, nieprzeterminowana i dobrze przechowywana prezerwatywa w skuteczny sposób chroni przed zakażeniem HIV. Do stosunku oralnego dedykowane są prezerwatywy smakowe i zapachowe, ale można do niego używać także klasycznych lub wzmacnianych prezerwatyw. "
         },
         "incorrect":[
@@ -130,7 +130,7 @@ zabezpiecz_content = [
                 "desc": "W kontaktach oralnych błona śluzowa jamy ustnej wrażliwa jest na zakażenie HIV, należy więc unikać jej kontaktu z wydzieliną z pochwy.  Jeśli dojdzie do kontaktu płynu zakaźnego z jamą ustną , powinno się ją wypłukać wodą. Nie powinno się płukać ust alkoholem! Pod wpływem alkoholu w jamie ustnej tworzą się mikrouszkodzenia, przez które wirus jeszcze łatwiej się wchłania. "
             },
             {
-                "answer": "Nic nie jest potrzebne –stosunek oralny jest bezpieczny",
+                "answer": "Nic nie jest potrzebne – stosunek oralny jest bezpieczny",
                 "desc": "Podczas stosunku oralnego (usta- pochwa) narażona na zakażenie HIV jest strona czynna (pieszcząca), ponieważ dochodzi do kontaktu płynu zakaźnego (wydzieliny z pochwy) z błoną śluzową jamy ustnej. Stosunek oralny może być jeszcze bardziej ryzykowny podczas miesiączki, ponieważ krew jest najbardziej zakaźnym płynem.   Ryzyko zakażenia dla strony biernej (pieszczonej) istnieje przy uszkodzeniach i krwawieniach w obrębie jamy ustnej u strony czynnej (pieszczącej)."
             },
             {
@@ -157,7 +157,7 @@ zabezpiecz_content = [
                 "desc": "Podczas kontaktów manualno-genitalnych narażone na zakażenie mogą być uszkodzone dłonie, które mają kontakt z płynem zakaźnym (np. wydzieliną z pochwy, wydzieliną z odbytu, spermą, preejakulatem).  Szorowanie rąk może doprowadzić do powstania dodatkowych uszkodzeń na dłoniach, co może zwiększyć ryzyko zakażenia. "
             },
             {
-                "answer": "Nic nie jest potrzebne –kontakty manualno-genitalne są bezpieczne",
+                "answer": "Nic nie jest potrzebne – kontakty manualno-genitalne są bezpieczne",
                 "desc": "Nie zawsze. Ryzyko zakażenia istnieje wtedy, gdy partner pieszczący ma uszkodzoną skórę dłoni. Należy również uważać na to, aby nie przenosić płynów zakaźnych na błony śluzowe (np. w sytuacji zatarcia oka, masturbacji)."
             },
             {
