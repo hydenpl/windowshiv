@@ -2,7 +2,7 @@ function initGame(key) {
     
     $('#content').load('game.html?v='+Math.random(), function() {
         $('.header').show();
-        $('h2.header-title').text("(i)grasz?");
+//        $('h2.header-title').text("(i)grasz?");
         $(".back-button").addClass("link").data("link", "main")
 //        drawInfo('back-canvas');
 //        $(".back-button").addClass("link").data("link", "instructions")
