@@ -7,8 +7,8 @@ menus = {
                     "label":"Mnie to nie dotyczy"
                 },
                 {
-                    "key":"gra_bezpieczne",
-                    "label":"Bezpieczne czy ryzykowne"
+                    "key":"gra_zabezpiecz",
+                    "label":"Zabezpiecz się"
                 },
                 {
                     "key":"test",

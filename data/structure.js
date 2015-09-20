@@ -17,10 +17,10 @@ structure = {
             "title": "Mnie to nie dotyczy",
             "back": "main"
         },
-    "gra_bezpieczne":
+    "gra_zabezpiecz":
         {
             "type": "menu",
-            "title": "Bezpieczne czy ryzykowne",
+            "title": "Zabezpiecz się",
             "back": "main"
         },
     "test":
