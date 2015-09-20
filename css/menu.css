@@ -6,8 +6,9 @@
 }
 #menu li {
   display: block;
-  height: 4em;
-  line-height: 4em;
+  font-size: 1.33em;
+  height: 3.5em;
+  line-height: 3.5em;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;

@@ -1,0 +1,100 @@
+#gra-zabezpiecz .quiz {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#gra-zabezpiecz .quiz .answers .answer {
+  display: table;
+  height: 4.65em;
+  width: 100%;
+}
+#gra-zabezpiecz .quiz .answers .answer .radio {
+  width: 18%;
+  display: table-cell;
+  position: relative;
+}
+#gra-zabezpiecz .quiz .answers .answer .radio::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  margin-top: -1em;
+  margin-left: -1em;
+  border: 0.2em solid #ffffff;
+  border-radius: 50%;
+}
+#gra-zabezpiecz .quiz .answers .answer.checked .radio::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  margin-top: -0.45em;
+  margin-left: -0.45em;
+  border: 0.2em solid #ffffff;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#gra-zabezpiecz .quiz .answers .answer .answer-text {
+  width: 82%;
+  font-size: 0.85em;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding-right: 10%;
+}
+#gra-zabezpiecz .quiz .answers .answer:nth-child(odd) {
+  background-color: #e5007d;
+}
+#gra-zabezpiecz .quiz .answers .answer:nth-child(even) {
+  background-color: #c9006e;
+}
+#gra-zabezpiecz .quiz .confirm-button {
+  font-size: 1.33em;
+  height: 3.5em;
+  line-height: 3.5em;
+  background-color: #c9006e;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#gra-zabezpiecz .result {
+  display: none;
+}
+#gra-zabezpiecz .result .answer.answer-ok {
+  display: none;
+}
+#gra-zabezpiecz .result .answer.answer-wrong {
+  display: block;
+}
+#gra-zabezpiecz .result .buttons.buttons-ok {
+  display: none;
+}
+#gra-zabezpiecz .result .buttons.buttons-wrong {
+  display: block;
+}
+#gra-zabezpiecz .result.result-ok .answer.answer-ok {
+  display: block;
+}
+#gra-zabezpiecz .result.result-ok .answer.answer-wrong {
+  display: none;
+}
+#gra-zabezpiecz .result.result-ok .buttons.buttons-ok {
+  display: block;
+}
+#gra-zabezpiecz .result.result-ok .buttons.buttons-wrong {
+  display: none;
+}
+#gra-zabezpieczwith-result .result {
+  display: block;
+}
+#gra-zabezpieczwith-result .quiz {
+  display: none;
+}

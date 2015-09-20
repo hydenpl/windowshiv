@@ -18,69 +18,155 @@
     }
 
     .quiz{
-
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        
         .question{
 
         }
 
         .answers{
-
+            
             .answer{
-                &.checked{
-
-                    .radio{
-
-                    }
-
-                    .answer-text{
-
-                    }
-                }
+                display: table;
+                height: 4.65em;
+                width: 100%;
+                
+                @radio-button-radius: 1.6em;
+                @radio-button-border: 0.20em;
+                @radio-button-checked-radius: 0.5em;
 
                 .radio{
-
+                    width: 18%;
+                    display: table-cell; 
+                    position: relative;
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: @radio-button-radius;
+                        height: @radio-button-radius;
+                        margin-top: -@radio-button-radius/2 - @radio-button-border;
+                        margin-left: -@radio-button-radius/2 - @radio-button-border;
+                        border: @radio-button-border solid #fff;
+                        border-radius: 50%;
+                    }
+                }
+                &.checked .radio{
+                    &::before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: @radio-button-checked-radius;
+                        height: @radio-button-checked-radius;
+                        margin-top: -@radio-button-checked-radius/2 - @radio-button-border;
+                        margin-left: -@radio-button-checked-radius/2 - @radio-button-border;
+                        border: @radio-button-border solid #fff;
+                        border-radius: 50%;
+                        background-color: #fff;
+                    }
+                }
+                .answer-text{
+                    width: 82%;
+                    font-size: 0.85em;
+                    display: table-cell; 
+                    vertical-align: middle; 
+                    text-align: left; 
+                    padding-right: 10%;
+                }
+                
+                
+                &:nth-child(odd){
+                    background-color: #e5007d;
                 }
 
-                .answer-text{
-
+                &:nth-child(even){
+                    background-color: #c9006e;
                 }
             }
         }
 
         .confirm-button{
-
+            font-size: 1.33em;
+            height: 3.5em;
+            line-height: 3.5em;
+            background-color: #c9006e;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
         }
     }
 
     .result{
-
+        display: none;
         .answer{
-
+            &.answer-ok{
+                display: none;
+            }
+            &.answer-wrong{
+                display: block;
+            }
         }
 
         .description{
 
         }
 
-        .result-ok{
+        .buttons{
+            &.buttons-ok{
+                display: none;
+                .button{
+                    &.next{
 
-            .button{
-                &.next{
+                    }
+                }
+            }
+            &.buttons-wrong{
+                display: block;
+                .button{
+                    &.improve{
 
+                    }
+                    &.next{
+
+                    }
                 }
             }
         }
-
-        .result-wrong{
-
-            .button{
-                &.improve{
-
+        &.result-ok{
+            .answer{
+                &.answer-ok{
+                    display:block;
                 }
-                &.next{
-
+                &.answer-wrong{
+                    display: none;
                 }
             }
+
+            .buttons{
+                &.buttons-ok{
+                    display:block;
+                }
+                &.buttons-wrong{
+                    display:none;
+                }
+            }
+        }
+    }
+    
+    &with-result{
+        .result{
+            display: block;
+        }
+        .quiz{
+            display: none;
         }
     }
 }

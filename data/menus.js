@@ -30,7 +30,7 @@ menus = {
             "links":[
                 {
                     "key":"sw_podstawowe",
-                    "label":"HIV I AIDS - podstawowe informacje"
+                    "label":"HIV I AIDS"
                 },
                 {
                     "key":"sw_drogi",
