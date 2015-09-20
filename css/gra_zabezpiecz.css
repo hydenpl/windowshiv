@@ -1,9 +1,49 @@
+#gra-zabezpiecz .sexual-activity .sa-image {
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+}
+#gra-zabezpiecz .sexual-activity .sa-image canvas {
+  display: none;
+  margin: 0 auto;
+}
+#gra-zabezpiecz .sexual-activity .sa-title {
+  font-size: 1.6em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#gra-zabezpiecz .sexual-activity .sa-desc {
+  text-align: center;
+  font-style: italic;
+}
+#gra-zabezpiecz .sexual-activity.anal canvas#sa-canvas-anal {
+  display: block;
+}
+#gra-zabezpiecz .sexual-activity.wagin canvas#sa-canvas-wagin {
+  display: block;
+}
+#gra-zabezpiecz .sexual-activity.oral canvas#sa-canvas-oral {
+  display: block;
+}
+#gra-zabezpiecz .sexual-activity.oralf canvas#sa-canvas-oralf {
+  display: block;
+}
+#gra-zabezpiecz .sexual-activity.manual canvas#sa-canvas-manual {
+  display: block;
+}
 #gra-zabezpiecz .quiz {
   display: block;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
+}
+#gra-zabezpiecz .quiz .question {
+  padding: 1.5em 4em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 #gra-zabezpiecz .quiz .answers .answer {
   display: table;
@@ -34,10 +74,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  margin-top: -0.45em;
-  margin-left: -0.45em;
+  width: 0.55em;
+  height: 0.55em;
+  margin-top: -0.475em;
+  margin-left: -0.475em;
   border: 0.2em solid #ffffff;
   border-radius: 50%;
   background-color: #fff;

@@ -2,18 +2,42 @@
     .sexual-activity{
 
         .sa-image{
-
+            padding-top: 2em;
+            padding-bottom: 0.5em;
             canvas{
-
+                display: none;
+                margin: 0 auto;
             }
         }
 
         .sa-title{
-
+            font-size: 1.6em;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            
         }
 
         .sa-desc{
-
+            text-align: center;
+            font-style: italic;
+            
+        }
+        
+        &.anal canvas#sa-canvas-anal{
+            display:block;
+        }
+        &.wagin canvas#sa-canvas-wagin{
+            display:block;
+        }
+        &.oral canvas#sa-canvas-oral{
+            display:block;
+        }
+        &.oralf canvas#sa-canvas-oralf{
+            display:block;
+        }
+        &.manual canvas#sa-canvas-manual{
+            display:block;
         }
     }
 
@@ -25,7 +49,11 @@
         left: 0;
         
         .question{
-
+            padding: 1.5em 4em;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9em;
         }
 
         .answers{
@@ -37,7 +65,7 @@
                 
                 @radio-button-radius: 1.6em;
                 @radio-button-border: 0.20em;
-                @radio-button-checked-radius: 0.5em;
+                @radio-button-checked-radius: 0.55em;
 
                 .radio{
                     width: 18%;
