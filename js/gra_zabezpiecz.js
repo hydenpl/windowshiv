@@ -4,10 +4,75 @@ function initGraZabezpiecz(key) {
         $('.header').show();
         $(".back-button").addClass("link").data("link", "main");
         rysujZabezpiecz();
+        zabezpieczNewQuestion();
         
+        $('.confirm-button').on('click', function(){
+            var ansChecked = $('.answer.checked');
+            if( ansChecked.length ){
+                var index = $(".answer").index(ansChecked);
+                var i = $(".answer").index($('.answer.correct'));
+                var ans = ((index-i)+2)%3;
+                $('#gra-zabezpiecz').addClass('with-result');
+                if(ansChecked.hasClass('correct')){
+                    $('.result').addClass('result-ok');                    
+                }else{
+                    $('.result').removeClass('result-ok');
+                }
+                $('.result .description').html(ansArr[ans].desc);
+            }
+        });
+        
+        $('.button.improve').on('click',function(){
+            $('#gra-zabezpiecz').removeClass('with-result');
+        });
+        
+        $('#gra-zabezpiecz .next').on('click',function(){
+            zabezpieczNewQuestion();
+        });
+        
+        $('.answer').on('click',function(){
+            $('.answer').removeClass('checked');
+            $(this).addClass('checked');
+        })
     });
 }
 
+function zabezpieczNewQuestion(){
+    var newActivity;
+    do {
+        newActivity = zabezpiecz_content[Math.floor(Math.random() * zabezpiecz_content.length)];
+    }
+    while (newActivity.key == zabezpiecz_key);
+    zabezpiecz_key = newActivity.key;
+    $('.sa-title').html(newActivity.name);
+    $('.sa-desc').html(newActivity.desc);
+    $('.sexual-activity').removeClass().addClass('sexual-activity').addClass(newActivity.key);
+    
+    $('.answer').removeClass('checked').removeClass('correct');
+    ansArr = getRandomSubarray(newActivity.incorrect, 2);
+    ansArr.push(newActivity.correct);
+    var i = Math.floor(Math.random() * 3);
+    $('.answer').each(function(index){
+        idx = (i+1+index)%3;
+        $(this).find('.answer-text').html(ansArr[idx].answer);
+        if(idx == 2){
+            $(this).addClass('correct');
+        }
+    });
+    $('#gra-zabezpiecz').removeClass('with-result');
+    
+}
+
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
 
 function rysujZabezpiecz(){
 var canvas = document.getElementById('sa-canvas-anal');

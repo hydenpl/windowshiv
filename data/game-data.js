@@ -179,3 +179,7 @@ zabezpiecz_content = [
         ]
     }
 ]
+
+zabezpiecz_key = zabezpiecz_content[Math.floor(Math.random() * zabezpiecz_content.length)].key;
+
+ansArr = undefined;
