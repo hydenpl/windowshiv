@@ -1,12 +1,12 @@
 var wh;
 var ww;
 var fs;
-var structure; //json ze struktura strony, backami, home itp
 var globalKey;
 
 $(function() {
 //    document.addEventListener("deviceready", function() {
-        initPage('splash');
+//        initPage('splash');
+        initPage('gra_zabezpiecz');
 
         $("body").on('click', '.link', function() {
             $(this).addClass("selected");
@@ -49,7 +49,6 @@ function initPage(key) {
     $('#content').empty().removeClass('no-header');
     $('#menu').empty();
     
-//        alert($('#content').html());
     if (structure[key].type == 'subpage') {
         initSubpage(key);
     } else if (structure[key].type == 'menu') {
@@ -58,16 +57,14 @@ function initPage(key) {
         initContent(key);
     } else if (structure[key].type == 'tworcy') {
         initTworcy(key);
-        //jeszcze nic
     } else if (structure[key].type == 'game') {
         initGame(key);
-        //jeszcze nic
+    } else if (structure[key].type == 'gra_zabezpiecz') {
+        initGraZabezpiecz(key);
     } else if (structure[key].type == 'instructions') {
         initInstructions(key);
-        //jeszcze nic
     } else {
         initSplash(key);
-        //jeszcze nic
     }
 }
 
