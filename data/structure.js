@@ -11,9 +11,15 @@ structure = {
             "title": "",
             "back": "close"
         },
-    "gra_drzewko":
+    "gra_drzewko_splash":
         {
             "type": "menu",
+            "title": "Mnie to nie dotyczy",
+            "back": "main"
+        },
+    "gra_drzewko":
+        {
+            "type": "gra_drzewko",
             "title": "Mnie to nie dotyczy",
             "back": "main"
         },

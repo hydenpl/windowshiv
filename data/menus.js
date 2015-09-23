@@ -2,10 +2,10 @@ menus = {
     "main":
         {
             "links":[
-//                {
-//                    "key":"gra_drzewko",
-//                    "label":"Mnie to nie dotyczy"
-//                },
+                {
+                    "key":"gra_drzewko_splash",
+                    "label":"Mnie to nie dotyczy"
+                },
                 {
                     "key":"gra_zabezpiecz_splash",
                     "label":"Zabezpiecz się"
@@ -56,6 +56,16 @@ menus = {
             "links":[
                 {
                     "key":"gra_zabezpiecz",
+                    "label":"START"
+                }
+            ]
+            
+        },
+    "gra_drzewko_splash":
+            {
+            "links":[
+                {
+                    "key":"gra_drzewko",
                     "label":"START"
                 }
             ]

@@ -4,7 +4,7 @@ var fs;
 var globalKey;
 
 $(function() {
-    document.addEventListener("deviceready", function() {
+//    document.addEventListener("deviceready", function() {
         initPage('splash');
 
         $("body").on('click', '.link', function() {
@@ -15,7 +15,7 @@ $(function() {
         window.addEventListener("resize", function() {
             initPage(globalKey);
         });
-    });
+//    });
 
     document.addEventListener("backbutton", function(){
         backKey = $('.back-button').data('link');
@@ -60,6 +60,8 @@ function initPage(key) {
         initGame(key);
     } else if (structure[key].type == 'gra_zabezpiecz') {
         initGraZabezpiecz(key);
+    } else if (structure[key].type == 'gra_drzewko') {
+        initGraDrzewko(key);
     } else if (structure[key].type == 'instructions') {
         initInstructions(key);
     } else {

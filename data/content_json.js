@@ -19,5 +19,8 @@ content_json = {
         },
     "gra_zabezpiecz_splash": {
         "content": "<p>Czy wiesz, jak zmniejszyć ryzyko zakażenia HIV podczas r&oacute;żnych technik seksualnych? Weź udział w quizie aby sprawdzić i zweryfikować swoją wiedzę.</p> <p>Do każdej techniki seksualnej będziesz miał/miała do wyboru trzy odpowiedzi &ndash; tylko jedna jest poprawna. Wskaż tę opcję, kt&oacute;ra najlepiej zabezpieczy przed zakażeniem HIV.</p> <p>Pamiętaj, jeśli nie jesteś pewny/pewna swojej odpowiedzi, w każdym momencie możesz przejść do <span class='link' data-link='strefa_wiedzy'>STREFY WIEDZY</span>, gdzie znajdziesz najważniejsze informacje dotyczące profilaktyki HIV/AIDS.</p>"
+    },
+    "gra_drzewko_splash": {
+        "content": "<p>Jak myślisz, czy zakażenie wirusem HIV dotyczy wszystkich, czy tylko wybranych grup ludzi? Czy można to ryzyko w jakiś spos&oacute;b oszacować, przewidzieć? Zr&oacute;b szybki test i sprawdź, czy faktycznie ryzyko zakażenia Ciebie nie dotyczy.</p>"
     }
 }
