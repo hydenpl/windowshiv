@@ -2,6 +2,10 @@ $.ajaxSetup({cache: false}); //TODO do usunięcia
 
 //tutaj byly globalsy dla gry
 
+gd_my_val = 4;
+gd_their_val = 3;
+
+
 zabezpiecz_content = [
     {
         "key": "anal",
