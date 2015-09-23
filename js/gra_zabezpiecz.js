@@ -6,7 +6,7 @@ function initGraZabezpiecz(key) {
         rysujZabezpiecz();
         zabezpieczNewQuestion();
         
-        $('.confirm-button').on('click', function(){
+        $('#gra-zabezpiecz .confirm-button').on('click', function(){
             var ansChecked = $('.answer.checked');
             if( ansChecked.length ){
                 var index = $(".answer").index(ansChecked);
@@ -22,7 +22,7 @@ function initGraZabezpiecz(key) {
             }
         });
         
-        $('.button.improve').on('click',function(){
+        $('#gra-zabezpiecz .button.improve').on('click',function(){
             $('#gra-zabezpiecz').removeClass('with-result');
         });
         
@@ -30,8 +30,8 @@ function initGraZabezpiecz(key) {
             zabezpieczNewQuestion();
         });
         
-        $('.answer').on('click',function(){
-            $('.answer').removeClass('checked');
+        $('#gra-zabezpiecz .answer').on('click',function(){
+            $('#gra-zabezpiecz .answer').removeClass('checked');
             $(this).addClass('checked');
         })
     });
