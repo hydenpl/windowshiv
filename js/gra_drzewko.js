@@ -3,6 +3,7 @@ function initGraDrzewko(key) {
     $('#content').load('gra_drzewko.html?v='+Math.random(), function() {
         $('.header').show();
         $(".back-button").addClass("link").data("link", "main");
+        $('.header-apla').addClass('invisible');
         rysujDrzewko();
         drzewkoNewQuestion();
         
