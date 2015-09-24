@@ -41,6 +41,7 @@
   width: 50%;
   color: #c9006e;
   transform: scaleX(0.7);
+  -webkit-transform: scaleX(0.7);
 }
 #gra-drzewko .drzewko-control .inputs .input-panel .input .input-left::after {
   display: block;
@@ -54,6 +55,7 @@
   width: 0.8em;
   height: 0.8em;
   transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 #gra-drzewko .drzewko-control .inputs .input-panel .input .input-right {
   position: absolute;
@@ -63,6 +65,7 @@
   width: 50%;
   color: #c9006e;
   transform: scaleX(0.7);
+  -webkit-transform: scaleX(0.7);
 }
 #gra-drzewko .drzewko-control .inputs .input-panel .input .input-right::after {
   display: block;
@@ -76,6 +79,7 @@
   width: 0.8em;
   height: 0.8em;
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 #gra-drzewko .drzewko-control .inputs .input-panel .input .input-value {
   position: absolute;

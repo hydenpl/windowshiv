@@ -62,17 +62,17 @@ function initGraDrzewko(key) {
             if(is_infected){
                 for(var p in partners){
                     if(partners[p].infected){
-                        drawDot(ctx_tree, partners[p].x, partners[p].y, tree_gap, tree_radius, partners[p].infected?'#e5007d':'#fff');
-                        drawLine(ctx_tree, partners[p].line, partners[p].infected);
+                        drawDot(ctx_tree, partners[p].x, partners[p].y, tree_gap, tree_radius, partners[p].infected?'#e5007d':'#fff', true);
+                        drawLine(ctx_tree, partners[p].line, partners[p].infected, true);
                     }
                     for(var bf in partners[p].list){
                         if(partners[p].list[bf].infected){
-                            drawDot(ctx_tree, partners[p].list[bf].x, partners[p].list[bf].y, tree_gap, tree_radius, partners[p].list[bf].infected?'#e5007d':'#fff');
-                            drawLine(ctx_tree, partners[p].list[bf].line, partners[p].list[bf].infected);
+                            drawDot(ctx_tree, partners[p].list[bf].x, partners[p].list[bf].y, tree_gap, tree_radius, partners[p].list[bf].infected?'#e5007d':'#fff', true);
+                            drawLine(ctx_tree, partners[p].list[bf].line, partners[p].list[bf].infected, true);
                         }
                     }
                 }
-                drawDot(ctx_tree, white_dot.x, white_dot.y, tree_gap, tree_radius, '#e5007d');
+                drawDot(ctx_tree, white_dot.x, white_dot.y, tree_gap, tree_radius, '#e5007d', true);
             }
             
         });
@@ -134,7 +134,7 @@ function prepareCanvas(){
     var width = $(".drzewko-canvas-container").width();
     var height = $(".drzewko-canvas-container").height();
 
-    var gap = 23;
+    var gap = fs;
     var radius = 3.5;
     
     var prob = 0.01;
@@ -257,7 +257,7 @@ function direction(x){
         return -1;
 }
 
-function drawLine(ctx, line, red, progress){
+function drawLine(ctx, line, red, bigline){
     
     ctx.beginPath();
     ctx.moveTo(tree_gap/2 + line[0].x * tree_gap, tree_gap/2 + line[0].y * tree_gap);
@@ -265,6 +265,8 @@ function drawLine(ctx, line, red, progress){
         ctx.lineTo(tree_gap/2 + line[p].x * tree_gap, tree_gap/2 + line[p].y * tree_gap);
     }
     ctx.lineWidth = 1;
+    if(bigline != undefined)
+        ctx.lineWidth = 1.5;
     if(red){
         ctx.strokeStyle = '#e5007d';
     }else{
@@ -273,11 +275,15 @@ function drawLine(ctx, line, red, progress){
     ctx.stroke();
 }
 
-function drawDot(ctx, x, y, gap, radius, color){
+function drawDot(ctx, x, y, gap, radius, color, bigdot){
     ctx.beginPath();
     ctx.arc(gap/2 + gap * x, gap/2 + gap * y, radius, 0, 2 * Math.PI, false);
     ctx.lineWidth = 1;
     ctx.strokeStyle = color;
+    if(bigdot != undefined){
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
     ctx.stroke();
 }
 
