@@ -135,7 +135,7 @@ function prepareCanvas(){
     var height = $(".drzewko-canvas-container").height();
 
     var gap = fs;
-    var radius = 3.5;
+    var radius = parseInt(fs/3)/2;
     
     var prob = 0.01;
     
