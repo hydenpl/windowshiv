@@ -5,6 +5,7 @@
 //tree_gap;
 //tree_radius;
 //white_dot;
+//partners
 
 function initGraDrzewko(key) {
     
@@ -16,15 +17,40 @@ function initGraDrzewko(key) {
         refreshVals();
         
         prepareCanvas();
-        var arr = [];
         
+        var arr = [];
         drawTree(ctx_tree, tree_w, tree_h, tree_gap, tree_radius, red_dots, white_dot, true, arr, 0);
         
-        var line = generateLine(2,3,14,20);
-        drawLine(ctx_tree, line, 0);
+//        var line = generateLine(12,20, 2,3);
+//        drawLine(ctx_tree, line, 0);
         
         $('.confirm-button').on('click', function(){
             $('#gra-drzewko').addClass('with-result');
+            
+            drawTree(ctx_tree, tree_w, tree_h, tree_gap, tree_radius, red_dots, white_dot, false, arr, 0);
+            var partners = [];
+            for(var i = 0; i < gd_my_val; i++){
+                var x = parseInt(Math.random()*tree_w);
+                var y = parseInt(Math.random()*tree_h);
+                partners.push({"x": x, "y": y, "line": generateLine(white_dot.x,white_dot.y,x,y) ,"list":[]});
+            }
+            for(var p in partners){
+                for(var i = 0; i < gd_their_val; i++){
+                    var x = parseInt(Math.random()*tree_w);
+                    var y = parseInt(Math.random()*tree_h);
+                    partners[p].list.push({"x": x, "y": y, "line": generateLine(partners[p].x,partners[p].y,x,y)});
+                }
+            }
+            for(var p in partners){
+                drawDot(ctx_tree, partners[p].x, partners[p].y, tree_gap, tree_radius, '#fff');
+                drawLine(ctx_tree, partners[p].line);
+                for(var bf in partners[p].list){
+                    drawDot(ctx_tree, partners[p].list[bf].x, partners[p].list[bf].y, tree_gap, tree_radius, '#fff');
+                    drawLine(ctx_tree, partners[p].list[bf].line);
+                }
+                
+            }
+            
         });
         
         $('.button.improve').on('click',function(){
@@ -104,6 +130,7 @@ function prepareCanvas(){
 }
 
 function drawTree(ctx, w, h, gap, radius, red, white, msg){
+    ctx.clearRect(0, 0, w*gap, h*gap);
     for(var x = 0; x < w; x++){
         for(var y = 0; y < h; y++){
             drawDot(ctx, x, y, gap, radius, '#555');
@@ -133,25 +160,48 @@ function generateLine(x, y, x2, y2){
                 }else{
                     temp_x = temp_x-0.5;
                 }
+                if( Math.random() > 0.1 ){
+                    if(y2 - y > 0){
+                        temp_y = temp_y+0.5;
+                    }else{
+                        temp_y = temp_y-0.5;
+                    }
+                }
             }else{
                 if(y2 - y > 0){
                     temp_y = temp_y+0.5;
                 }else{
                     temp_y = temp_y-0.5;
                 }
+                if( Math.random() > 0.2 ){
+                    if(x2 - x > 0){
+                        temp_x = temp_x+0.5;
+                    }else{
+                        temp_x = temp_x-0.5;
+                    }
+                }
             }
             first = false;
         }else{
+            var max = Math.min(Math.abs(x2-temp_x), Math.abs(y2-temp_y));
+            if(max < 1){
+                if(Math.abs(x2-temp_x)<1){
+                    temp_y += (Math.abs(y2-temp_y)-0.5) * direction(y2-temp_y);
+                }else{
+                    temp_x += (Math.abs(x2-temp_x)-0.5) * direction(x2-temp_x);
+                }
+                line.push({"x":temp_x, "y":temp_y});
+                break;
+            }
+            var dist = 1 + parseInt(Math.random()*(max -1));
             if( Math.random() > 0.4 ){
                 // w róg
-                var max = Math.min(Math.abs(x2-temp_x), Math.abs(y2-temp_y));
-                var dist = 1 + parseInt(Math.random()*(max-1));
                 temp_x += dist * direction(x2-temp_x);
                 temp_y += dist * direction(y2-temp_y);
             }else{
                 // bok
                 var max = Math.min(Math.abs(x2-temp_x), Math.abs(y2-temp_y));
-                var dist = 1 + parseInt(Math.random()*(max-1));
+                var dist = parseInt(Math.random()*(max));
                 if(x2 - temp_x > y2 - temp_y){
                     temp_x += dist * direction(x2-temp_x);
                 }else{
