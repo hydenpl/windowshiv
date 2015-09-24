@@ -4,9 +4,9 @@ var fs;
 var globalKey;
 
 $(function() {
-//    document.addEventListener("deviceready", function() {
-//        initPage('splash');
-        initPage('gra_drzewko');
+    document.addEventListener("deviceready", function() {
+        initPage('splash');
+//        initPage('gra_drzewko');
 
         $("body").on('click', '.link', function() {
             $(this).addClass("selected");
@@ -16,7 +16,7 @@ $(function() {
         window.addEventListener("resize", function() {
             initPage(globalKey);
         });
-//    });
+    });
 
     document.addEventListener("backbutton", function(){
         backKey = $('.back-button').data('link');

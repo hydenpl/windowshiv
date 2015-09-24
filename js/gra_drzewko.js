@@ -32,8 +32,6 @@ function initGraDrzewko(key) {
             drawTree(ctx_tree, tree_w, tree_h, tree_gap, tree_radius, red_dots, white_dot, false, arr, 0);
             var partners = [];
             for(var i = 0; i < gd_my_val; i++){
-//                var x = parseInt(Math.random()*tree_w);
-//                var y = parseInt(Math.random()*tree_h);
                 var x = parseInt(white_dot.x + (Math.random()-0.5)*20 );
                 var y = parseInt(white_dot.y + (Math.random()-0.5)*20 );
                 partners.push({"x": x, "y": y, "line": generateLine(white_dot.x,white_dot.y,x,y) ,"list":[], "infected":isInfected(x,y)});
