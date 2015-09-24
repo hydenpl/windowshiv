@@ -5,7 +5,6 @@ $.ajaxSetup({cache: false}); //TODO do usunięcia
 gd_my_val = 4;
 gd_their_val = 3;
 
-
 zabezpiecz_content = [
     {
         "key": "anal",

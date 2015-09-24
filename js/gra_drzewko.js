@@ -1,3 +1,11 @@
+//ctx_tree;
+//red_dots;
+//tree_w;
+//tree_h;
+//tree_gap;
+//tree_radius;
+//white_dot;
+
 function initGraDrzewko(key) {
     
     $('#content').load('gra_drzewko.html?v='+Math.random(), function() {
@@ -7,7 +15,13 @@ function initGraDrzewko(key) {
         
         refreshVals();
         
-        przygotujCanvas();
+        prepareCanvas();
+        var arr = [];
+        
+        drawTree(ctx_tree, tree_w, tree_h, tree_gap, tree_radius, red_dots, white_dot, true, arr, 0);
+        
+        var line = generateLine(2,3,14,20);
+        drawLine(ctx_tree, line, 0);
         
         $('.confirm-button').on('click', function(){
             $('#gra-drzewko').addClass('with-result');
@@ -53,7 +67,8 @@ function refreshVals(){
     $('.their-val').text(gd_their_val);
 }
 
-function przygotujCanvas(){
+
+function prepareCanvas(){
     var canvas = document.getElementById('drzewko-canvas');
 
     var width = $(".drzewko-canvas-container").width();
@@ -61,6 +76,8 @@ function przygotujCanvas(){
 
     var gap = 23;
     var radius = 3.5;
+    
+    var prob = 0.01;
     
     canvas.width = width;
     canvas.height = height;
@@ -72,6 +89,21 @@ function przygotujCanvas(){
     var red = new Array({"x": initial_red, "y": parseInt(1.2 * initial_red)});
     var white = {"x": initial_red-2, "y": parseInt(1.6 * initial_red)};
     
+    var count = prob * w * h;
+    
+    for(var i = 0; i< count; i++){
+        red.push({"x": parseInt(Math.random()*w) ,"y": parseInt(Math.random()*h)})
+    }
+    ctx_tree = ctx;
+    red_dots = red;
+    tree_w = w;
+    tree_h = h;
+    tree_gap = gap;
+    tree_radius = radius;
+    white_dot = white;
+}
+
+function drawTree(ctx, w, h, gap, radius, red, white, msg){
     for(var x = 0; x < w; x++){
         for(var y = 0; y < h; y++){
             drawDot(ctx, x, y, gap, radius, '#555');
@@ -82,9 +114,75 @@ function przygotujCanvas(){
     }
     
     drawDot(ctx, white.x, white.y, gap, radius, '#eee');
+    if(msg){
+        drawMessages(ctx, red[0].x, red[0].y, white.x, white.y, gap);
+    }
+}
+
+
+function generateLine(x, y, x2, y2){
+    var line = [{"x":x, "y":y}];
+    var temp_x = x;
+    var temp_y = y;
+    var first = true;
+    while(temp_x !== x2 && temp_y !== y2){
+        if(first){
+            if(Math.abs(x2-x) > Math.abs(y2-y)){
+                if(x2 - x > 0){
+                    temp_x = temp_x+0.5;
+                }else{
+                    temp_x = temp_x-0.5;
+                }
+            }else{
+                if(y2 - y > 0){
+                    temp_y = temp_y+0.5;
+                }else{
+                    temp_y = temp_y-0.5;
+                }
+            }
+            first = false;
+        }else{
+            if( Math.random() > 0.4 ){
+                // w róg
+                var max = Math.min(Math.abs(x2-temp_x), Math.abs(y2-temp_y));
+                var dist = 1 + parseInt(Math.random()*(max-1));
+                temp_x += dist * direction(x2-temp_x);
+                temp_y += dist * direction(y2-temp_y);
+            }else{
+                // bok
+                var max = Math.min(Math.abs(x2-temp_x), Math.abs(y2-temp_y));
+                var dist = 1 + parseInt(Math.random()*(max-1));
+                if(x2 - temp_x > y2 - temp_y){
+                    temp_x += dist * direction(x2-temp_x);
+                }else{
+                    temp_y += dist * direction(y2-temp_y);
+                }
+                
+            }
+        }
+        line.push({"x":temp_x, "y":temp_y});
+    }
+    line.push({"x":x2, "y":y2});
+    return line;
+}
+
+function direction(x){
+    if(x>0)
+        return 1;
+    else
+        return -1;
+}
+
+function drawLine(ctx, line, progress){
     
-    drawMessages(ctx, red[0].x, red[0].y, white.x, white.y, gap);
-    
+    ctx.beginPath();
+    ctx.moveTo(tree_gap/2 + line[0].x * tree_gap, tree_gap/2 + line[0].y * tree_gap);
+    for(var p in line){
+        ctx.lineTo(tree_gap/2 + line[p].x * tree_gap, tree_gap/2 + line[p].y * tree_gap);
+    }
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#fff';
+    ctx.stroke();
 }
 
 function drawDot(ctx, x, y, gap, radius, color){
