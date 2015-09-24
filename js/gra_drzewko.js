@@ -73,6 +73,8 @@ function initGraDrzewko(key) {
                     }
                 }
                 drawDot(ctx_tree, white_dot.x, white_dot.y, tree_gap, tree_radius, '#e5007d', true);
+            }else{
+                drawDot(ctx_tree, white_dot.x, white_dot.y, tree_gap, tree_radius, '#fff', true);
             }
             
         });
@@ -174,7 +176,7 @@ function drawTree(ctx, w, h, gap, radius, red, white, msg){
         drawDot(ctx, red[i].x, red[i].y, gap, radius, '#e5007d');
     }
     
-    drawDot(ctx, white.x, white.y, gap, radius, '#eee');
+    drawDot(ctx, white.x, white.y, gap, radius, '#eee', true);
     if(msg){
         drawMessages(ctx, red[0].x, red[0].y, white.x, white.y, gap);
     }
