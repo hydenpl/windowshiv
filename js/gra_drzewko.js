@@ -27,28 +27,54 @@ function initGraDrzewko(key) {
         $('.confirm-button').on('click', function(){
             $('#gra-drzewko').addClass('with-result');
             
+            is_infected = false;
+            
             drawTree(ctx_tree, tree_w, tree_h, tree_gap, tree_radius, red_dots, white_dot, false, arr, 0);
             var partners = [];
             for(var i = 0; i < gd_my_val; i++){
-                var x = parseInt(Math.random()*tree_w);
-                var y = parseInt(Math.random()*tree_h);
-                partners.push({"x": x, "y": y, "line": generateLine(white_dot.x,white_dot.y,x,y) ,"list":[]});
+//                var x = parseInt(Math.random()*tree_w);
+//                var y = parseInt(Math.random()*tree_h);
+                var x = parseInt(white_dot.x + (Math.random()-0.5)*20 );
+                var y = parseInt(white_dot.y + (Math.random()-0.5)*20 );
+                partners.push({"x": x, "y": y, "line": generateLine(white_dot.x,white_dot.y,x,y) ,"list":[], "infected":isInfected(x,y)});
             }
             for(var p in partners){
+                var par_inf = partners[p].infected;
                 for(var i = 0; i < gd_their_val; i++){
                     var x = parseInt(Math.random()*tree_w);
                     var y = parseInt(Math.random()*tree_h);
-                    partners[p].list.push({"x": x, "y": y, "line": generateLine(partners[p].x,partners[p].y,x,y)});
+                    partners[p].list.push({"x": x, "y": y, "line": generateLine(partners[p].x,partners[p].y,x,y), "infected":par_inf?true:isInfected(x,y)});
+                    if(isInfected(x,y)){
+                        partners[p].infected = true;
+                    }
                 }
             }
             for(var p in partners){
-                drawDot(ctx_tree, partners[p].x, partners[p].y, tree_gap, tree_radius, '#fff');
-                drawLine(ctx_tree, partners[p].line);
-                for(var bf in partners[p].list){
-                    drawDot(ctx_tree, partners[p].list[bf].x, partners[p].list[bf].y, tree_gap, tree_radius, '#fff');
-                    drawLine(ctx_tree, partners[p].list[bf].line);
+                if(!partners[p].infected){
+                    drawDot(ctx_tree, partners[p].x, partners[p].y, tree_gap, tree_radius, partners[p].infected?'#e5007d':'#fff');
+                    drawLine(ctx_tree, partners[p].line, partners[p].infected);
                 }
-                
+                for(var bf in partners[p].list){
+                    if(!partners[p].list[bf].infected){
+                        drawDot(ctx_tree, partners[p].list[bf].x, partners[p].list[bf].y, tree_gap, tree_radius, partners[p].list[bf].infected?'#e5007d':'#fff');
+                        drawLine(ctx_tree, partners[p].list[bf].line, partners[p].list[bf].infected);
+                    }
+                }
+            }
+            if(is_infected){
+                for(var p in partners){
+                    if(partners[p].infected){
+                        drawDot(ctx_tree, partners[p].x, partners[p].y, tree_gap, tree_radius, partners[p].infected?'#e5007d':'#fff');
+                        drawLine(ctx_tree, partners[p].line, partners[p].infected);
+                    }
+                    for(var bf in partners[p].list){
+                        if(partners[p].list[bf].infected){
+                            drawDot(ctx_tree, partners[p].list[bf].x, partners[p].list[bf].y, tree_gap, tree_radius, partners[p].list[bf].infected?'#e5007d':'#fff');
+                            drawLine(ctx_tree, partners[p].list[bf].line, partners[p].list[bf].infected);
+                        }
+                    }
+                }
+                drawDot(ctx_tree, white_dot.x, white_dot.y, tree_gap, tree_radius, '#e5007d');
             }
             
         });
@@ -86,6 +112,16 @@ function initGraDrzewko(key) {
             }
         });
     });
+}
+
+function isInfected(x, y){
+    for(i in red_dots){
+        if( x == red_dots[i].x && y == red_dots[i].y){
+            is_infected = true;
+            return true;
+        }
+    }
+    return false;
 }
 
 function refreshVals(){
@@ -223,7 +259,7 @@ function direction(x){
         return -1;
 }
 
-function drawLine(ctx, line, progress){
+function drawLine(ctx, line, red, progress){
     
     ctx.beginPath();
     ctx.moveTo(tree_gap/2 + line[0].x * tree_gap, tree_gap/2 + line[0].y * tree_gap);
@@ -231,7 +267,11 @@ function drawLine(ctx, line, progress){
         ctx.lineTo(tree_gap/2 + line[p].x * tree_gap, tree_gap/2 + line[p].y * tree_gap);
     }
     ctx.lineWidth = 1;
-    ctx.strokeStyle = '#fff';
+    if(red){
+        ctx.strokeStyle = '#e5007d';
+    }else{
+        ctx.strokeStyle = '#fff';
+    }
     ctx.stroke();
 }
 
