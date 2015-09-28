@@ -55,8 +55,7 @@
   display: table-cell;
   position: relative;
 }
-#gra-zabezpiecz .quiz .answers .answer .radio::after {
-  content: "";
+#gra-zabezpiecz .quiz .answers .answer .radio .radio-outer {
   display: block;
   position: absolute;
   top: 50%;
@@ -68,7 +67,7 @@
   border: 0.2em solid #ffffff;
   border-radius: 50%;
 }
-#gra-zabezpiecz .quiz .answers .answer.checked .radio::before {
+#gra-zabezpiecz .quiz .answers .answer.checked .radio .radio-inner {
   content: "";
   display: block;
   position: absolute;

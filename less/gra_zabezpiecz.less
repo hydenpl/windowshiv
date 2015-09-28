@@ -71,8 +71,7 @@
                     width: 18%;
                     display: table-cell; 
                     position: relative;
-                    &::after{
-                        content: "";
+                    .radio-outer{
                         display: block;
                         position: absolute;
                         top: 50%;
@@ -86,7 +85,7 @@
                     }
                 }
                 &.checked .radio{
-                    &::before{
+                    .radio-inner{
                         content: "";
                         display: block;
                         position: absolute;

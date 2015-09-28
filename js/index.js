@@ -6,7 +6,7 @@ var globalKey;
 $(function() {
     document.addEventListener("deviceready", function() {
         initPage('splash');
-//        initPage('gra_drzewko');
+//        initPage('gra_zabezpiecz');
 
         $("body").on('click', '.link', function() {
             $(this).addClass("selected");
