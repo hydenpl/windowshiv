@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<widget id="pl.org.programstacja.polaczenia" version="1.2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="pl.org.programstacja.polaczenia" version="1.2.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Połączenia</name>
     <description>
         Witamy w aplikacji o połączeniach. Połączeniach między ludźmi - zarówno tych bezpiecznych, jak i tych ryzykownych, zabezpieczonych i niezabezpieczonych. Naszym celem nie jest ocenianie, moralizowanie ani straszenie. Aplikacja ta jest źródłem rzetelnej wiedzy na temat HIV i AIDS.
