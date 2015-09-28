@@ -69,7 +69,7 @@
   margin-top: -1em;
   margin-left: -1em;
   border: 0.2em solid #ffffff;
-  border-radius: 50%;
+  border-radius: 1.6em;
 }
 #gra-zabezpiecz .quiz .answers .answer.checked .radio .radio-inner {
   content: "";
@@ -82,7 +82,7 @@
   margin-top: -0.475em;
   margin-left: -0.475em;
   border: 0.2em solid #ffffff;
-  border-radius: 50%;
+  border-radius: 0.55em;
   background-color: #fff;
 }
 #gra-zabezpiecz .quiz .answers .answer .answer-text-wrapper {
