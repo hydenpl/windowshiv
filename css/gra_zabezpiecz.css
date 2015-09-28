@@ -46,14 +46,18 @@
   font-size: 0.9em;
 }
 #gra-zabezpiecz .quiz .answers .answer {
-  display: table;
   height: 4.65em;
   width: 100%;
+  position: relative;
 }
 #gra-zabezpiecz .quiz .answers .answer .radio {
   width: 18%;
-  display: table-cell;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1.6em;
+  height: 3.2em;
+  right: 0;
 }
 #gra-zabezpiecz .quiz .answers .answer .radio .radio-outer {
   display: block;
@@ -81,8 +85,16 @@
   border-radius: 50%;
   background-color: #fff;
 }
-#gra-zabezpiecz .quiz .answers .answer .answer-text {
+#gra-zabezpiecz .quiz .answers .answer .answer-text-wrapper {
   width: 82%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  display: table;
+}
+#gra-zabezpiecz .quiz .answers .answer .answer-text-wrapper .answer-text {
   font-size: 0.85em;
   display: table-cell;
   vertical-align: middle;

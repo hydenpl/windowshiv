@@ -59,18 +59,21 @@
         .answers{
             
             .answer{
-                display: table;
                 height: 4.65em;
                 width: 100%;
-                
+                position: relative;
                 @radio-button-radius: 1.6em;
                 @radio-button-border: 0.20em;
                 @radio-button-checked-radius: 0.55em;
 
                 .radio{
                     width: 18%;
-                    display: table-cell; 
-                    position: relative;
+                    position: absolute;
+                    left:0;
+                    top:50%;
+                    margin-top: -@radio-button-radius;
+                    height: @radio-button-radius * 2;
+                    right:0;
                     .radio-outer{
                         display: block;
                         position: absolute;
@@ -100,16 +103,22 @@
                         background-color: #fff;
                     }
                 }
-                .answer-text{
+                .answer-text-wrapper{
                     width: 82%;
-                    font-size: 0.85em;
-                    display: table-cell; 
-                    vertical-align: middle; 
-                    text-align: left; 
-                    padding-right: 10%;
+                    position: absolute;
+                    right:0;
+                    top:0;
+                    bottom:0;
+                    height: 100%;
+                    display: table;
+                    .answer-text{
+                        font-size: 0.85em;
+                        display: table-cell; 
+                        vertical-align: middle; 
+                        text-align: left; 
+                        padding-right: 10%;
+                    }
                 }
-                
-                
                 &:nth-child(odd){
                     background-color: #e5007d;
                 }
