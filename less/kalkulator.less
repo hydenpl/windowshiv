@@ -171,9 +171,116 @@
       min-height: 100%;
       height: 150%;
 
+      @color-protect: #fff;
+      @color-protect-selected: #e5007d;
+
       &#kalk-zabezpieczenia{
         left:0;
-        background-color: #c9006e;
+        padding-top: 1em;
+        //background-color: #c9006e;
+        .protection{
+          height: 5em;
+          width: 100%;
+          position:relative;
+
+
+          @check-button-radius: 1.6em;
+          @check-button-border: 0.20em;
+          @check-button-checked-radius: 0.55em;
+          .check{
+            width: 18%;
+            position: absolute;
+            left:0;
+            top:50%;
+            margin-top: -@check-button-radius;
+            height: @check-button-radius * 2;
+            right:0;
+            .check-outer{
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: @check-button-radius;
+              height: @check-button-radius;
+              margin-top: -@check-button-radius/2 - @check-button-border;
+              margin-left: -@check-button-radius/2 - @check-button-border;
+              border: @check-button-border solid @color-protect;
+            }
+          }
+          &.selected .check {
+            .check-outer{
+              border-color: @color-protect-selected;
+            }
+            .check-inner {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: @check-button-checked-radius;
+              height: @check-button-checked-radius;
+              margin-top: -@check-button-checked-radius/2 - @check-button-border;
+              margin-left: -@check-button-checked-radius/2 - @check-button-border;
+              border: @check-button-border solid @color-protect-selected;
+              background-color: @color-protect-selected;
+            }
+          }
+          .name{
+            position: absolute;
+            width: 75%;
+            text-align: left;
+            top: 50%;
+            margin-top: -0.65em;
+            font-size: 1em;
+            left: 20%;
+
+
+          }
+          .protect-canvas{
+            position: absolute;
+            right: 0;
+            width: 5em;
+            top:0;
+            bottom:0;
+          }
+
+          .protect-canvas-selected{
+            display:none;
+            position: absolute;
+            right: 0;
+            width: 5em;
+            top:0;
+            bottom:0;
+          }
+          &.selected{
+            .protect-canvas{
+              display: none;
+            }
+            .protect-canvas-selected{
+              display:block;
+            }
+          }
+          &.disabled::after{
+            content: "";
+            display: block;
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            background-color: rgba(0,0,0,0.7);
+          }
+        }
+
+        .protection.selected{
+          .check{
+
+          }
+          .name{
+            color: @color-protect-selected;
+          }
+        }
+
       }
       &#kalk-czynnosci{
         left: 50%;

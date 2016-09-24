@@ -34,12 +34,20 @@ function initKalkulator(key) {
         var key;
         for(key in content_calc){
             $('#kalk-zabezpieczenia').append(
-                '<div class="protection '+key+'"><div class="check"></div><div class="name"></div><canvas class="protect-canvas" id="'+key+'"></canvas><canvas class="protect-canvas-selected" id="'+key+'_selected"></canvas></div>'
+                '<div class="protection '+key+'"><div class="check"><div class="check-outer"></div><div class="check-inner"></div></div><div class="name"></div><canvas class="protect-canvas" id="'+key+'"></canvas><canvas class="protect-canvas-selected" id="'+key+'_selected"></canvas></div>'
                             );
             $('#kalk-zabezpieczenia .'+key+' .name').text(content_calc[key].label);
-            // $('#'+key).
-            drawProtection(key, key, "30", '#fff');
-            drawProtection(key+'_selected', key, "30", '#ff0000');
+            var size = $('.protection').first().outerHeight();
+            console.log(size);
+            drawProtection(key, key, size, '#fff');
+            drawProtection(key+'_selected', key, size, '#e5007d');
+
+            $('#kalk-zabezpieczenia .'+key).on('click', function(){
+                console.log('blah');
+               if( ! $(this).hasClass('disabled')){
+                   $(this).toggleClass('selected')
+               }
+            });
         }
 
 

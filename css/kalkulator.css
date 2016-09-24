@@ -206,7 +206,91 @@
 }
 #kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia {
   left: 0;
-  background-color: #c9006e;
+  padding-top: 1em;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection {
+  height: 5em;
+  width: 100%;
+  position: relative;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection .check {
+  width: 18%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1.6em;
+  height: 3.2em;
+  right: 0;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection .check .check-outer {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  margin-top: -1em;
+  margin-left: -1em;
+  border: 0.2em solid #fff;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .check .check-outer {
+  border-color: #e5007d;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .check .check-inner {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.55em;
+  height: 0.55em;
+  margin-top: -0.475em;
+  margin-left: -0.475em;
+  border: 0.2em solid #e5007d;
+  background-color: #e5007d;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection .name {
+  position: absolute;
+  width: 75%;
+  text-align: left;
+  top: 50%;
+  margin-top: -0.65em;
+  font-size: 1em;
+  left: 20%;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection .protect-canvas {
+  position: absolute;
+  right: 0;
+  width: 5em;
+  top: 0;
+  bottom: 0;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection .protect-canvas-selected {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 5em;
+  top: 0;
+  bottom: 0;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .protect-canvas {
+  display: none;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .protect-canvas-selected {
+  display: block;
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.disabled::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .name {
+  color: #e5007d;
 }
 #kalkulator #kalkulator-content .kalk-content-page#kalk-czynnosci {
   left: 50%;

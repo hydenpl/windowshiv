@@ -5,4 +5,7 @@ content_calc = {
     "protect-prez-zwykla": {
         "label": "Prezerwatywa zwykła"
     },
+    "protect-prez-wzmac": {
+        "label": "Prezerwatywa wzmacniana"
+    },
 }

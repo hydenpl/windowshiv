@@ -2220,8 +2220,9 @@ function drawProtection(canvasId, protectionId, size, color){
         canvas.height = size;
         var ctx = canvas.getContext('2d');
 
-        ctx.translate(0,0);
-        ctx.scale(0.3,0.3);
+
+        ctx.scale(size*0.005, size*0.005);
+        ctx.translate(20,20);
 
         ctx.save();
         ctx.translate(0,0);
@@ -2242,7 +2243,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.miterLimit = 4;
         ctx.save();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(63.498,30.085);
         ctx.bezierCurveTo(63.498,19.957,71.678,11.869,81.55,11.869);
@@ -2262,7 +2263,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(103.076,40.565);
         ctx.bezierCurveTo(101.222,40.565,99.722,42.067,99.722,43.919);
@@ -2278,7 +2279,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(121.358,41.698);
         ctx.lineTo(115.982,36.32);
@@ -2295,7 +2296,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(90.394,36.322);
         ctx.lineTo(85.018,41.698);
@@ -2312,7 +2313,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(77.884,56.888);
         ctx.bezierCurveTo(75.739,55.875,73.782,55.036,71.101,54.388999999999996);
@@ -2349,7 +2350,12 @@ function drawProtection(canvasId, protectionId, size, color){
 
         canvas.width = size;
         canvas.height = size;
+
         var ctx = canvas.getContext('2d');
+
+        ctx.scale(size*0.0045, size*0.0045);
+        ctx.translate(20,40);
+
         ctx.save();
         ctx.translate(0,0);
         ctx.beginPath();
@@ -2404,13 +2410,90 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.restore();
-    }else if(protectionId==='TODO') {
+    }else if(protectionId==='protect-prez-wzmac'){
         var canvas = document.getElementById(canvasId);
 
         canvas.width = size;
         canvas.height = size;
+
         var ctx = canvas.getContext('2d');
 
+        ctx.scale(size*0.0045, size*0.0045);
+        ctx.translate(20,40);
+
+        ctx.save();
+        ctx.translate(0,0);
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineTo(141.73,0);
+        ctx.lineTo(141.73,141.73);
+        ctx.lineTo(0,141.73);
+        ctx.closePath();
+        ctx.clip();
+        ctx.translate(0,0);
+        ctx.translate(0,0);
+        ctx.scale(1,1);
+        ctx.translate(0,0);
+        ctx.strokeStyle = 'rgba(0,0,0,0)';
+        ctx.lineCap = 'butt';
+        ctx.lineJoin = 'miter';
+        ctx.miterLimit = 4;
+        ctx.save();
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(16.933,10.668);
+        ctx.lineTo(18.076,11.854999999999999);
+        ctx.lineTo(19.219,13.059);
+        ctx.lineTo(20.749000000000002,12.347);
+        ctx.bezierCurveTo(24.389000000000003,10.658999999999999,28.467000000000002,10.176,32.353,10.905);
+        ctx.bezierCurveTo(36.133,11.607999999999999,39.738,13.454999999999998,42.585,16.416999999999998);
+        ctx.lineTo(121.70400000000001,98.894);
+        ctx.lineTo(122.933,100.177);
+        ctx.lineTo(124.498,99.316);
+        ctx.bezierCurveTo(125.271,98.902,126.13300000000001,98.761,126.96000000000001,98.894);
+        ctx.bezierCurveTo(127.76800000000001,99.01700000000001,128.542,99.39500000000001,129.157,100.027);
+        ctx.bezierCurveTo(129.895,100.793,130.247,101.796,130.229,102.789);
+        ctx.bezierCurveTo(130.21,103.781,129.80700000000002,104.766,129.05100000000002,105.505);
+        ctx.lineTo(100.49700000000001,132.898);
+        ctx.bezierCurveTo(99.72500000000001,133.636,98.72200000000001,133.988,97.73700000000001,133.97);
+        ctx.bezierCurveTo(96.73500000000001,133.952,95.751,133.548,95.03000000000002,132.783);
+        ctx.bezierCurveTo(94.41400000000002,132.14999999999998,94.06200000000001,131.35899999999998,93.97400000000002,130.541);
+        ctx.bezierCurveTo(93.87000000000002,129.706,94.06200000000001,128.846,94.50100000000002,128.106);
+        ctx.lineTo(95.41600000000003,126.577);
+        ctx.lineTo(94.18500000000003,125.29299999999999);
+        ctx.lineTo(15.052,42.825);
+        ctx.bezierCurveTo(12.203,39.854,10.516,36.179,9.969999999999999,32.381);
+        ctx.bezierCurveTo(9.406999999999998,28.461,10.057999999999998,24.408,11.886999999999999,20.839);
+        ctx.lineTo(12.659999999999998,19.352999999999998);
+        ctx.lineTo(11.516999999999998,18.156999999999996);
+        ctx.lineTo(10.373999999999997,16.969999999999995);
+        ctx.bezierCurveTo(9.512999999999996,16.063999999999997,9.089999999999996,14.894999999999996,9.107999999999997,13.725999999999996);
+        ctx.bezierCurveTo(9.142999999999997,12.564999999999996,9.599999999999998,11.404999999999996,10.496999999999996,10.543999999999995);
+        ctx.bezierCurveTo(11.410999999999996,9.672999999999995,12.588999999999997,9.259999999999994,13.748999999999995,9.276999999999996);
+        ctx.bezierCurveTo(14.911,9.305,16.071,9.771,16.933,10.668);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+        ctx.save();
+        ctx.save();
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(131.261,11.557);
+        ctx.lineTo(111.847,11.557);
+        ctx.lineTo(104.082,39.515);
+        ctx.lineTo(111.856,39.515);
+        ctx.lineTo(105.24499999999999,63.333);
+        ctx.lineTo(107.57699999999998,63.333);
+        ctx.lineTo(130.09799999999998,35.376);
+        ctx.lineTo(118.69099999999999,35.376);
+        ctx.lineTo(131.261,11.557);
+        ctx.closePath();
+        ctx.moveTo(131.261,11.557);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+        ctx.restore();
+        ctx.restore();
 
     }
 
