@@ -14,39 +14,36 @@ function initKalkulator(key) {
         $(".back-button").addClass("link").data("link", "main");
         $('.header-apla').addClass('invisible');
 
+        $('#kalk-right').on('click', function(){
+            if ($(this).hasClass('active')) {
+                $('#kalkulator-content').addClass('shifted');
+                $('#kalk-left').addClass('active');
+                $(this).removeClass('active');
+                $('#kalk-title').text('CZYNNOŚĆ');
+            }
+        });
 
-        
-        $('.button.improve').on('click',function(){
-            $('#gra-drzewko').removeClass('with-result');
-        });
-        
-        $('#gra-zabezpiecz .next').on('click',function(){
-            $('#gra-drzewko').removeClass('with-result');
-        });
-        
-        $('.my-left').on('click', function(){
-            if(gd_my_val > 1){
-                gd_my_val--;
-                refreshVals();
+        $('#kalk-left').on('click', function() {
+            if ($(this).hasClass('active')) {
+                $('#kalkulator-content').removeClass('shifted');
+                $('#kalk-right').addClass('active');
+                $(this).removeClass('active');
+                $('#kalk-title').text('ZABEZPIECZENIE');
             }
         });
-        $('.my-right').on('click', function(){
-            if(gd_my_val < 20){
-                gd_my_val++;
-                refreshVals();
-            }
-        });
-        $('.their-left').on('click', function(){
-            if(gd_their_val > 0){
-                gd_their_val--;
-                refreshVals();
-            }
-        });
-        $('.their-right').on('click', function(){
-            if(gd_their_val < 20){
-                gd_their_val++;
-                refreshVals();
-            }
-        });
+        var key;
+        for(key in content_calc){
+            $('#kalk-zabezpieczenia').append(
+                '<div class="protection '+key+'"><div class="check"></div><div class="name"></div><canvas class="protect-canvas" id="'+key+'"></canvas><canvas class="protect-canvas-selected" id="'+key+'_selected"></canvas></div>'
+                            );
+            $('#kalk-zabezpieczenia .'+key+' .name').text(content_calc[key].label);
+            // $('#'+key).
+            drawProtection(key, key, "30", '#fff');
+            drawProtection(key+'_selected', key, "30", '#ff0000');
+        }
+
+
+
+
     });
 }
