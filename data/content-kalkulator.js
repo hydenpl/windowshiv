@@ -1,4 +1,4 @@
-content_calc = {
+protect_calc = {
     "protect-none": {
         "label": "Brak zabezpieczenia"
     },
@@ -7,5 +7,15 @@ content_calc = {
     },
     "protect-prez-wzmac": {
         "label": "Prezerwatywa wzmacniana"
+    },
+}
+
+
+czynnosci_calc = {
+    "przytulanie": {
+        "label": "Przytulanie, głaskanie"
+    },
+    "pocalunek": {
+        "label": "Pocałunek francuski"
     },
 }
