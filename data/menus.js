@@ -21,6 +21,10 @@ menus = {
                 {
                     "key":"tworcy",
                     "label":"Twórcy"
+                },
+                {
+                    "key":"kalkulator",
+                    "label":"Kalkulator"
                 }
             ]
             

@@ -6,7 +6,7 @@ var globalKey;
 $(function() {
     // document.addEventListener("deviceready", function() {
     //     initPage('splash');
-       initPage('gra_zabezpiecz');
+       initPage('kalkulator');
 
         $("body").on('click', '.link', function() {
             $(this).addClass("selected");
@@ -66,7 +66,9 @@ function initPage(key) {
         initGraDrzewko(key);
     } else if (structure[key].type == 'instructions') {
         initInstructions(key);
-    } else {
+    } else if (structure[key].type == 'kalkulator') {
+        initKalkulator(key);
+    }else {
         initSplash(key);
     }
 }

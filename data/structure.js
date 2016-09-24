@@ -88,5 +88,11 @@ structure = {
             "type": "tworcy",
             "title": "Twórcy",
             "back": "main"
-        }
+        },
+    "kalkulator":
+    {
+        "type": "kalkulator",
+        "title": "",
+        "back": "main"
+    }
 }
