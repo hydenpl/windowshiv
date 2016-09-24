@@ -1,13 +1,56 @@
 #kalkulator {
 
-  .result-4 {
+  #kalkulator-results{
+
+    height: 2em;
+    background-color: #ff7200;
+    color: #fff;
+    padding: 1.7em 1em 1.5em;
 
     .kalk-label {
+      display: inline-block;
+      font-size: 1.3em;
+      font-weight: 700;
+      padding-right: 1em;
+    }
+
+    @color-result-active: #fff;
+    @color-result-inactive: #444;
+    @base-rect-height: 1.3em;
+    @number-of-rects: 6;
+    .score-rect {
+      width: 1.7em;
+      //float: left;
+      display: inline-block;
+      margin-left: 0.2em;
+      background-color: @color-result-inactive;
+
+      .generate-rects(@number-of-rects);
+
+      .generate-rects(@n, @i: 1) when (@i <= @n) {
+        &.rect-@{i} {
+          height: (@base-rect-height*(1+@i)/(1+@number-of-rects));
+        }
+        .generate-rects(@n, (@i + 1));
+      }
 
     }
 
-    .score-rect {
+    .generate-results(@number-of-rects);
 
+    .generate-results(@n, @i: 1) when (@i <= @n) {
+      &.result-@{i} {
+        .generate-result-rects(@i);
+
+        .generate-result-rects(@k, @j: 1) when (@j <= @k) {
+          .score-rect.rect-@{j} {
+            background-color: @color-result-active;
+          }
+          .generate-result-rects(@k, (@j + 1));
+        }
+      }
+
+      .generate-results(@n, (@i + 1));
     }
 
     #kalk-info-button {
@@ -16,6 +59,8 @@
   }
 
   #kalkulator-menu {
+    background-color: #1b1b1b;
+    color: #fff;
 
     #kalk-left {
 
