@@ -2526,7 +2526,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(56.323,18.218);
         ctx.bezierCurveTo(63.613,21.881,73.84100000000001,23.979,84.462,26.913);
@@ -2578,7 +2578,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(91.241,116.346);
         ctx.bezierCurveTo(99.644,111.672,105.289,104.822,107.122,95.211);
@@ -2636,7 +2636,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(86.363,42.585);
         ctx.lineTo(86.363,42.681);
@@ -2877,7 +2877,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(16.933,10.668);
         ctx.lineTo(18.076,11.854999999999999);
@@ -2913,7 +2913,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(133.19,32.628);
         ctx.bezierCurveTo(132.899,27.231,128.489,22.774,123.084,22.774);
@@ -2976,7 +2976,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(121.787,17.216);
         ctx.bezierCurveTo(121.533,17.155,121.286,17.11,121.045,17.079);
@@ -3032,7 +3032,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.miterLimit = 4;
         ctx.save();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(101.106,6.48);
         ctx.lineTo(42.49,6.48);
@@ -3047,7 +3047,7 @@ function drawProtection(canvasId, protectionId, size, color){
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(51.609,117.817);
         ctx.lineTo(92.83500000000001,117.817);
@@ -3107,7 +3107,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.miterLimit = 4;
         ctx.save();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(71.725, 39.089);
         ctx.bezierCurveTo(73.068, 50.294, 82.586, 58.995999999999995, 94.154, 58.995999999999995);
@@ -3121,7 +3121,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(88.697, 60.243);
         ctx.bezierCurveTo(88.679, 60.251000000000005, 88.662, 60.251000000000005, 88.645, 60.251000000000005);
@@ -3137,7 +3137,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(47.035, 58.995);
         ctx.bezierCurveTo(59.513999999999996, 58.995, 69.634, 48.873999999999995, 69.634, 36.394999999999996);
@@ -3149,7 +3149,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(70.169, 128.651);
         ctx.lineTo(70.169, 85.897);
@@ -3177,7 +3177,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(133.53, 128.651);
         ctx.bezierCurveTo(145.231, 99.98500000000001, 132.472, 82.42100000000002, 120.676, 72.53200000000001);
@@ -3226,7 +3226,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(48.545,43.255);
         ctx.lineTo(57.131,43.255);
@@ -3257,7 +3257,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(48.545,132.849);
         ctx.lineTo(48.128,132.849);
@@ -3386,7 +3386,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(101.329,87.625);
         ctx.bezierCurveTo(101.28899999999999,102.718,99.15799999999999,117.783,96.08399999999999,132.849);
@@ -3515,7 +3515,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(118.293,9.927);
         ctx.bezierCurveTo(109.218,9.927,101.861,17.283,101.861,26.357);
@@ -3573,7 +3573,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
             ctx.lineJoin = 'miter';
             ctx.miterLimit = 4;
             ctx.save();
-            ctx.fillStyle = "#ffffff";
+            ctx.fillStyle = color;
             ctx.beginPath();
             ctx.moveTo(23.419,69.611);
             ctx.bezierCurveTo(22.372,65.629,20.581,60.98500000000001,17.483,56.412000000000006);
@@ -3591,7 +3591,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
             ctx.restore();
             ctx.save();
             ctx.save();
-            ctx.fillStyle = "#ffffff";
+            ctx.fillStyle = color;
             ctx.beginPath();
             ctx.moveTo(131.747,17.295);
             ctx.bezierCurveTo(130.519,15.192000000000002,128.854,13.527000000000001,126.75000000000001,12.3);
@@ -3632,7 +3632,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
             ctx.stroke();
             ctx.restore();
             ctx.save();
-            ctx.fillStyle = "#ffffff";
+            ctx.fillStyle = color;
             ctx.beginPath();
             ctx.moveTo(125.67,25.953);
             ctx.bezierCurveTo(125.371,25.858,125.08,25.881999999999998,124.794,26.025);
@@ -3658,7 +3658,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
             ctx.stroke();
             ctx.restore();
             ctx.save();
-            ctx.fillStyle = "#ffffff";
+            ctx.fillStyle = color;
             ctx.beginPath();
             ctx.moveTo(115.285,21.897);
             ctx.bezierCurveTo(115.917,21.897,116.455,21.673,116.902,21.226999999999997);
@@ -3676,7 +3676,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
             ctx.stroke();
             ctx.restore();
             ctx.save();
-            ctx.fillStyle = "#ffffff";
+            ctx.fillStyle = color;
             ctx.beginPath();
             ctx.moveTo(124.436,17.322);
             ctx.bezierCurveTo(123.805,17.322,123.266,17.546,122.81800000000001,17.992);
@@ -3725,7 +3725,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(79.611,72.426);
         ctx.bezierCurveTo(77.263,74.775,74.14800000000001,76.06400000000001,70.83500000000001,76.06400000000001);
@@ -3743,7 +3743,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(67.921,66.563);
         ctx.bezierCurveTo(68.70400000000001,67.345,69.73500000000001,67.773,70.83500000000001,67.773);
@@ -3765,7 +3765,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(37.755,51.71);
         ctx.fill();
@@ -3802,7 +3802,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(11.458,37.251);
         ctx.lineTo(12.164,37.251);
@@ -4308,7 +4308,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(122.827,27.196);
         ctx.bezierCurveTo(124.967,26.813000000000002,126.883,25.788,128.356,24.314);
@@ -4376,7 +4376,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(48.545,43.255);
         ctx.lineTo(57.131,43.255);
@@ -4407,7 +4407,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(48.545,132.849);
         ctx.lineTo(48.128,132.849);
@@ -4536,7 +4536,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(101.329,87.625);
         ctx.bezierCurveTo(101.28899999999999,102.718,99.15799999999999,117.783,96.08399999999999,132.849);
@@ -4665,7 +4665,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(134.898,22.603);
         ctx.bezierCurveTo(134.898,20.818,133.451,19.372,131.667,19.372);
@@ -4734,7 +4734,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(23.419,69.611);
         ctx.bezierCurveTo(22.372,65.629,20.581,60.98500000000001,17.483,56.412000000000006);
@@ -4751,7 +4751,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(120.413,30.032);
         ctx.bezierCurveTo(122.553,29.649,124.469,28.624,125.942,27.15);
@@ -4818,7 +4818,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(23.419,69.611);
         ctx.bezierCurveTo(22.372,65.629,20.581,60.98500000000001,17.483,56.412000000000006);
@@ -4835,7 +4835,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(129.587,9.354);
         ctx.lineTo(120.14899999999999,9.354);
@@ -4901,7 +4901,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(11.458,37.251);
         ctx.lineTo(12.164,37.251);
@@ -5407,7 +5407,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.stroke();
         ctx.restore();
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(132.001,6.518);
         ctx.lineTo(122.563,6.518);
@@ -5472,7 +5472,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.lineJoin = 'miter';
         ctx.miterLimit = 4;
         ctx.save();
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(97.056,60.43);
         ctx.bezierCurveTo(107.497,57.262,114.753,62.354,112.489,71.65899999999999);
