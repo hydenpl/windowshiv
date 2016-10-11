@@ -28,10 +28,13 @@ protect_calc = {
 
 czynnosci_calc = {
     "czynn-przytul": {
-        "label": "Przytulanie, głaskanie"
+        "label": "Przytulanie, głaskanie",
+        // "available": ["none", "prez-zwykla", "prez-wzmac", "prez-smak", "chust", "wazel", "prez-damska", "lubryk"], //ALL
+        "available": ["none", "prez-zwykla", "prez-wzmac", "prez-smak", "chust", "wazel", "prez-damska", "lubryk"],
     },
     "czynn-pocalunek": {
-        "label": "Pocałunek"
+        "label": "Pocałunek",
+        "available": ["none"],
     },
     "czynn-dlon": {
         "label": "Dłoń"

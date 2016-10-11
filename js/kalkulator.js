@@ -51,6 +51,25 @@ function initKalkulator(key) {
         }
 
 
+        function disableProtections( key ){
+            return function(){
+
+                $('.czynnosc').each(function(){
+                    $('#kalk-czynnosci .czynnosc').removeClass('selected');
+                });
+                $('#kalk-czynnosci .'+key).addClass('selected');
+                $("#kalk-zabezpieczenia .protection").each(function(){
+                    $(this).addClass("disabled");
+                });
+                console.log("disabling: "+czynnosci_calc[key].label);
+                var i;
+                var protections = czynnosci_calc[key].available;
+                for(i in protections){
+                    $('#kalk-zabezpieczenia .protect-'+protections[i]).removeClass("disabled");
+                }
+            }
+        }
+
         for(key in czynnosci_calc){
             $('#kalk-czynnosci').append(
                 '<div class="czynnosc '+key+'"><div class="radio"><div class="radio-outer"></div><div class="radio-inner"></div></div><div class="name"></div><canvas class="czynnosc-canvas" id="'+key+'"></canvas><canvas class="czynnosc-canvas-selected" id="'+key+'_selected"></canvas></div>'
@@ -61,12 +80,7 @@ function initKalkulator(key) {
             drawCzynnosc(key, key, size, '#fff');
             drawCzynnosc(key+'_selected', key, size, '#e5007d');
 
-            $('#kalk-czynnosci .'+key).on('click', function(){
-                $('.czynnosc').each(function(){
-                    $(this).removeClass('selected');
-                })
-                $(this).addClass('selected')
-            });
+            $('#kalk-czynnosci .'+key).on('click', disableProtections(key));
         }
 
 
