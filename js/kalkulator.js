@@ -19,7 +19,7 @@ function initKalkulator(key) {
                 $('#kalkulator-content').addClass('shifted');
                 $('#kalk-left').addClass('active');
                 $(this).removeClass('active');
-                $('#kalk-title').text('CZYNNOŚĆ');
+                $('#kalk-title').text('ZABEZPIECZENIE');
             }
         });
 
@@ -28,7 +28,7 @@ function initKalkulator(key) {
                 $('#kalkulator-content').removeClass('shifted');
                 $('#kalk-right').addClass('active');
                 $(this).removeClass('active');
-                $('#kalk-title').text('ZABEZPIECZENIE');
+                $('#kalk-title').text('CZYNNOŚĆ');
             }
         });
         var key;
@@ -58,8 +58,8 @@ function initKalkulator(key) {
             $('#kalk-czynnosci .'+key+' .name').text(czynnosci_calc[key].label);
             var size = $('.czynnosc').first().outerHeight();
 
-            drawProtection(key, key, size, '#fff');
-            drawProtection(key+'_selected', key, size, '#e5007d');
+            drawCzynnosc(key, key, size, '#fff');
+            drawCzynnosc(key+'_selected', key, size, '#e5007d');
 
             $('#kalk-czynnosci .'+key).on('click', function(){
                 $('.czynnosc').each(function(){
