@@ -7,6 +7,8 @@
 //white_dot;
 //partners
 
+var prevProtectionId;
+
 function initKalkulator(key) {
     
     $('#content').load('kalkulator.html?v='+Math.random(), function() {
@@ -31,23 +33,36 @@ function initKalkulator(key) {
                 $('#kalk-title').text('CZYNNOŚĆ');
             }
         });
+
+        function selectProtection( key ){
+            return function(){
+                var el = $('#kalk-zabezpieczenia .'+key);
+                var thisId = el.attr('id');
+                if( ! el.hasClass('selected') && prevProtectionId!==thisId ){
+                    $('#kalk-zabezpieczenia .protection').each(function(){
+                        if($(this).attr('id') !== prevProtectionId){
+                            $(this).removeClass('selected');
+                        }
+                    });
+                    prevProtectionId = thisId;
+                }
+                el.toggleClass('selected');
+            }
+        }
+
+
         var key;
         for(key in protect_calc){
             $('#kalk-zabezpieczenia').append(
-                '<div class="protection '+key+'"><div class="check"><div class="check-outer"></div><div class="check-inner"></div></div><div class="name"></div><canvas class="protect-canvas" id="'+key+'"></canvas><canvas class="protect-canvas-selected" id="'+key+'_selected"></canvas></div>'
+                '<div id="'+key+'" class="protection '+key+'"><div class="check"><div class="check-outer"></div><div class="check-inner"></div></div><div class="name"></div><canvas class="protect-canvas" id="'+key+'_canvas"></canvas><canvas class="protect-canvas-selected" id="'+key+'_selected"></canvas></div>'
                             );
             $('#kalk-zabezpieczenia .'+key+' .name').text(protect_calc[key].label);
             var size = $('.protection').first().outerHeight();
 
-            drawProtection(key, key, size, '#fff');
+            drawProtection(key+'_canvas', key, size, '#fff');
             drawProtection(key+'_selected', key, size, '#e5007d');
 
-            $('#kalk-zabezpieczenia .'+key).on('click', function(){
-                console.log('blah');
-               if( ! $(this).hasClass('disabled')){
-                   $(this).toggleClass('selected')
-               }
-            });
+            $('#kalk-zabezpieczenia .'+key).on('click', selectProtection(key));
         }
 
 
