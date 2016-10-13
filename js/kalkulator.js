@@ -38,6 +38,19 @@ function initKalkulator(key) {
             return function(){
                 var el = $('#kalk-zabezpieczenia .'+key);
                 var thisId = el.attr('id');
+                if( el.hasClass('disabled')){
+                  return;
+                }
+                if( key === 'protect-none'){
+                    el.toggleClass('selected');
+                    prevProtectionId = undefined;
+                    $('#kalk-zabezpieczenia .protection').each(function(){
+                        if($(this).attr('id') !== thisId){
+                            $(this).removeClass('selected');
+                        }
+                    });
+                    return;
+                }
                 if( ! el.hasClass('selected') && prevProtectionId!==thisId ){
                     $('#kalk-zabezpieczenia .protection').each(function(){
                         if($(this).attr('id') !== prevProtectionId){
@@ -47,6 +60,9 @@ function initKalkulator(key) {
                     prevProtectionId = thisId;
                 }
                 el.toggleClass('selected');
+                if( $('#kalk-zabezpieczenia .protection.selected').length === 0){
+                    $('#kalk-zabezpieczenia .protect-none').addClass('selected');
+                }
             }
         }
 
@@ -64,6 +80,7 @@ function initKalkulator(key) {
 
             $('#kalk-zabezpieczenia .'+key).on('click', selectProtection(key));
         }
+        $('#kalk-zabezpieczenia .protect-none').addClass('selected');
 
 
         function disableProtections( key ){

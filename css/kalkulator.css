@@ -233,10 +233,10 @@
   margin-left: -1em;
   border: 0.2em solid #fff;
 }
-#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .check .check-outer {
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected:not(.disabled) .check .check-outer {
   border-color: #e5007d;
 }
-#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .check .check-inner {
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected:not(.disabled) .check .check-inner {
   content: "";
   display: block;
   position: absolute;
@@ -273,13 +273,13 @@
   top: 0;
   bottom: 0;
 }
-#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .protect-canvas {
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected:not(.disabled) .protect-canvas {
   display: none;
 }
-#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .protect-canvas-selected {
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected:not(.disabled) .protect-canvas-selected {
   display: block;
 }
-#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected .name {
+#kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.selected:not(.disabled) .name {
   color: #e5007d;
 }
 #kalkulator #kalkulator-content .kalk-content-page#kalk-zabezpieczenia .protection.disabled::after {

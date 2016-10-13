@@ -208,7 +208,7 @@
               border: @check-button-border solid @color-protect;
             }
           }
-          &.selected .check {
+          &.selected:not(.disabled) .check {
             .check-outer{
               border-color: @color-protect-selected;
             }
@@ -253,7 +253,7 @@
             top:0;
             bottom:0;
           }
-          &.selected{
+          &.selected:not(.disabled){
             .protect-canvas{
               display: none;
             }
