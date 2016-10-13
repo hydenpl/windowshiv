@@ -19,12 +19,12 @@ menus = {
                     "label":"Strefa wiedzy"
                 },
                 {
-                    "key":"tworcy",
-                    "label":"Twórcy"
-                },
-                {
                     "key":"kalkulator",
                     "label":"Kalkulator"
+                },
+                {
+                    "key":"tworcy",
+                    "label":"Twórcy"
                 }
             ]
             
