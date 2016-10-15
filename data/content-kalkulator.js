@@ -80,7 +80,6 @@ czynnosci_calc = {
         //         "n":3
         //     },
         // }
-
     },
     "czynn-pocalunek": {
         "label": "Pocałunek",

@@ -185,6 +185,9 @@ function initKalkulator(key) {
 
 
 
+        drawInfoKalkulator('kalk-info-button-canvas', $("#kalk-info-button").outerHeight() );
+
+
 
     });
 }
