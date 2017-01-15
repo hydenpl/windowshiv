@@ -152,8 +152,8 @@ body {
   border: 0;
 }
 body {
-  /*overflow: hidden;*/
-  background-color: #000000;
+  overflow: hidden;
+  background-color: #000;
 }
 #content {
   margin-top: 4em;
@@ -212,7 +212,7 @@ a {
 #logo {
   display: block;
   margin: 0 auto;
-  padding: 1.5em 0;
+  padding: 2em 0;
 }
 h2.header-title {
   display: block;
@@ -225,3 +225,4 @@ h2.header-title.big-title {
   font-size: 3em;
   font-weight: bold;
 }
+/*# sourceMappingURL=style.css.map */
