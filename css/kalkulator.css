@@ -8,39 +8,34 @@
   overflow-x: hidden;
 }
 #kalkulator #kalkulator-results {
-  height: 2em;
-  background-color: #ff7200;
+  height: 1.6em;
+  background-color: #c9006e;
   color: #fff;
-  padding: 1.7em 1em 1.5em;
+  padding: 1.9em 1em 1.7em;
+  display: relative;
 }
 #kalkulator #kalkulator-results .kalk-label {
   display: inline-block;
   font-size: 1.3em;
   font-weight: 700;
-  padding-right: 1em;
+  padding-right: 1.2em;
 }
 #kalkulator #kalkulator-results .score-rect {
   width: 1.7em;
   display: inline-block;
   margin-left: 0.2em;
-  background-color: #cc5b00;
+  background-color: rgba(0, 0, 0, 0.13);
 }
 #kalkulator #kalkulator-results .score-rect.rect-1 {
-  height: 0.37142857em;
+  height: 0.52em;
 }
 #kalkulator #kalkulator-results .score-rect.rect-2 {
-  height: 0.55714286em;
+  height: 0.78em;
 }
 #kalkulator #kalkulator-results .score-rect.rect-3 {
-  height: 0.74285714em;
+  height: 1.04em;
 }
 #kalkulator #kalkulator-results .score-rect.rect-4 {
-  height: 0.92857143em;
-}
-#kalkulator #kalkulator-results .score-rect.rect-5 {
-  height: 1.11428571em;
-}
-#kalkulator #kalkulator-results .score-rect.rect-6 {
   height: 1.3em;
 }
 #kalkulator #kalkulator-results.result-1 .score-rect.rect-1 {
@@ -73,45 +68,15 @@
 #kalkulator #kalkulator-results.result-4 .score-rect.rect-4 {
   background-color: #fff;
 }
-#kalkulator #kalkulator-results.result-5 .score-rect.rect-1 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-5 .score-rect.rect-2 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-5 .score-rect.rect-3 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-5 .score-rect.rect-4 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-5 .score-rect.rect-5 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-6 .score-rect.rect-1 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-6 .score-rect.rect-2 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-6 .score-rect.rect-3 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-6 .score-rect.rect-4 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-6 .score-rect.rect-5 {
-  background-color: #fff;
-}
-#kalkulator #kalkulator-results.result-6 .score-rect.rect-6 {
-  background-color: #fff;
-}
 #kalkulator #kalkulator-results #kalk-info-button {
-  display: inline-block;
-  margin-left: 1em;
+  position: absolute;
+  right: 1em;
+  top: 1.4em;
   height: 2em;
-  margin-top: -0.5em;
   width: 2em;
+}
+#kalkulator #kalkulator-results #kalk-info-button.disabled {
+  display: none;
 }
 #kalkulator #kalkulator-menu {
   background-color: #1b1b1b;
@@ -184,6 +149,19 @@
   height: 0.8em;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+}
+#kalkulator #kalkulator-description {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 5.2em;
+  width: 100%;
+  background-color: #1b1b1b;
+}
+#kalkulator #kalkulator-description .kalkulator-description-content {
+  padding: 1.5em;
+  color: #ffffff;
 }
 #kalkulator #kalkulator-content {
   position: absolute;
@@ -379,4 +357,3 @@
 #kalkulator #kalkulator-content .kalk-content-page#kalk-czynnosci .czynnosc.selected .name {
   color: #e5007d;
 }
-/*# sourceMappingURL=kalkulator.css.map */

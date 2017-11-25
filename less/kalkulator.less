@@ -9,25 +9,25 @@
   overflow-x: hidden;
 
 
-
   #kalkulator-results{
 
-    height: 2em;
-    background-color: #ff7200;
+    height: 1.6em;
+    background-color: #c9006e;
     color: #fff;
-    padding: 1.7em 1em 1.5em;
+    padding: 1.9em 1em 1.7em;
+    display: relative;
 
     .kalk-label {
       display: inline-block;
       font-size: 1.3em;
       font-weight: 700;
-      padding-right: 1em;
+      padding-right: 1.2em;
     }
 
     @color-result-active: #fff;
-    @color-result-inactive: #cc5b00;
+    @color-result-inactive: rgba(0,0,0,0.13);
     @base-rect-height: 1.3em;
-    @number-of-rects: 6;
+    @number-of-rects: 4;
     .score-rect {
       width: 1.7em;
       //float: left;
@@ -63,12 +63,16 @@
       .generate-results(@n, (@i + 1));
     }
 
-    #kalk-info-button {
-      display: inline-block;
-      margin-left: 1em;
+    #kalk-info-button{
+      position: absolute;
+      right: 1em;
+      top: 1.4em;
       height: 2em;
-      margin-top: -0.5em;
       width: 2em;
+
+      &.disabled{
+        display: none;
+      }
     }
   }
 
@@ -143,6 +147,20 @@
         -webkit-transform: rotate(-45deg);
       }
 
+    }
+  }
+
+  #kalkulator-description{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 5.2em;
+    width: 100%;
+    background-color: #1b1b1b;
+    .kalkulator-description-content{
+      padding: 1.5em;
+      color: #ffffff;
     }
   }
 

@@ -4,9 +4,9 @@ var fs;
 var globalKey;
 
 $(function() {
-    // document.addEventListener("deviceready", function() {
-    //     initPage('splash');
-       initPage('kalkulator');
+     document.addEventListener("deviceready", function() {
+         initPage('splash');
+//       initPage('kalkulator');
 
         $("body").on('click', '.link', function() {
             $(this).addClass("selected");
@@ -16,7 +16,7 @@ $(function() {
         window.addEventListener("resize", function() {
             initPage(globalKey);
         });
-    // });
+     });
 
     document.addEventListener("backbutton", function(){
         backKey = $('.back-button').data('link');
@@ -68,7 +68,7 @@ function initPage(key) {
         initInstructions(key);
     } else if (structure[key].type == 'kalkulator') {
         initKalkulator(key);
-    }else {
+    } else {
         initSplash(key);
     }
 }

@@ -2,9 +2,13 @@ menus = {
     "main":
         {
             "links":[
+//                {
+//                    "key":"gra_drzewko_splash",
+//                    "label":"Mnie to nie dotyczy"
+//                },
                 {
-                    "key":"gra_drzewko_splash",
-                    "label":"Mnie to nie dotyczy"
+                    "key":"kalkulator_splash",
+                    "label":"Kalkulator ryzyka"
                 },
                 {
                     "key":"gra_zabezpiecz_splash",
@@ -17,10 +21,6 @@ menus = {
                 {
                     "key":"strefa_wiedzy",
                     "label":"Strefa wiedzy"
-                },
-                {
-                    "key":"kalkulator",
-                    "label":"Kalkulator"
                 },
                 {
                     "key":"tworcy",
@@ -64,6 +64,16 @@ menus = {
                 }
             ]
             
+        },
+    "kalkulator_splash":
+            {
+            "links":[
+                {
+                    "key":"kalkulator",
+                    "label":"START"
+                }
+            ]
+
         },
     "gra_drzewko_splash":
             {

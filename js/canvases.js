@@ -3545,7 +3545,7 @@ function drawCzynnosc(canvasId, czynnoscId, size, color) {
         ctx.restore();
         ctx.restore();
 
-    } else if (czynnoscId === 'czynn-oral-bier') {
+    } else if (czynnoscId === 'czynn-oral-bier' || czynnoscId === 'czynn-oral-bier-kobieta' ) {
         var canvas = document.getElementById(canvasId);
 
         canvas.width = size;

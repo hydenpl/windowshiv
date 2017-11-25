@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <widget id="pl.org.programstacja.polaczenia" version="1.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Połączenia</name>
+    <name>Połączenia - test HIV</name>
     <description>
         Witamy w aplikacji o połączeniach. Połączeniach między ludźmi - zarówno tych bezpiecznych, jak i tych ryzykownych, zabezpieczonych i niezabezpieczonych. Naszym celem nie jest ocenianie, moralizowanie ani straszenie. Aplikacja ta jest źródłem rzetelnej wiedzy na temat HIV i AIDS.
     </description>
@@ -8,7 +8,7 @@
         Program Stacja
     </author>
     <preference name="permissions" value="none" />
-    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />

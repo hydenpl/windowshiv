@@ -1,32 +1,4 @@
-protect_calc = {
-    "protect-none": {
-        "label": "Brak zabezpieczenia"
-    },
-    "protect-prez-zwykla": {
-        "label": "Prezerwatywa zwykła"
-    },
-    "protect-prez-wzmac": {
-        "label": "Prezerwatywa wzmacniana"
-    },
-    "protect-prez-smak": {
-        "label": "Prezerwatywa smakowa"
-    },
-    "protect-chust": {
-        "label": "Chusteczka lateksowa"
-    },
-    "protect-wazel": {
-        "label": "Wazelina/oliwka"
-    },
-    "protect-prez-damska": {
-        "label": "Prezerwatywa damska"
-    },
-    "protect-lubryk": {
-        "label": "Lubrykant"
-    }
-};
-
-
-czynnosci_calc = {
+{
   "czynn-przytul": {
     "label": "Przytulanie, głaskanie",
     "available": [
@@ -420,4 +392,4 @@ czynnosci_calc = {
       }
     }
   }
-};
+}

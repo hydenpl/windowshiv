@@ -75,11 +75,11 @@ function initKalkulator(key) {
                     }else if(isInArray("protect-prez-smak", actProts)){
                         return "p_smakowa_lubrykant"
                     }else if(isInArray("protect-chust", actProts)){
-                        return "chusteczka"
+                        return "chusteczka_lubrykant"
                     }else if(isInArray("protect-prez-damska", actProts)){
                         return "p_damska_lubrykant"
                     }else if(isInArray("protect-wazel", actProts)){
-                        return "lubrykant"
+                        return "wazelina"
                     }
                 }else if(isInArray("protect-wazel", actProts)){
                     return "p_dowolna_wazelina"
@@ -93,7 +93,12 @@ function initKalkulator(key) {
             $('#kalkulator-results').removeClass();
             console.log("Czynnosc: "+currentCzynnosc+", protection: "+getProtectionCombo() + ", risk: " + czynnosci_calc[currentCzynnosc].risk[getProtectionCombo()].n);
             $('#kalkulator-results').addClass('result-'+czynnosci_calc[currentCzynnosc].risk[getProtectionCombo()].n)
-
+            if(czynnosci_calc[currentCzynnosc].risk[getProtectionCombo()].info){
+                $('#kalk-info-button').removeClass('disabled');
+                $('#kalkulator-description .kalkulator-description-content').text(czynnosci_calc[currentCzynnosc].risk[getProtectionCombo()].info);
+            }else{
+                $('#kalk-info-button').addClass('disabled');
+            }
         }
 
         function selectProtection( key ){
@@ -187,7 +192,12 @@ function initKalkulator(key) {
 
         drawInfoKalkulator('kalk-info-button-canvas', $("#kalk-info-button").outerHeight() );
 
-
+        $('#kalk-info-button').on('click', function(){
+          if(!$(this).hasClass('disabled')){
+            $('#kalkulator-results').toggleClass('colored');
+            $('#kalkulator-description').toggle();
+          }
+        })
 
     });
 }

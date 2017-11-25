@@ -23,12 +23,12 @@ structure = {
             "title": "Mnie to nie dotyczy",
             "back": "main"
         },
-    "gra_drzewko_info":
-        {
-            "type": "content",
-            "title": "Info",
-            "back": "gra_drzewko"
-        },
+//    "gra_drzewko_info":
+//        {
+//            "type": "content",
+//            "title": "Info",
+//            "back": "gra_drzewko"
+//        },
     "gra_zabezpiecz_splash":
         {
             "type": "menu",
@@ -89,6 +89,12 @@ structure = {
             "title": "Twórcy",
             "back": "main"
         },
+    "kalkulator_splash":
+    {
+        "type": "menu",
+        "title": "Kalkulator ryzyka",
+        "back": "main"
+    },
     "kalkulator":
     {
         "type": "kalkulator",
